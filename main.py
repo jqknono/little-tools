@@ -16,7 +16,11 @@ def main():
     # print(data)
 
     # step2: 获取启动次数
-    data = query_launches_times()
+    # data = query_launches_times()
+    # print(data)
+
+    # step3: 获取次日留存
+    data = query_retentions()
     print(data)
 
 
