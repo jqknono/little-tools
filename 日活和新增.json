@@ -1,0 +1,69 @@
+{
+    "result": "success",
+    "total": 9,
+    "stats": [
+        {
+            "date": "2019-09-14",
+            "active": 31478,
+            "install": 3844,
+            "old_user": 27634,
+            "account": 0
+        },
+        {
+            "date": "2019-09-13",
+            "active": 39305,
+            "install": 6587,
+            "old_user": 32718,
+            "account": 0
+        },
+        {
+            "date": "2019-09-12",
+            "active": 39747,
+            "install": 6442,
+            "old_user": 33305,
+            "account": 0
+        },
+        {
+            "date": "2019-09-11",
+            "active": 39969,
+            "install": 5974,
+            "old_user": 33995,
+            "account": 0
+        },
+        {
+            "date": "2019-09-10",
+            "active": 42945,
+            "install": 6925,
+            "old_user": 36020,
+            "account": 0
+        },
+        {
+            "date": "2019-09-09",
+            "active": 44703,
+            "install": 7289,
+            "old_user": 37414,
+            "account": 0
+        },
+        {
+            "date": "2019-09-08",
+            "active": 43719,
+            "install": 7496,
+            "old_user": 36223,
+            "account": 0
+        },
+        {
+            "date": "2019-09-07",
+            "active": 42603,
+            "install": 6505,
+            "old_user": 36098,
+            "account": 0
+        },
+        {
+            "date": "2019-09-06",
+            "active": 43574,
+            "install": 6420,
+            "old_user": 37154,
+            "account": 0
+        }
+    ]
+}
