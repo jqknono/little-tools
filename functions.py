@@ -244,6 +244,6 @@ def query_iap_money():
         i+=1
     return {"昨天": response[0], "前天": response[1], '八天前': response[2]}
 
-{"appName":["Game_android_TBC3"],"dateRange":["2019-09-07","2019-09-14"],"timeZone":"default","platform":[],"country":[],"breakdown":["app_name","date"]}
+
 
 print(query_iap_money())   
