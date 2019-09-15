@@ -1,0 +1,69 @@
+{
+    "result": "success",
+    "stats": [
+        {
+            "count_per_launch": "--",
+            "count": 332054,
+            "date": "2019-09-15",
+            "device": "--",
+            "duration": "00:00:00"
+        },
+        {
+            "count_per_launch": 1.2859993608278035,
+            "count": 511042,
+            "date": "2019-09-14",
+            "device": 23571,
+            "duration": "00:00:00"
+        },
+        {
+            "count_per_launch": 1.1669245771331322,
+            "count": 347635,
+            "date": "2019-09-13",
+            "device": 23267,
+            "duration": "00:00:00"
+        },
+        {
+            "count_per_launch": 1.1966083730789614,
+            "count": 372570,
+            "date": "2019-09-12",
+            "device": 24185,
+            "duration": "00:00:00"
+        },
+        {
+            "count_per_launch": 1.2058603881515546,
+            "count": 389142,
+            "date": "2019-09-11",
+            "device": 24526,
+            "duration": "00:00:00"
+        },
+        {
+            "count_per_launch": 1.2489653198418778,
+            "count": 484350,
+            "date": "2019-09-10",
+            "device": 26933,
+            "duration": "00:00:00"
+        },
+        {
+            "count_per_launch": 1.280834476286725,
+            "count": 532302,
+            "date": "2019-09-09",
+            "device": 28379,
+            "duration": "00:00:00"
+        },
+        {
+            "count_per_launch": 1.3089592825805827,
+            "count": 541523,
+            "date": "2019-09-08",
+            "device": 27273,
+            "duration": "00:00:00"
+        },
+        {
+            "count_per_launch": 1.2864913229752277,
+            "count": 563626,
+            "date": "2019-09-07",
+            "device": 26766,
+            "duration": "00:00:00"
+        }
+    ],
+    "total": 9
+}
