@@ -9,6 +9,8 @@ from result import *
 
 
 url_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=%(stats_type)s'
+url_event_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&stats=%(stats_type)s&event_group_id=%(event_group_id)s'
+
 today = datetime.today()
 interval = 8
 
@@ -71,7 +73,7 @@ def query_threedays_retentions():
     end_date = (today -timedelta(days=4)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=11)).strftime('%Y-%m-%d')
     url = url_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
-                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
+                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type,'event_group_id':event_group_id}
     resp = requests.get(url=url, cookies=cookies)
     data = resp.json()
     return {"昨天": data['stats'][7]['retention_rate'][2], "前天": data['stats'][6]['retention_rate'][2], '八天前': data['stats'][0]['retention_rate'][2]}
@@ -87,3 +89,34 @@ def query_sevendays_retentions():
     resp = requests.get(url=url, cookies=cookies)
     data = resp.json()
     return {"昨天": data['stats'][6]['retention_rate'][6], "前天": data['stats'][5]['retention_rate'][6], '八天前': data['stats'][0]['retention_rate'][6]}
+
+def query_video_supplement():
+    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b7289ddf43e4838c7000268
+    stats_type = 'event_group_trend'
+    report_type = 'events'
+    event_group_id = event_id_ad_interstitial_from
+    end_date = (today -timedelta(days=1)).strftime('%Y-%m-%d')
+    start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
+    url = url_event_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type,'event_group_id':event_group_id}
+    resp = requests.get(url=url, cookies=cookies)
+    data = resp.json()
+    return {"昨天": data['stats'][0]['count'], "前天": data['stats'][1]['count'], '八天前': data['stats'][-1]['count']}
+    
+def query_video():
+    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-09&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b7289a4f43e487686000096
+    stats_type = 'event_group_trend'
+    report_type = 'events'
+    event_group_id = vent_id_watch_video
+    end_date = (today -timedelta(days=1)).strftime('%Y-%m-%d')
+    start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
+    url = url_event_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type,'event_group_id':event_group_id}
+    resp = requests.get(url=url, cookies=cookies)
+    data = resp.json()
+    return {"昨天": [data['stats'][0]['count'], data['stats'][0]['device']], "前天": [data['stats'][1]['count'],data['stats'][1]['device']], '八天前': [data['stats'][-1]['count'],data['stats'][-1]['device']]}
+
+
+
+
+print(query_video())   

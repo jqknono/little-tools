@@ -28,7 +28,11 @@ def main():
     # print(data)
 
     # step5: 获取七日留存
-    data = query_sevendays_retentions()
+    # data = query_sevendays_retentions()
+    # print(data)
+
+    # step6: 获取插屏数量
+    data = query_video_supplement()
     print(data)
 
 
