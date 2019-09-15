@@ -1,0 +1,63 @@
+{
+    "result": "success",
+    "stats": [
+        {
+            "label": "com.idlecapatalist.aovalw.offer7.99",
+            "num": 138,
+            "percent": 24.1
+        },
+        {
+            "label": "com.idlecapatalist.aovalw.goldspin",
+            "num": 133,
+            "percent": 23.2
+        },
+        {
+            "label": "com.idlecapatalist.aovalw.offer2.99",
+            "num": 104,
+            "percent": 18.2
+        },
+        {
+            "label": "com.idlecapatalist.aovalw.gold4.99",
+            "num": 68,
+            "percent": 11.9
+        },
+        {
+            "label": "com.idlecapatalist.aovalw.offer9.99",
+            "num": 48,
+            "percent": 8.4
+        },
+        {
+            "label": "com.idlecapatalist.aovalw.gold9.99",
+            "num": 25,
+            "percent": 4.4
+        },
+        {
+            "label": "com.idlecapatalist.aovalw.offer19.99",
+            "num": 22,
+            "percent": 3.8
+        },
+        {
+            "label": "com.idlecapatalist.aovalw.gold19.99",
+            "num": 20,
+            "percent": 3.5
+        },
+        {
+            "label": "com.idlecapatalist.aovalw.offer49.99",
+            "num": 10,
+            "percent": 1.7
+        },
+        {
+            "label": "com.idlecapatalist.aovalw.offer79.99",
+            "num": 4,
+            "percent": 0.7
+        },
+        {
+            "label": "com.idlecapatalist.aovalw.gold49.99",
+            "num": 1,
+            "percent": 0.2
+        }
+    ],
+    "exceeded": "no",
+    "total": 11
+}
+
