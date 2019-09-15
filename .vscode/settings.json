@@ -1,4 +1,5 @@
 {
     "git.allowForcePush": true,
-    "git.rebaseWhenSync": true
+    "git.rebaseWhenSync": true,
+    "git.autoStash": true
 }
