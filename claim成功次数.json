@@ -1,0 +1,32 @@
+{
+    "result": "success",
+    "stats": [
+        {
+            "label": "show",
+            "num": 56957,
+            "percent": 66.2
+        },
+        {
+            "label": "claim_success",
+            "num": 14256,
+            "percent": 16.6
+        },
+        {
+            "label": "click_reset",
+            "num": 11094,
+            "percent": 12.9
+        },
+        {
+            "label": "don't reset",
+            "num": 3592,
+            "percent": 4.2
+        },
+        {
+            "label": "click_gold_angel",
+            "num": 198,
+            "percent": 0.2
+        }
+    ],
+    "exceeded": "no",
+    "total": 5
+}
