@@ -20,7 +20,15 @@ def main():
     # print(data)
 
     # step3: 获取次日留存
-    data = query_retentions()
+    # data = query_morrow_retentions()
+    # print(data)
+
+    # step4: 获取三日留存
+    # data = query_threedays_retentions()
+    # print(data)
+
+    # step5: 获取七日留存
+    data = query_sevendays_retentions()
     print(data)
 
 

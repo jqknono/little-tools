@@ -51,7 +51,7 @@ def query_launches_times():
     return {"昨天": data['stats'][1]['data'], "前天": data['stats'][2]['data'], '八天前': data['stats'][-1]['data']}
 
 
-def query_retentions():
+def query_morrow_retentions():
     """用户次日留存"""
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-09&end_date=2019-09-15&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=retentions
     stats_type = 'retentions'
@@ -64,3 +64,26 @@ def query_retentions():
     data = resp.json()
     return {"昨天": data['stats'][-1]['retention_rate'][0], "前天": data['stats'][-2]['retention_rate'][0], '八天前': data['stats'][0]['retention_rate'][0]}
 
+def query_threedays_retentions():
+    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-04&end_date=2019-09-15&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=retentions
+    stats_type = 'retentions'
+    report_type = 'reports'
+    end_date = (today -timedelta(days=4)).strftime('%Y-%m-%d')
+    start_date = (today - timedelta(days=11)).strftime('%Y-%m-%d')
+    url = url_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
+    resp = requests.get(url=url, cookies=cookies)
+    data = resp.json()
+    return {"昨天": data['stats'][7]['retention_rate'][2], "前天": data['stats'][6]['retention_rate'][2], '八天前': data['stats'][0]['retention_rate'][2]}
+
+def query_sevendays_retentions():    
+    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-01&end_date=2019-09-15&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=retentions
+    stats_type = 'retentions'
+    report_type = 'reports'
+    end_date = (today -timedelta(days=7)).strftime('%Y-%m-%d')
+    start_date = (today - timedelta(days=14)).strftime('%Y-%m-%d')
+    url = url_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
+    resp = requests.get(url=url, cookies=cookies)
+    data = resp.json()
+    return {"昨天": data['stats'][6]['retention_rate'][6], "前天": data['stats'][5]['retention_rate'][6], '八天前': data['stats'][0]['retention_rate'][6]}
