@@ -118,5 +118,3 @@ def query_video():
 
 
 
-
-print(query_video())   
