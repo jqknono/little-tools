@@ -1,0 +1,52 @@
+{
+    "result": "success",
+    "stats": [
+        {
+            "label": "2",
+            "num": 4520,
+            "percent": 18.4
+        },
+        {
+            "label": "3",
+            "num": 3604,
+            "percent": 14.7
+        },
+        {
+            "label": "4",
+            "num": 3120,
+            "percent": 12.7
+        },
+        {
+            "label": "5",
+            "num": 2617,
+            "percent": 10.7
+        },
+        {
+            "label": "6",
+            "num": 2398,
+            "percent": 9.8
+        },
+        {
+            "label": "7",
+            "num": 2279,
+            "percent": 9.3
+        },
+        {
+            "label": "8",
+            "num": 2184,
+            "percent": 8.9
+        },
+        {
+            "label": "9",
+            "num": 1967,
+            "percent": 8.0
+        },
+        {
+            "label": "10",
+            "num": 1842,
+            "percent": 7.5
+        }
+    ],
+    "exceeded": "no",
+    "total": 9
+}
