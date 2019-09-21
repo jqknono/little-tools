@@ -121,7 +121,7 @@ def query_iap_users():
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b84cc7ca40fa34b91000015
     stats_type = 'event_group_trend'
     report_type = 'events'
-    event_group_id = event_group_id_iap
+    event_group_id = event_group_id_buy_iap_total
     end_date = (today -timedelta(days=1)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
     url = url_event_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
@@ -129,6 +129,7 @@ def query_iap_users():
     resp = requests.get(url=url, cookies=cookies)
     data = resp.json()
     return {"昨天": data['stats'][0]['device'], "前天": data['stats'][1]['device'], '八天前': data['stats'][-1]['device']}
+
 
 def query_open_map2_users():
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?&start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b84cc7ca40fa34b91000019
@@ -246,4 +247,4 @@ def query_iap_money():
 
 
 
-print(query_iap_money())   
+ 
