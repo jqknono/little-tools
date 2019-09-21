@@ -74,7 +74,7 @@ def query_threedays_retentions():
     end_date = (today -timedelta(days=4)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=11)).strftime('%Y-%m-%d')
     url = url_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
-                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type,'event_group_id':event_group_id}
+                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
     resp = requests.get(url=url, cookies=cookies)
     data = resp.json()
     return {"昨天": data['stats'][7]['retention_rate'][2], "前天": data['stats'][6]['retention_rate'][2], '八天前': data['stats'][0]['retention_rate'][2]}
