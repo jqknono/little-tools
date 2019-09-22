@@ -1,0 +1,52 @@
+{
+    "result": "success",
+    "stats": [
+        {
+            "label": "FreeBonus_money",
+            "num": 599956,
+            "percent": 25.0
+        },
+        {
+            "label": "Offline",
+            "num": 545196,
+            "percent": 22.7
+        },
+        {
+            "label": "Double_Cash",
+            "num": 379677,
+            "percent": 15.8
+        },
+        {
+            "label": "skip_30_minutes",
+            "num": 258124,
+            "percent": 10.7
+        },
+        {
+            "label": "speedUp",
+            "num": 211886,
+            "percent": 8.8
+        },
+        {
+            "label": "cost_50%_off",
+            "num": 134435,
+            "percent": 5.6
+        },
+        {
+            "label": "Slot",
+            "num": 117686,
+            "percent": 4.9
+        },
+        {
+            "label": "AdClaim",
+            "num": 116689,
+            "percent": 4.9
+        },
+        {
+            "label": "FreeBonus_gold",
+            "num": 40297,
+            "percent": 1.7
+        }
+    ],
+    "exceeded": "no",
+    "total": 9
+}

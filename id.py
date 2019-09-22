@@ -10,8 +10,13 @@ event_group_id_open_event = '5b7289ddf43e4838c7000282'
 event_group_id_show_claim = '5b7289ddf43e4838c7000289'
 event_group_id_unlock_business = '5b7289ddf43e4838c7000295'
 event_group_id_buy_iap_total= '5b84cc7ca40fa34b91000015'
+event_group_id_ad_play_num = '5b7289a4f43e487686000096'
 
 
 event_id_show_claim = '5b7be0660237f6071568cc54'
 event_id_unlock_business= '5b7bdfa20237f6071568cc50'
 event_id_buy_iap_total = '5b9f7401c37c58067735ebc0'
+event_id_ad_play_action = '5b7a8b163665ca0789e82188'
+event_id_ad_play_event = '5b74f0b25a16bc074d5f2633'
+event_id_ad_play_event = '5b9f0bd60237f606c0aca277'
+event_id_ad_play_event = '5ba22b756e21cc6462bdafd3'

@@ -236,8 +236,7 @@ def query_iap_money():
     event_group_id = event_group_id_buy_iap_total
     event_group_name = 'buy_iap_total'
     group = []
-    # todo: 临时取2
-    end_date = (today - timedelta(days=2)).strftime('%Y-%m-%d')
+    end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
     start_date = end_date
     url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&event_id=%(event_id)s&event_group_id=%(event_group_id)s&event_group_name=%(event_group_name)s&stats=%(stats_type)s&property_type=string'
 
@@ -250,6 +249,52 @@ def query_iap_money():
         group.append({'label': d['label'], 'num': d['num']})
 
     return group
+
+
+def query_ad_play_num(event_id, event_group_id):
+    """查询播放广告次数"""
+    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-16&end_date=2019-09-22&channels[]=&versions[]=&event_id=5b7a8b163665ca0789e82188&event_group_id=5b7289a4f43e487686000096&event_group_name=watch_video&stats=count_distribute&property_type=string
+
+    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-16&end_date=2019-09-22&channels[]=&versions[]=&event_id=5b74f0b25a16bc074d5f2633&event_group_id=5b7289a4f43e487686000096&event_group_name=watch_video&stats=count_distribute&property_type=string
+
+    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-16&end_date=2019-09-22&channels[]=&versions[]=&event_id=5b9f0bd60237f606c0aca277&event_group_id=5b7289a4f43e487686000096&event_group_name=watch_video&stats=count_distribute&property_type=string
+
+    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-16&end_date=2019-09-22&channels[]=&versions[]=&event_id=5ba22b756e21cc6462bdafd3&event_group_id=5b7289a4f43e487686000096&event_group_name=watch_video&stats=count_distribute&property_type=string
+    stats_type = 'count_distribute'
+    report_type = 'events'
+    event_group_name = 'watch_video'
+    end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
+    start_date = end_date
+    url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&event_id=%(event_id)s&event_group_id=%(event_group_id)s&event_group_name=%(event_group_name)s&stats=%(stats_type)s&property_type=string'
+
+    url = url_eventname_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+                                   'start_date': start_date, 'end_date': end_date, 'event_id': event_id,
+                                   'event_group_id': event_group_id, 'event_group_name': event_group_name, 'stats_type': stats_type}
+    resp = requests.get(url=url, cookies=cookies)
+    data = resp.json()
+    dict = {}
+    for item in data['stats']:
+        dict[item['label']] = item['num']
+
+    return dict
+
+
+def query_ad_play_num_all():
+    total = {}
+    ids = ["event_id_ad_play_action",
+           "event_id_ad_play_event",
+           "event_id_ad_play_event",
+           "event_id_ad_play_event",
+           "5ba22b756e21cc6462bdafd3"]
+    for id in ids:
+        data = query_ad_play_num(id, event_group_id_ad_play_num)
+        for key in data.keys():
+            if key in total:
+                total[key] += data[key]
+            else:
+                total[key] = data[key]
+
+    return total
 
 
 product_id_iOS_unit_price = {
@@ -310,5 +355,5 @@ def calculate_iap_value_per_payment():
     pass
 
 
-data = query_iap_money()
+data = query_ad_play_num_all()
 print(data)
