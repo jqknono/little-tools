@@ -280,12 +280,13 @@ def query_ad_play_num(event_id, event_group_id):
     return dict
 
 
+
 def query_ad_play_num_all():
     total = {}
-    ids = ["event_id_ad_play_action",
-           "event_id_ad_play_event",
-           "event_id_ad_play_map2",
-           "event_id_ad_play_map3"]
+    ids = [event_id_ad_play_action,
+           event_id_ad_play_event,
+           event_id_ad_play_map2,
+           event_id_ad_play_map3]
     for id in ids:
         data = query_ad_play_num(id, event_group_id_watch_video)
         for key in data.keys():
