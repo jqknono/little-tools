@@ -1,73 +1,48 @@
-{"昨天": [
-        {"label": "com.idlecapatalist.aovalw.goldspin", "num": 217
-        },
-        {"label": "com.idlecapatalist.aovalw.gold4.99", "num": 111
-        },
-        {"label": "com.idlecapatalist.aovalw.offer7.99", "num": 109
-        },
-        {"label": "com.idlecapatalist.aovalw.offer2.99", "num": 96
-        },
-        {"label": "com.idlecapatalist.aovalw.offer9.99", "num": 60
-        },
-        {"label": "com.idlecapatalist.aovalw.gold9.99", "num": 37
-        },
-        {"label": "com.idlecapatalist.aovalw.offer19.99", "num": 35
-        },
-        {"label": "com.idlecapatalist.aovalw.gold19.99", "num": 14
-        },
-        {"label": "com.idlecapatalist.aovalw.offer79.99", "num": 1
-        },
-        {"label": "com.idlecapatalist.aovalw.offer49.99", "num": 1
-        },
-        {"label": "com.idlecapatalist.aovalw.gold49.99", "num": 1
-        }
-    ], "前天": [
-        {"label": "com.idlecapatalist.aovalw.goldspin", "num": 212
-        },
-        {"label": "com.idlecapatalist.aovalw.offer7.99", "num": 95
-        },
-        {"label": "com.idlecapatalist.aovalw.gold4.99", "num": 73
-        },
-        {"label": "com.idlecapatalist.aovalw.offer2.99", "num": 68
-        },
-        {"label": "com.idlecapatalist.aovalw.offer9.99", "num": 42
-        },
-        {"label": "com.idlecapatalist.aovalw.offer19.99", "num": 28
-        },
-        {"label": "com.idlecapatalist.aovalw.gold9.99", "num": 25
-        },
-        {"label": "com.idlecapatalist.aovalw.gold19.99", "num": 10
-        },
-        {"label": "com.idlecapatalist.aovalw.offer79.99", "num": 3
-        },
-        {"label": "com.idlecapatalist.aovalw.gold99.99", "num": 3
-        },
-        {"label": "com.idlecapatalist.aovalw.offer49.99", "num": 2
-        },
-        {"label": "com.idlecapatalist.aovalw.gold49.99", "num": 1
-        }
-    ], "八天前": [
-        {"label": "com.idlecapatalist.aovalw.goldspin", "num": 129
-        },
-        {"label": "com.idlecapatalist.aovalw.offer2.99", "num": 57
-        },
-        {"label": "com.idlecapatalist.aovalw.offer7.99", "num": 48
-        },
-        {"label": "com.idlecapatalist.aovalw.gold4.99", "num": 44
-        },
-        {"label": "com.idlecapatalist.aovalw.offer9.99", "num": 26
-        },
-        {"label": "com.idlecapatalist.aovalw.gold9.99", "num": 24
-        },
-        {"label": "com.idlecapatalist.aovalw.offer19.99", "num": 19
-        },
-        {"label": "com.idlecapatalist.aovalw.gold19.99", "num": 15
-        },
-        {"label": "com.idlecapatalist.aovalw.offer49.99", "num": 3
-        },
-        {"label": "com.idlecapatalist.aovalw.gold49.99", "num": 1
-        },
-        {"label": "com.idlecapatalist.aovalw.offer79.99", "num": 1
-        }
-    ]
-}
+[
+    {'label': 'com.idlecapatalist.aovalw.goldspin', 'num': 217
+    },
+    {'label': 'com.idlecapatalist.aovalw.gold4.99', 'num': 111
+    },
+    {'label': 'com.idlecapatalist.aovalw.offer7.99', 'num': 109
+    },
+    {'label': 'com.idlecapatalist.aovalw.offer2.99', 'num': 96
+    },
+    {'label': 'com.idlecapatalist.aovalw.offer9.99', 'num': 60
+    },
+    {'label': 'com.idlecapatalist.aovalw.gold9.99', 'num': 37
+    },
+    {'label': 'com.idlecapatalist.aovalw.offer19.99', 'num': 35
+    },
+    {'label': 'com.idlecapatalist.aovalw.gold19.99', 'num': 14
+    },
+    {'label': 'com.idlecapatalist.aovalw.offer79.99', 'num': 1
+    },
+    {'label': 'com.idlecapatalist.aovalw.offer49.99', 'num': 1
+    },
+    {'label': 'com.idlecapatalist.aovalw.gold49.99', 'num': 1
+    }
+]
+[
+    {'label': 'com.idlecapatalist.aovalw.goldspin', 'num': 217
+    },
+    {'label': 'com.idlecapatalist.aovalw.gold4.99', 'num': 111
+    },
+    {'label': 'com.idlecapatalist.aovalw.offer7.99', 'num': 109
+    },
+    {'label': 'com.idlecapatalist.aovalw.offer2.99', 'num': 96
+    },
+    {'label': 'com.idlecapatalist.aovalw.offer9.99', 'num': 60
+    },
+    {'label': 'com.idlecapatalist.aovalw.gold9.99', 'num': 37
+    },
+    {'label': 'com.idlecapatalist.aovalw.offer19.99', 'num': 35
+    },
+    {'label': 'com.idlecapatalist.aovalw.gold19.99', 'num': 14
+    },
+    {'label': 'com.idlecapatalist.aovalw.offer79.99', 'num': 1
+    },
+    {'label': 'com.idlecapatalist.aovalw.offer49.99', 'num': 1
+    },
+    {'label': 'com.idlecapatalist.aovalw.gold49.99', 'num': 1
+    }
+]
