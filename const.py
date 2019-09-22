@@ -10,4 +10,3 @@ ad_play_dict_keys = ["FreeBonus_money",
                      "Slot",
                      "AdClaim",
                      "FreeBonus_gold"]
-

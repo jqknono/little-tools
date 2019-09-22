@@ -395,9 +395,12 @@ def query_xi_back_gun():
     resp = conn.get_response()
     response = resp.read().decode("utf-8")
     data = json.loads(response)
+    dict = {}
+    for item in data[0]:
+        if item["date"]==end_date and item["lifetime"] == 24:
+            dict["people_num_watch_video"] = item["users"]
+            for event in item["event"]:
+                if event["event_name"] == "video_imp":
+                    dict["num_video_played"] = event["cnt"]
 
-    return data
-
-
-
-b'{"app_name":Game_iOS_Idle Capitalist,"date_range":[2019-09-11,2019-09-19],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":[com.idlecapatalist.aovalw],"platform":[ios],"media_source":["Facebook Ads"],"country_code":["US"]}}'
+    return dict
