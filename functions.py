@@ -6,7 +6,8 @@ from datetime import timedelta
 import json
 from collections import namedtuple
 from result import *
-
+from urllib.parse import unquote
+from hyper import HTTPConnection
 
 url_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=%(stats_type)s'
 url_event_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&stats=%(stats_type)s&event_group_id=%(event_group_id)s'
@@ -340,14 +341,13 @@ def calculate_iap_nums():
     return j
 
 
-
 def calculate_iap_money_sum():
     '''付费金额'''
     i = 0
     j = 0
     data = query_iap_money()
     for i in range(len(data)):
-        j += data[i]['num']* product_id_iOS_unit_price[data[i]['label']]
+        j += data[i]['num'] * product_id_iOS_unit_price[data[i]['label']]
     return j
 
 
@@ -366,3 +366,43 @@ def calculate_iap_value_per_payment():
     pass
 
 
+def query_xi_back_gun():
+    """从xi平台查询, 回本手枪图"""
+    url = "https://xi.harrybuy.com/es/monesimplify/pistolevent"
+    connect_sid = unquote('s%3Ae_O5RJ8-rXFpEW91Ua7eKVSABBJEanws.w3NAuc1%2BI6Ni%2FDg%2BzuQ%2BZJ3zWwqdAytz0zYkzVkgRyM')
+    cookies = {'Xi-Token': 'fangfang_ren',
+               'connect.sid': connect_sid}
+    qdata = b'{"app_name":"Game_iOS_Idle Capitalist","date_range":["2019-09-15","2019-09-19"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":["com.idlecapatalist.aovalw"],"platform":["ios"],"media_source":["Facebook Ads"],"country_code":["US"]}}'
+
+    headers = {
+        "authority": "xi.harrybuy.com",
+        "method": "POST",
+        "Host": "xi.harrybuy.com",
+        "Connection": "keep-alive",
+        "accept": "application/json, text/plain, */*",
+        "Origin": "https://xi.harrybuy.com",
+        "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5",
+        "Content-Type": "application/json",
+        "Accept": "*/*",
+        "Referer": "https://xi.harrybuy.com/v3/",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
+        "Content-Type": "application/json;charset=UTF-8",
+        "Cookie": f"Xi-Token=fangfang_ren; connect.sid= {connect_sid}",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "x-token": "fangfang_ren",
+        "Referrer Policy": "no-referrer-when-downgrade"
+    }
+
+    conn = HTTPConnection('xi.harrybuy.com')
+    conn.request('POST', url, headers=headers, body=qdata)
+    resp = conn.get_response()
+    response = resp.read().decode("utf-8")
+    data = json.loads(response)
+
+    return data
+
+
+data = query_xi_back_gun()
+print(data)
