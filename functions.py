@@ -236,8 +236,7 @@ def query_iap_money():
     event_group_id = event_group_id_buy_iap_total
     event_group_name = 'buy_iap_total'
     group = []
-    # todo: 临时取2
-    end_date = (today - timedelta(days=2)).strftime('%Y-%m-%d')
+    end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
     start_date = end_date
     url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&event_id=%(event_id)s&event_group_id=%(event_group_id)s&event_group_name=%(event_group_name)s&stats=%(stats_type)s&property_type=string'
 
@@ -287,12 +286,23 @@ product_id_andriod_unit_price = {
 
 def calculate_iap_nums():
     '''IAP购买次数'''
-    pass
+    i = 0
+    j = 0
+    data = query_iap_money()
+    for i in range(len(data)):
+        j += data[i]['num']
+    return j
+
 
 
 def calculate_iap_money_sum():
     '''付费金额'''
-    pass
+    i = 0
+    j = 0
+    data = query_iap_money()
+    for i in range(len(data)):
+        j += data[i]['num']* product_id_iOS_unit_price[data[i]['label']]
+    return j
 
 
 def calculate_iap_num_per_user():
@@ -310,5 +320,3 @@ def calculate_iap_value_per_payment():
     pass
 
 
-data = query_iap_money()
-print(data)
