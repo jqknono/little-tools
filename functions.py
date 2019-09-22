@@ -351,20 +351,6 @@ def calculate_iap_money_sum():
     return j
 
 
-def calculate_iap_num_per_user():
-    '''人均付费次数(日活)'''
-    pass
-
-
-def calculate_iap_value_per_payment():
-    '''单次付费价值'''
-    pass
-
-
-def calculate_iap_value_per_payment():
-    '''人均付费金额(日活)'''
-    pass
-
 
 def query_xi_back_gun():
     """从xi平台查询, 回本手枪图"""
@@ -372,8 +358,17 @@ def query_xi_back_gun():
     connect_sid = unquote('s%3Ae_O5RJ8-rXFpEW91Ua7eKVSABBJEanws.w3NAuc1%2BI6Ni%2FDg%2BzuQ%2BZJ3zWwqdAytz0zYkzVkgRyM')
     cookies = {'Xi-Token': 'fangfang_ren',
                'connect.sid': connect_sid}
-    qdata = b'{"app_name":"Game_iOS_Idle Capitalist","date_range":["2019-09-15","2019-09-19"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":["com.idlecapatalist.aovalw"],"platform":["ios"],"media_source":["Facebook Ads"],"country_code":["US"]}}'
 
+    end_date = (today - timedelta(days=3)).strftime('%Y-%m-%d')
+    start_date = (today - timedelta(days=11)).strftime('%Y-%m-%d')
+    app_name = 'Game_iOS_Idle Capitalist'
+    bundle_id = 'com.idlecapatalist.aovalw'
+    platform = 'ios'
+    qdata_temlate ='{"app_name":"%(app_name)s","date_range":["%(start_date)s","%(end_date)s"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":["%(bundle_id)s"],"platform":["%(platform)s"],"media_source":["Facebook Ads"],"country_code":["US"]}}'
+
+    # qdata = b'{"app_name":"Game_iOS_Idle Capitalist","date_range":["2019-09-15","2019-09-19"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":["com.idlecapatalist.aovalw"],"platform":["ios"],"media_source":["Facebook Ads"],"country_code":["US"]}}'
+    qdata_str = qdata_temlate % {"app_name":app_name,"start_date":start_date,'end_date':end_date,'bundle_id':bundle_id,'platform':platform}
+    qdata = qdata_str.encode("utf-8")
     headers = {
         "authority": "xi.harrybuy.com",
         "method": "POST",
@@ -404,5 +399,5 @@ def query_xi_back_gun():
     return data
 
 
-data = query_xi_back_gun()
-print(data)
+
+b'{"app_name":Game_iOS_Idle Capitalist,"date_range":[2019-09-11,2019-09-19],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":[com.idlecapatalist.aovalw],"platform":[ios],"media_source":["Facebook Ads"],"country_code":["US"]}}'

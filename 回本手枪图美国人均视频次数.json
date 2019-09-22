@@ -1,0 +1,2448 @@
+[
+    [
+        {
+            "lifetime": 24,
+            "users": 973,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 5917,
+                    "revenue": 304.38019090052694
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 5,
+                    "revenue": 0.14403000380843878
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 5,
+                    "revenue": 19.584584295749664
+                }
+            ],
+            "date": "2019-09-13"
+        },
+        {
+            "lifetime": 48,
+            "users": 973,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1893,
+                    "revenue": 83.90035980101675
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 2,
+                    "revenue": 0.04238000139594078
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 3,
+                    "revenue": 4.883883953094482
+                }
+            ],
+            "date": "2019-09-13"
+        },
+        {
+            "lifetime": 72,
+            "users": 973,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1670,
+                    "revenue": 51.0799401323311
+                }
+            ],
+            "date": "2019-09-13"
+        },
+        {
+            "lifetime": 96,
+            "users": 973,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1214,
+                    "revenue": 44.134250059723854
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 1,
+                    "revenue": 3.4964964389801025
+                }
+            ],
+            "date": "2019-09-13"
+        },
+        {
+            "lifetime": 120,
+            "users": 973,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 733,
+                    "revenue": 27.935460005886853
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 1,
+                    "revenue": 0.012919999659061432
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 1,
+                    "revenue": 4.359175205230713
+                }
+            ],
+            "date": "2019-09-13"
+        },
+        {
+            "lifetime": 144,
+            "users": 973,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 510,
+                    "revenue": 18.689580018166453
+                }
+            ],
+            "date": "2019-09-13"
+        },
+        {
+            "lifetime": 168,
+            "users": 973,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 642,
+                    "revenue": 16.545930024934933
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 1,
+                    "revenue": 0.011029999703168869
+                }
+            ],
+            "date": "2019-09-13"
+        },
+        {
+            "lifetime": 24,
+            "users": 1189,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 6838,
+                    "revenue": 325.62622149288654
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 3,
+                    "revenue": 0.02610000129789114
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 7,
+                    "revenue": 44.095094084739685
+                }
+            ],
+            "date": "2019-09-15"
+        },
+        {
+            "lifetime": 48,
+            "users": 1189,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 2219,
+                    "revenue": 81.88399030454457
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 6,
+                    "revenue": 25.18318283557892
+                }
+            ],
+            "date": "2019-09-15"
+        },
+        {
+            "lifetime": 72,
+            "users": 1189,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1436,
+                    "revenue": 64.07297004200518
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 3,
+                    "revenue": 0.0838799998164177
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 3,
+                    "revenue": 4.883884012699127
+                }
+            ],
+            "date": "2019-09-15"
+        },
+        {
+            "lifetime": 96,
+            "users": 1189,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 981,
+                    "revenue": 48.0806100955233
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 3,
+                    "revenue": 0.024389999452978373
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 1,
+                    "revenue": 5.598598480224609
+                }
+            ],
+            "date": "2019-09-15"
+        },
+        {
+            "lifetime": 120,
+            "users": 1189,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 939,
+                    "revenue": 43.66846020240337
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 2,
+                    "revenue": 0.017329999711364508
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 2,
+                    "revenue": 1.3873873949050903
+                }
+            ],
+            "date": "2019-09-15"
+        },
+        {
+            "lifetime": 24,
+            "users": 4344,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 31503,
+                    "revenue": 1526.4127559761982
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 9,
+                    "revenue": 0.27442000340670347
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 72,
+                    "revenue": 343.0291466116905
+                }
+            ],
+            "date": "2019-09-17"
+        },
+        {
+            "lifetime": 48,
+            "users": 4344,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 12217,
+                    "revenue": 495.2434601611458
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 7,
+                    "revenue": 0.06820999830961227
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 43,
+                    "revenue": 144.04304230213165
+                }
+            ],
+            "date": "2019-09-17"
+        },
+        {
+            "lifetime": 72,
+            "users": 4344,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 6838,
+                    "revenue": 305.7170611822512
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 7,
+                    "revenue": 0.12147999880835414
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 12,
+                    "revenue": 31.447447538375854
+                }
+            ],
+            "date": "2019-09-17"
+        },
+        {
+            "lifetime": 24,
+            "users": 1534,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 9735,
+                    "revenue": 463.83664920693263
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 13,
+                    "revenue": 0.1409299997612834
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 16,
+                    "revenue": 61.54954820871353
+                }
+            ],
+            "date": "2019-09-11"
+        },
+        {
+            "lifetime": 48,
+            "users": 1534,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 3501,
+                    "revenue": 127.93190033920109
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 1,
+                    "revenue": 0.008410000242292881
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 5,
+                    "revenue": 12.577577650547028
+                }
+            ],
+            "date": "2019-09-11"
+        },
+        {
+            "lifetime": 72,
+            "users": 1534,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 2390,
+                    "revenue": 87.07817037031054
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 12,
+                    "revenue": 0.3798200059682131
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 6,
+                    "revenue": 10.468468427658081
+                }
+            ],
+            "date": "2019-09-11"
+        },
+        {
+            "lifetime": 96,
+            "users": 1534,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1325,
+                    "revenue": 53.59452008875087
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 2,
+                    "revenue": 0.04100000113248825
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 5,
+                    "revenue": 20.28528505563736
+                }
+            ],
+            "date": "2019-09-11"
+        },
+        {
+            "lifetime": 120,
+            "users": 1534,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1104,
+                    "revenue": 40.64966026111506
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 5,
+                    "revenue": 0.05323000252246857
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 4,
+                    "revenue": 8.380380392074585
+                }
+            ],
+            "date": "2019-09-11"
+        },
+        {
+            "lifetime": 144,
+            "users": 1534,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1018,
+                    "revenue": 41.857330105733126
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 1,
+                    "revenue": 0.008860000409185886
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 3,
+                    "revenue": 7.68668657541275
+                }
+            ],
+            "date": "2019-09-11"
+        },
+        {
+            "lifetime": 168,
+            "users": 1534,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 682,
+                    "revenue": 21.262979946332052
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 2,
+                    "revenue": 0.025839999318122864
+                }
+            ],
+            "date": "2019-09-11"
+        },
+        {
+            "lifetime": 24,
+            "users": 6199,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 37526,
+                    "revenue": 2052.15620545845
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 23,
+                    "revenue": 0.5942099899984896
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 98,
+                    "revenue": 517.5831655263901
+                }
+            ],
+            "date": "2019-09-19"
+        },
+        {
+            "lifetime": 24,
+            "users": 1250,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 7951,
+                    "revenue": 356.0931903638557
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 4,
+                    "revenue": 0.08600000105798244
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 5,
+                    "revenue": 46.21121007204056
+                }
+            ],
+            "date": "2019-09-12"
+        },
+        {
+            "lifetime": 48,
+            "users": 1250,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 2305,
+                    "revenue": 92.61618011747487
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 5,
+                    "revenue": 0.11226999945938587
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 4,
+                    "revenue": 10.482482492923737
+                }
+            ],
+            "date": "2019-09-12"
+        },
+        {
+            "lifetime": 72,
+            "users": 1250,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1453,
+                    "revenue": 58.191569996997714
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 2,
+                    "revenue": 0.014620000496506691
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 1,
+                    "revenue": 0.6936936974525452
+                }
+            ],
+            "date": "2019-09-12"
+        },
+        {
+            "lifetime": 96,
+            "users": 1250,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1338,
+                    "revenue": 38.365850078873336
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 3,
+                    "revenue": 9.788788557052612
+                }
+            ],
+            "date": "2019-09-12"
+        },
+        {
+            "lifetime": 120,
+            "users": 1250,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1376,
+                    "revenue": 35.920180110493675
+                }
+            ],
+            "date": "2019-09-12"
+        },
+        {
+            "lifetime": 144,
+            "users": 1250,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 768,
+                    "revenue": 26.165800087852404
+                }
+            ],
+            "date": "2019-09-12"
+        },
+        {
+            "lifetime": 168,
+            "users": 1250,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 797,
+                    "revenue": 29.409669942688197
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 2,
+                    "revenue": 0.011909999884665012
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 1,
+                    "revenue": 2.095095157623291
+                }
+            ],
+            "date": "2019-09-12"
+        },
+        {
+            "lifetime": 24,
+            "users": 863,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 6188,
+                    "revenue": 302.39064980647527
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 4,
+                    "revenue": 0.11815000139176846
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 12,
+                    "revenue": 44.06005948781967
+                }
+            ],
+            "date": "2019-09-14"
+        },
+        {
+            "lifetime": 48,
+            "users": 863,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1784,
+                    "revenue": 74.47154033440165
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 4,
+                    "revenue": 0.10036000050604343
+                }
+            ],
+            "date": "2019-09-14"
+        },
+        {
+            "lifetime": 72,
+            "users": 863,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1292,
+                    "revenue": 43.10116982716136
+                }
+            ],
+            "date": "2019-09-14"
+        },
+        {
+            "lifetime": 96,
+            "users": 863,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1016,
+                    "revenue": 31.62737004389055
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 3,
+                    "revenue": 0.08917000144720078
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 1,
+                    "revenue": 0.6936936974525452
+                }
+            ],
+            "date": "2019-09-14"
+        },
+        {
+            "lifetime": 120,
+            "users": 863,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 693,
+                    "revenue": 28.222609985619783
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 1,
+                    "revenue": 0.03999999910593033
+                }
+            ],
+            "date": "2019-09-14"
+        },
+        {
+            "lifetime": 144,
+            "users": 863,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 475,
+                    "revenue": 23.823470065370202
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 1,
+                    "revenue": 0.6936936974525452
+                }
+            ],
+            "date": "2019-09-14"
+        },
+        {
+            "lifetime": 24,
+            "users": 2914,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 23252,
+                    "revenue": 1106.7790116132237
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 6,
+                    "revenue": 0.30200000386685133
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 73,
+                    "revenue": 378.5675639510155
+                }
+            ],
+            "date": "2019-09-16"
+        },
+        {
+            "lifetime": 48,
+            "users": 2914,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 8237,
+                    "revenue": 346.0303291459568
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 7,
+                    "revenue": 0.04763999907299876
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 30,
+                    "revenue": 109.09909814596176
+                }
+            ],
+            "date": "2019-09-16"
+        },
+        {
+            "lifetime": 72,
+            "users": 2914,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 4939,
+                    "revenue": 215.9248205772601
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 19,
+                    "revenue": 105.67267173528671
+                }
+            ],
+            "date": "2019-09-16"
+        },
+        {
+            "lifetime": 96,
+            "users": 2914,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 3815,
+                    "revenue": 162.60109047405422
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 5,
+                    "revenue": 0.15130999870598316
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 20,
+                    "revenue": 115.47547310590744
+                }
+            ],
+            "date": "2019-09-16"
+        },
+        {
+            "lifetime": 24,
+            "users": 5147,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 30833,
+                    "revenue": 1660.4962814720348
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 16,
+                    "revenue": 0.17828999552875757
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 52,
+                    "revenue": 228.7555273771286
+                }
+            ],
+            "date": "2019-09-18"
+        },
+        {
+            "lifetime": 48,
+            "users": 5147,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 11588,
+                    "revenue": 579.2962117102579
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 14,
+                    "revenue": 0.2305699959397316
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 30,
+                    "revenue": 97.18718653917313
+                }
+            ],
+            "date": "2019-09-18"
+        }
+    ]
+]
+    PS E:\fanfan偷懒工程> & C:/Users/jqknono/AppData/Local/Programs/Python/Python37-32/python.exe e:/fanfan偷懒工程/functions.py
+    [
+    [
+        {
+            "lifetime": 24,
+            "users": 973,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 5917,
+                    "revenue": 304.38019090052694
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 5,
+                    "revenue": 0.14403000380843878
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 5,
+                    "revenue": 19.584584295749664
+                }
+            ],
+            "date": "2019-09-13"
+        },
+        {
+            "lifetime": 48,
+            "users": 973,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1893,
+                    "revenue": 83.90035980101675
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 2,
+                    "revenue": 0.04238000139594078
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 3,
+                    "revenue": 4.883883953094482
+                }
+            ],
+            "date": "2019-09-13"
+        },
+        {
+            "lifetime": 72,
+            "users": 973,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1670,
+                    "revenue": 51.0799401323311
+                }
+            ],
+            "date": "2019-09-13"
+        },
+        {
+            "lifetime": 96,
+            "users": 973,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1214,
+                    "revenue": 44.134250059723854
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 1,
+                    "revenue": 3.4964964389801025
+                }
+            ],
+            "date": "2019-09-13"
+        },
+        {
+            "lifetime": 120,
+            "users": 973,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 733,
+                    "revenue": 27.935460005886853
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 1,
+                    "revenue": 0.012919999659061432
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 1,
+                    "revenue": 4.359175205230713
+                }
+            ],
+            "date": "2019-09-13"
+        },
+        {
+            "lifetime": 144,
+            "users": 973,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 510,
+                    "revenue": 18.689580018166453
+                }
+            ],
+            "date": "2019-09-13"
+        },
+        {
+            "lifetime": 168,
+            "users": 973,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 642,
+                    "revenue": 16.545930024934933
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 1,
+                    "revenue": 0.011029999703168869
+                }
+            ],
+            "date": "2019-09-13"
+        },
+        {
+            "lifetime": 24,
+            "users": 1534,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 9735,
+                    "revenue": 463.83664920693263
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 13,
+                    "revenue": 0.1409299997612834
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 16,
+                    "revenue": 61.54954820871353
+                }
+            ],
+            "date": "2019-09-11"
+        },
+        {
+            "lifetime": 48,
+            "users": 1534,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 3501,
+                    "revenue": 127.93190033920109
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 1,
+                    "revenue": 0.008410000242292881
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 5,
+                    "revenue": 12.577577650547028
+                }
+            ],
+            "date": "2019-09-11"
+        },
+        {
+            "lifetime": 72,
+            "users": 1534,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 2390,
+                    "revenue": 87.07817037031054
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 12,
+                    "revenue": 0.3798200059682131
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 6,
+                    "revenue": 10.468468427658081
+                }
+            ],
+            "date": "2019-09-11"
+        },
+        {
+            "lifetime": 96,
+            "users": 1534,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1325,
+                    "revenue": 53.59452008875087
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 2,
+                    "revenue": 0.04100000113248825
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 5,
+                    "revenue": 20.28528505563736
+                }
+            ],
+            "date": "2019-09-11"
+        },
+        {
+            "lifetime": 120,
+            "users": 1534,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1104,
+                    "revenue": 40.64966026111506
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 5,
+                    "revenue": 0.05323000252246857
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 4,
+                    "revenue": 8.380380392074585
+                }
+            ],
+            "date": "2019-09-11"
+        },
+        {
+            "lifetime": 144,
+            "users": 1534,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1018,
+                    "revenue": 41.857330105733126
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 1,
+                    "revenue": 0.008860000409185886
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 3,
+                    "revenue": 7.68668657541275
+                }
+            ],
+            "date": "2019-09-11"
+        },
+        {
+            "lifetime": 168,
+            "users": 1534,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 682,
+                    "revenue": 21.262979946332052
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 2,
+                    "revenue": 0.025839999318122864
+                }
+            ],
+            "date": "2019-09-11"
+        },
+        {
+            "lifetime": 24,
+            "users": 6199,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 37526,
+                    "revenue": 2052.15620545845
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 23,
+                    "revenue": 0.5942099899984896
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 98,
+                    "revenue": 517.5831655263901
+                }
+            ],
+            "date": "2019-09-19"
+        },
+        {
+            "lifetime": 24,
+            "users": 4344,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 31503,
+                    "revenue": 1526.4127559761982
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 9,
+                    "revenue": 0.27442000340670347
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 72,
+                    "revenue": 343.0291466116905
+                }
+            ],
+            "date": "2019-09-17"
+        },
+        {
+            "lifetime": 48,
+            "users": 4344,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 12217,
+                    "revenue": 495.2434601611458
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 7,
+                    "revenue": 0.06820999830961227
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 43,
+                    "revenue": 144.04304230213165
+                }
+            ],
+            "date": "2019-09-17"
+        },
+        {
+            "lifetime": 72,
+            "users": 4344,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 6838,
+                    "revenue": 305.7170611822512
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 7,
+                    "revenue": 0.12147999880835414
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 12,
+                    "revenue": 31.447447538375854
+                }
+            ],
+            "date": "2019-09-17"
+        },
+        {
+            "lifetime": 24,
+            "users": 1189,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 6838,
+                    "revenue": 325.62622149288654
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 3,
+                    "revenue": 0.02610000129789114
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 7,
+                    "revenue": 44.095094084739685
+                }
+            ],
+            "date": "2019-09-15"
+        },
+        {
+            "lifetime": 48,
+            "users": 1189,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 2219,
+                    "revenue": 81.88399030454457
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 6,
+                    "revenue": 25.18318283557892
+                }
+            ],
+            "date": "2019-09-15"
+        },
+        {
+            "lifetime": 72,
+            "users": 1189,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1436,
+                    "revenue": 64.07297004200518
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 3,
+                    "revenue": 0.0838799998164177
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 3,
+                    "revenue": 4.883884012699127
+                }
+            ],
+            "date": "2019-09-15"
+        },
+        {
+            "lifetime": 96,
+            "users": 1189,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 981,
+                    "revenue": 48.0806100955233
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 3,
+                    "revenue": 0.024389999452978373
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 1,
+                    "revenue": 5.598598480224609
+                }
+            ],
+            "date": "2019-09-15"
+        },
+        {
+            "lifetime": 120,
+            "users": 1189,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 939,
+                    "revenue": 43.66846020240337
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 2,
+                    "revenue": 0.017329999711364508
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 2,
+                    "revenue": 1.3873873949050903
+                }
+            ],
+            "date": "2019-09-15"
+        },
+        {
+            "lifetime": 24,
+            "users": 2914,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 23252,
+                    "revenue": 1106.7790116132237
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 6,
+                    "revenue": 0.30200000386685133
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 73,
+                    "revenue": 378.5675639510155
+                }
+            ],
+            "date": "2019-09-16"
+        },
+        {
+            "lifetime": 48,
+            "users": 2914,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 8237,
+                    "revenue": 346.0303291459568
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 7,
+                    "revenue": 0.04763999907299876
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 30,
+                    "revenue": 109.09909814596176
+                }
+            ],
+            "date": "2019-09-16"
+        },
+        {
+            "lifetime": 72,
+            "users": 2914,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 4939,
+                    "revenue": 215.9248205772601
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 19,
+                    "revenue": 105.67267173528671
+                }
+            ],
+            "date": "2019-09-16"
+        },
+        {
+            "lifetime": 96,
+            "users": 2914,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 3815,
+                    "revenue": 162.60109047405422
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 5,
+                    "revenue": 0.15130999870598316
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 20,
+                    "revenue": 115.47547310590744
+                }
+            ],
+            "date": "2019-09-16"
+        },
+        {
+            "lifetime": 24,
+            "users": 1250,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 7951,
+                    "revenue": 356.0931903638557
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 4,
+                    "revenue": 0.08600000105798244
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 5,
+                    "revenue": 46.21121007204056
+                }
+            ],
+            "date": "2019-09-12"
+        },
+        {
+            "lifetime": 48,
+            "users": 1250,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 2305,
+                    "revenue": 92.61618011747487
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 5,
+                    "revenue": 0.11226999945938587
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 4,
+                    "revenue": 10.482482492923737
+                }
+            ],
+            "date": "2019-09-12"
+        },
+        {
+            "lifetime": 72,
+            "users": 1250,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1453,
+                    "revenue": 58.191569996997714
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 2,
+                    "revenue": 0.014620000496506691
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 1,
+                    "revenue": 0.6936936974525452
+                }
+            ],
+            "date": "2019-09-12"
+        },
+        {
+            "lifetime": 96,
+            "users": 1250,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1338,
+                    "revenue": 38.365850078873336
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 3,
+                    "revenue": 9.788788557052612
+                }
+            ],
+            "date": "2019-09-12"
+        },
+        {
+            "lifetime": 120,
+            "users": 1250,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1376,
+                    "revenue": 35.920180110493675
+                }
+            ],
+            "date": "2019-09-12"
+        },
+        {
+            "lifetime": 144,
+            "users": 1250,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 768,
+                    "revenue": 26.165800087852404
+                }
+            ],
+            "date": "2019-09-12"
+        },
+        {
+            "lifetime": 168,
+            "users": 1250,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 797,
+                    "revenue": 29.409669942688197
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 2,
+                    "revenue": 0.011909999884665012
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 1,
+                    "revenue": 2.095095157623291
+                }
+            ],
+            "date": "2019-09-12"
+        },
+        {
+            "lifetime": 24,
+            "users": 5147,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 30833,
+                    "revenue": 1660.4962814720348
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 16,
+                    "revenue": 0.17828999552875757
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 52,
+                    "revenue": 228.7555273771286
+                }
+            ],
+            "date": "2019-09-18"
+        },
+        {
+            "lifetime": 48,
+            "users": 5147,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 11588,
+                    "revenue": 579.2962117102579
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 14,
+                    "revenue": 0.2305699959397316
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 30,
+                    "revenue": 97.18718653917313
+                }
+            ],
+            "date": "2019-09-18"
+        },
+        {
+            "lifetime": 24,
+            "users": 863,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 6188,
+                    "revenue": 302.39064980647527
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 4,
+                    "revenue": 0.11815000139176846
+                },
+                {
+                    "event_name": "iap",
+                    "cnt": 12,
+                    "revenue": 44.06005948781967
+                }
+            ],
+            "date": "2019-09-14"
+        },
+        {
+            "lifetime": 48,
+            "users": 863,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1784,
+                    "revenue": 74.47154033440165
+                },
+                {
+                    "event_name": "interstitial_imp",
+                    "cnt": 4,
+                    "revenue": 0.10036000050604343
+                }
+            ],
+            "date": "2019-09-14"
+        },
+        {
+            "lifetime": 72,
+            "users": 863,
+            "event": [
+                {
+                    "event_name": "video_imp",
+                    "cnt": 1292,
+                    "revenue": 43.10116982716136
+                }
+            ],
+            "date": "2019-09-14"
+        },
+        {
+            "lifetime": 96,
+            "users": 863,
+            "event": [
+                {"event_na
+    PS E:\fanfan偷懒工程> & C:/Users/jqknono/AppData/Local/Programs/Python/Python37-32/python.exe e:/fanfan偷懒工程/functions.py
+    [
+                        [
+                            {
+                                "lifetime": 24,
+                                "users": 1189,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 6838,
+                                        "revenue": 325.62622149288654
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 3,
+                                        "revenue": 0.02610000129789114
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 7,
+                                        "revenue": 44.095094084739685
+                                    }
+                                ],
+                                "date": "2019-09-15"
+                            },
+                            {
+                                "lifetime": 48,
+                                "users": 1189,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 2219,
+                                        "revenue": 81.88399030454457
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 6,
+                                        "revenue": 25.18318283557892
+                                    }
+                                ],
+                                "date": "2019-09-15"
+                            },
+                            {
+                                "lifetime": 72,
+                                "users": 1189,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 1436,
+                                        "revenue": 64.07297004200518
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 3,
+                                        "revenue": 0.0838799998164177
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 3,
+                                        "revenue": 4.883884012699127
+                                    }
+                                ],
+                                "date": "2019-09-15"
+                            },
+                            {
+                                "lifetime": 96,
+                                "users": 1189,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 981,
+                                        "revenue": 48.0806100955233
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 3,
+                                        "revenue": 0.024389999452978373
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 1,
+                                        "revenue": 5.598598480224609
+                                    }
+                                ],
+                                "date": "2019-09-15"
+                            },
+                            {
+                                "lifetime": 120,
+                                "users": 1189,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 939,
+                                        "revenue": 43.66846020240337
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 2,
+                                        "revenue": 0.017329999711364508
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 2,
+                                        "revenue": 1.3873873949050903
+                                    }
+                                ],
+                                "date": "2019-09-15"
+                            },
+                            {
+                                "lifetime": 24,
+                                "users": 1250,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 7951,
+                                        "revenue": 356.0931903638557
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 4,
+                                        "revenue": 0.08600000105798244
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 5,
+                                        "revenue": 46.21121007204056
+                                    }
+                                ],
+                                "date": "2019-09-12"
+                            },
+                            {
+                                "lifetime": 48,
+                                "users": 1250,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 2305,
+                                        "revenue": 92.61618011747487
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 5,
+                                        "revenue": 0.11226999945938587
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 4,
+                                        "revenue": 10.482482492923737
+                                    }
+                                ],
+                                "date": "2019-09-12"
+                            },
+                            {
+                                "lifetime": 72,
+                                "users": 1250,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 1453,
+                                        "revenue": 58.191569996997714
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 2,
+                                        "revenue": 0.014620000496506691
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 1,
+                                        "revenue": 0.6936936974525452
+                                    }
+                                ],
+                                "date": "2019-09-12"
+                            },
+                            {
+                                "lifetime": 96,
+                                "users": 1250,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 1338,
+                                        "revenue": 38.365850078873336
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 3,
+                                        "revenue": 9.788788557052612
+                                    }
+                                ],
+                                "date": "2019-09-12"
+                            },
+                            {
+                                "lifetime": 120,
+                                "users": 1250,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 1376,
+                                        "revenue": 35.920180110493675
+                                    }
+                                ],
+                                "date": "2019-09-12"
+                            },
+                            {
+                                "lifetime": 144,
+                                "users": 1250,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 768,
+                                        "revenue": 26.165800087852404
+                                    }
+                                ],
+                                "date": "2019-09-12"
+                            },
+                            {
+                                "lifetime": 168,
+                                "users": 1250,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 797,
+                                        "revenue": 29.409669942688197
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 2,
+                                        "revenue": 0.011909999884665012
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 1,
+                                        "revenue": 2.095095157623291
+                                    }
+                                ],
+                                "date": "2019-09-12"
+                            },
+                            {
+                                "lifetime": 24,
+                                "users": 863,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 6188,
+                                        "revenue": 302.39064980647527
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 4,
+                                        "revenue": 0.11815000139176846
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 12,
+                                        "revenue": 44.06005948781967
+                                    }
+                                ],
+                                "date": "2019-09-14"
+                            },
+                            {
+                                "lifetime": 48,
+                                "users": 863,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 1784,
+                                        "revenue": 74.47154033440165
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 4,
+                                        "revenue": 0.10036000050604343
+                                    }
+                                ],
+                                "date": "2019-09-14"
+                            },
+                            {
+                                "lifetime": 72,
+                                "users": 863,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 1292,
+                                        "revenue": 43.10116982716136
+                                    }
+                                ],
+                                "date": "2019-09-14"
+                            },
+                            {
+                                "lifetime": 96,
+                                "users": 863,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 1016,
+                                        "revenue": 31.62737004389055
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 3,
+                                        "revenue": 0.08917000144720078
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 1,
+                                        "revenue": 0.6936936974525452
+                                    }
+                                ],
+                                "date": "2019-09-14"
+                            },
+                            {
+                                "lifetime": 120,
+                                "users": 863,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 693,
+                                        "revenue": 28.222609985619783
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 1,
+                                        "revenue": 0.03999999910593033
+                                    }
+                                ],
+                                "date": "2019-09-14"
+                            },
+                            {
+                                "lifetime": 144,
+                                "users": 863,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 475,
+                                        "revenue": 23.823470065370202
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 1,
+                                        "revenue": 0.6936936974525452
+                                    }
+                                ],
+                                "date": "2019-09-14"
+                            },
+                            {
+                                "lifetime": 24,
+                                "users": 5147,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 30833,
+                                        "revenue": 1660.4962814720348
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 16,
+                                        "revenue": 0.17828999552875757
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 52,
+                                        "revenue": 228.7555273771286
+                                    }
+                                ],
+                                "date": "2019-09-18"
+                            },
+                            {
+                                "lifetime": 48,
+                                "users": 5147,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 11588,
+                                        "revenue": 579.2962117102579
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 14,
+                                        "revenue": 0.2305699959397316
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 30,
+                                        "revenue": 97.18718653917313
+                                    }
+                                ],
+                                "date": "2019-09-18"
+                            },
+                            {
+                                "lifetime": 24,
+                                "users": 1534,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 9735,
+                                        "revenue": 463.83664920693263
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 13,
+                                        "revenue": 0.1409299997612834
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 16,
+                                        "revenue": 61.54954820871353
+                                    }
+                                ],
+                                "date": "2019-09-11"
+                            },
+                            {
+                                "lifetime": 48,
+                                "users": 1534,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 3501,
+                                        "revenue": 127.93190033920109
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 1,
+                                        "revenue": 0.008410000242292881
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 5,
+                                        "revenue": 12.577577650547028
+                                    }
+                                ],
+                                "date": "2019-09-11"
+                            },
+                            {
+                                "lifetime": 72,
+                                "users": 1534,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 2390,
+                                        "revenue": 87.07817037031054
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 12,
+                                        "revenue": 0.3798200059682131
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 6,
+                                        "revenue": 10.468468427658081
+                                    }
+                                ],
+                                "date": "2019-09-11"
+                            },
+                            {
+                                "lifetime": 96,
+                                "users": 1534,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 1325,
+                                        "revenue": 53.59452008875087
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 2,
+                                        "revenue": 0.04100000113248825
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 5,
+                                        "revenue": 20.28528505563736
+                                    }
+                                ],
+                                "date": "2019-09-11"
+                            },
+                            {
+                                "lifetime": 120,
+                                "users": 1534,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 1104,
+                                        "revenue": 40.64966026111506
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 5,
+                                        "revenue": 0.05323000252246857
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 4,
+                                        "revenue": 8.380380392074585
+                                    }
+                                ],
+                                "date": "2019-09-11"
+                            },
+                            {
+                                "lifetime": 144,
+                                "users": 1534,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 1018,
+                                        "revenue": 41.857330105733126
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 1,
+                                        "revenue": 0.008860000409185886
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 3,
+                                        "revenue": 7.68668657541275
+                                    }
+                                ],
+                                "date": "2019-09-11"
+                            },
+                            {
+                                "lifetime": 168,
+                                "users": 1534,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 682,
+                                        "revenue": 21.262979946332052
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 2,
+                                        "revenue": 0.025839999318122864
+                                    }
+                                ],
+                                "date": "2019-09-11"
+                            },
+                            {
+                                "lifetime": 24,
+                                "users": 2914,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 23252,
+                                        "revenue": 1106.7790116132237
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 6,
+                                        "revenue": 0.30200000386685133
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 73,
+                                        "revenue": 378.5675639510155
+                                    }
+                                ],
+                                "date": "2019-09-16"
+                            },
+                            {
+                                "lifetime": 48,
+                                "users": 2914,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 8237,
+                                        "revenue": 346.0303291459568
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 7,
+                                        "revenue": 0.04763999907299876
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 30,
+                                        "revenue": 109.09909814596176
+                                    }
+                                ],
+                                "date": "2019-09-16"
+                            },
+                            {
+                                "lifetime": 72,
+                                "users": 2914,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 4939,
+                                        "revenue": 215.9248205772601
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 19,
+                                        "revenue": 105.67267173528671
+                                    }
+                                ],
+                                "date": "2019-09-16"
+                            },
+                            {
+                                "lifetime": 96,
+                                "users": 2914,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 3815,
+                                        "revenue": 162.60109047405422
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 5,
+                                        "revenue": 0.15130999870598316
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 20,
+                                        "revenue": 115.47547310590744
+                                    }
+                                ],
+                                "date": "2019-09-16"
+                            },
+                            {
+                                "lifetime": 24,
+                                "users": 973,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 5917,
+                                        "revenue": 304.38019090052694
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 5,
+                                        "revenue": 0.14403000380843878
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 5,
+                                        "revenue": 19.584584295749664
+                                    }
+                                ],
+                                "date": "2019-09-13"
+                            },
+                            {
+                                "lifetime": 48,
+                                "users": 973,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 1893,
+                                        "revenue": 83.90035980101675
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 2,
+                                        "revenue": 0.04238000139594078
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 3,
+                                        "revenue": 4.883883953094482
+                                    }
+                                ],
+                                "date": "2019-09-13"
+                            },
+                            {
+                                "lifetime": 72,
+                                "users": 973,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 1670,
+                                        "revenue": 51.0799401323311
+                                    }
+                                ],
+                                "date": "2019-09-13"
+                            },
+                            {
+                                "lifetime": 96,
+                                "users": 973,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 1214,
+                                        "revenue": 44.134250059723854
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 1,
+                                        "revenue": 3.4964964389801025
+                                    }
+                                ],
+                                "date": "2019-09-13"
+                            },
+                            {
+                                "lifetime": 120,
+                                "users": 973,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 733,
+                                        "revenue": 27.935460005886853
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 1,
+                                        "revenue": 0.012919999659061432
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 1,
+                                        "revenue": 4.359175205230713
+                                    }
+                                ],
+                                "date": "2019-09-13"
+                            },
+                            {
+                                "lifetime": 144,
+                                "users": 973,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 510,
+                                        "revenue": 18.689580018166453
+                                    }
+                                ],
+                                "date": "2019-09-13"
+                            },
+                            {
+                                "lifetime": 168,
+                                "users": 973,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 642,
+                                        "revenue": 16.545930024934933
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 1,
+                                        "revenue": 0.011029999703168869
+                                    }
+                                ],
+                                "date": "2019-09-13"
+                            },
+                            {
+                                "lifetime": 24,
+                                "users": 4344,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 31503,
+                                        "revenue": 1526.4127559761982
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 9,
+                                        "revenue": 0.27442000340670347
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 72,
+                                        "revenue": 343.0291466116905
+                                    }
+                                ],
+                                "date": "2019-09-17"
+                            },
+                            {
+                                "lifetime": 48,
+                                "users": 4344,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 12217,
+                                        "revenue": 495.2434601611458
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 7,
+                                        "revenue": 0.06820999830961227
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 43,
+                                        "revenue": 144.04304230213165
+                                    }
+                                ],
+                                "date": "2019-09-17"
+                            },
+                            {
+                                "lifetime": 72,
+                                "users": 4344,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 6838,
+                                        "revenue": 305.7170611822512
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 7,
+                                        "revenue": 0.12147999880835414
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 12,
+                                        "revenue": 31.447447538375854
+                                    }
+                                ],
+                                "date": "2019-09-17"
+                            },
+                            {
+                                "lifetime": 24,
+                                "users": 6199,
+                                "event": [
+                                    {
+                                        "event_name": "video_imp",
+                                        "cnt": 37526,
+                                        "revenue": 2052.15620545845
+                                    },
+                                    {
+                                        "event_name": "interstitial_imp",
+                                        "cnt": 23,
+                                        "revenue": 0.5942099899984896
+                                    },
+                                    {
+                                        "event_name": "iap",
+                                        "cnt": 98,
+                                        "revenue": 517.5831655263901
+                                    }
+                                ],
+                                "date": "2019-09-19"
+                            }
+                        ]
+                    ]
