@@ -7,7 +7,7 @@ import json
 from collections import namedtuple
 from result import *
 
-
+g_product_id = id_tbc_ios
 url_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=%(stats_type)s'
 url_event_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&stats=%(stats_type)s&event_group_id=%(event_group_id)s'
 url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&%(event_id)s&%(event_group_id)s&%(event_group_name)s&stats=%(stats_type)s&property_type=string'
@@ -33,7 +33,7 @@ def query_active_users():
     report_type = 'game_reports'
     end_date = today.strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=interval)).strftime('%Y-%m-%d')
-    url = url_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+    url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
                          'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
     resp = requests.get(url=url, cookies=cookies)
     data = resp.json()
@@ -47,7 +47,7 @@ def query_launches_times():
     report_type = 'reports'
     end_date = today.strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=interval)).strftime('%Y-%m-%d')
-    url = url_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+    url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
                          'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
     resp = requests.get(url=url, cookies=cookies)
     data = resp.json()
@@ -61,7 +61,7 @@ def query_morrow_retentions():
     report_type = 'reports'
     end_date = (today - timedelta(days=2)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=9)).strftime('%Y-%m-%d')
-    url = url_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+    url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
                          'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
     resp = requests.get(url=url, cookies=cookies)
     data = resp.json()
@@ -74,7 +74,7 @@ def query_threedays_retentions():
     report_type = 'reports'
     end_date = (today - timedelta(days=4)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=11)).strftime('%Y-%m-%d')
-    url = url_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+    url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
                          'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
     resp = requests.get(url=url, cookies=cookies)
     data = resp.json()
@@ -87,7 +87,7 @@ def query_sevendays_retentions():
     report_type = 'reports'
     end_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=14)).strftime('%Y-%m-%d')
-    url = url_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+    url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
                          'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
     resp = requests.get(url=url, cookies=cookies)
     data = resp.json()
@@ -101,7 +101,7 @@ def query_video_supplement():
     event_group_id = event_group_id_ad_interstitial_from
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    url = url_event_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+    url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
                                'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
     resp = requests.get(url=url, cookies=cookies)
     data = resp.json()
@@ -115,7 +115,7 @@ def query_video():
     event_group_id = event_group_id_watch_video
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    url = url_event_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+    url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
                                'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
     resp = requests.get(url=url, cookies=cookies)
     data = resp.json()
@@ -129,7 +129,7 @@ def query_iap_users():
     event_group_id = event_group_id_buy_iap_total
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    url = url_event_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+    url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
                                'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
     resp = requests.get(url=url, cookies=cookies)
     data = resp.json()
@@ -143,7 +143,7 @@ def query_open_map2_users():
     event_group_id = event_group_id_open_map2
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    url = url_event_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+    url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
                                'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
     resp = requests.get(url=url, cookies=cookies)
     data = resp.json()
@@ -157,7 +157,7 @@ def query_open_map3_users():
     event_group_id = event_group_id_open_map3
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    url = url_event_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+    url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
                                'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
     resp = requests.get(url=url, cookies=cookies)
     data = resp.json()
@@ -171,7 +171,7 @@ def query_open_event():
     event_group_id = event_group_id_open_event
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    url = url_event_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+    url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
                                'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
     resp = requests.get(url=url, cookies=cookies)
     data = resp.json()
@@ -193,7 +193,7 @@ def query_claim_times():
         start_date = end_date
         url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&event_id=%(event_id)s&event_group_id=%(event_group_id)s&event_group_name=%(event_group_name)s&stats=%(stats_type)s&property_type=string'
 
-        url = url_eventname_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+        url = url_eventname_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
                                        'start_date': start_date, 'end_date': end_date, 'event_id': event_id,
                                        'event_group_id': event_group_id, 'event_group_name': event_group_name, 'stats_type': stats_type}
         resp = requests.get(url=url, cookies=cookies)
@@ -218,7 +218,7 @@ def query_unlock_business():
         start_date = end_date
         url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&event_id=%(event_id)s&event_group_id=%(event_group_id)s&event_group_name=%(event_group_name)s&stats=%(stats_type)s&property_type=string'
 
-        url = url_eventname_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+        url = url_eventname_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
                                        'start_date': start_date, 'end_date': end_date, 'event_id': event_id,
                                        'event_group_id': event_group_id, 'event_group_name': event_group_name, 'stats_type': stats_type}
         resp = requests.get(url=url, cookies=cookies)
@@ -240,7 +240,7 @@ def query_iap_money():
     start_date = end_date
     url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&event_id=%(event_id)s&event_group_id=%(event_group_id)s&event_group_name=%(event_group_name)s&stats=%(stats_type)s&property_type=string'
 
-    url = url_eventname_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+    url = url_eventname_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
                                    'start_date': start_date, 'end_date': end_date, 'event_id': event_id,
                                    'event_group_id': event_group_id, 'event_group_name': event_group_name, 'stats_type': stats_type}
     resp = requests.get(url=url, cookies=cookies)
@@ -268,7 +268,7 @@ def query_ad_play_num(event_id, event_group_id):
     start_date = end_date
     url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&event_id=%(event_id)s&event_group_id=%(event_group_id)s&event_group_name=%(event_group_name)s&stats=%(stats_type)s&property_type=string'
 
-    url = url_eventname_temlate % {"base_url": base_url, "id": id_tbc_ios, 'report_type': report_type,
+    url = url_eventname_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
                                    'start_date': start_date, 'end_date': end_date, 'event_id': event_id,
                                    'event_group_id': event_group_id, 'event_group_name': event_group_name, 'stats_type': stats_type}
     resp = requests.get(url=url, cookies=cookies)
