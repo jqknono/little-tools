@@ -263,6 +263,7 @@ def query_ad_play_num(event_id, event_group_id):
     stats_type = 'count_distribute'
     report_type = 'events'
     event_group_name = 'watch_video'
+    event_group_id = event_group_id_watch_video
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
     start_date = end_date
     url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&event_id=%(event_id)s&event_group_id=%(event_group_id)s&event_group_name=%(event_group_name)s&stats=%(stats_type)s&property_type=string'
@@ -283,11 +284,10 @@ def query_ad_play_num_all():
     total = {}
     ids = ["event_id_ad_play_action",
            "event_id_ad_play_event",
-           "event_id_ad_play_event",
-           "event_id_ad_play_event",
-           "5ba22b756e21cc6462bdafd3"]
+           "event_id_ad_play_map2",
+           "event_id_ad_play_map3"]
     for id in ids:
-        data = query_ad_play_num(id, event_group_id_ad_play_num)
+        data = query_ad_play_num(id, event_group_id_watch_video)
         for key in data.keys():
             if key in total:
                 total[key] += data[key]
@@ -351,18 +351,6 @@ def calculate_iap_money_sum():
     return j
 
 
-def calculate_iap_num_per_user():
-    '''人均付费次数(日活)'''
-    pass
 
-
-def calculate_iap_value_per_payment():
-    '''单次付费价值'''
-    pass
-
-
-def calculate_iap_value_per_payment():
-    '''人均付费金额(日活)'''
-    pass
 
 
