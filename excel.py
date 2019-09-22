@@ -47,6 +47,7 @@ data12 = query_claim_times()
 data13 = query_iap_money()
 data14 = calculate_iap_nums()
 data15 = calculate_iap_money_sum()
+data16 = query_ad_play_num_all()
 
 #数据计算
 value_E = data['昨天'][0] / data['昨天'][1]    # E列生命周期
@@ -54,24 +55,35 @@ value_L = data4 ['昨天'] / data['昨天'][0]     # L列日活启动次数
 value_M = data5['昨天'][0]/ data['昨天'][0]    # M列日活视频次数
 value_N = data5['昨天'][0]/ data5['昨天'][1]   # N列独立用户视频次数
 value_O = data5['昨天'][1]/data['昨天'][0]     # O列视频用户覆盖率
-value_X = data6['昨天']/data['昨天'][0]        # x列人均插频次数
+value_P = data16['Double_Cash']/data5['昨天'][1]       # P列doubleCash广告位独立用户人均视频数
+value_Q = data16['Offline']/data5['昨天'][1]           # Q列Offline广告位独立用户人均视频数
+value_R = data16['AdClaim']/data5['昨天'][1]           # R列claim广告位独立用户人均视频数
+value_S1 = data16['FreeBonus_money']/data5['昨天'][1] 
+value_S2 = data16['FreeBonus_gold']/data5['昨天'][1]
+value_S = value_S1 + value_S2                          # S列FreeBonus广告位独立用户人均视频数
+value_T = data16['speedUp']/data5['昨天'][1]            # T列speed广告位独立用户人均视频数
+value_U = data16['Slot']/data5['昨天'][1]               # U列spin广告位独立用户人均视频数
+value_V = data16['skip_30_minutes']/data5['昨天'][1]    # V列skimtime广告位独立用户人均视频数
+value_W = data16['cost_50%_off']/data5['昨天'][1]       # W列50%discount广告位独立用户人均视频数
+
+value_X = data6['昨天']/data['昨天'][0]                  # x列人均插频次数
 value_Y = (data5['昨天'][0]+data6['昨天'])/data['昨天'][0]        # Y列人均视频+插频次数
 
-value_z = data14                             # Z列内购次数
+value_z = data14                                        # Z列内购次数
 
-value_AA = data7['昨天']                      # AA列内购人数
-value_AB = data15                             # AB列内购金额
-value_AD = data14/data['昨天'][0]             # AD列日活人均付费次数
-value_AE = data7['昨天']/data['昨天'][0]       # AE列日活付费率
-value_AF = data15/data14                      # AF列单次付费价值
-value_AG = data15/data['昨天'][0]              # AG列日活人均付费金额
+value_AA = data7['昨天']                                 # AA列内购人数
+value_AB = data15                                       # AB列内购金额
+value_AD = data14/data['昨天'][0]                        # AD列日活人均付费次数
+value_AE = data7['昨天']/data['昨天'][0]                  # AE列日活付费率
+value_AF = data15/data14                                 # AF列单次付费价值
+value_AG = data15/data['昨天'][0]                         # AG列日活人均付费金额
 
-value_AH = data8['昨天'][0]/data['昨天'][1]    # AH列新增用户解锁第5产业占比
-value_AI = data8['昨天'][1]/data['昨天'][1]    # AI列新增用户解锁第10产业占比
-value_AJ = data12['昨天']/data['昨天'][0]      # AJ列成功claim日活用户占比
-value_AK = data9['昨天']/data['昨天'][0]       # AK列进入map2日活用户占比
-value_AL = data10['昨天']/data['昨天'][0]      # AL列进入map3日活用户占比
-value_AM = data11['昨天']/data['昨天'][0]      # AM列进入event日活用户占比
+value_AH = data8['昨天'][0]/data['昨天'][1]                # AH列新增用户解锁第5产业占比
+value_AI = data8['昨天'][1]/data['昨天'][1]                # AI列新增用户解锁第10产业占比
+value_AJ = data12['昨天']/data['昨天'][0]                  # AJ列成功claim日活用户占比
+value_AK = data9['昨天']/data['昨天'][0]                   # AK列进入map2日活用户占比
+value_AL = data10['昨天']/data['昨天'][0]                  # AL列进入map3日活用户占比
+value_AM = data11['昨天']/data['昨天'][0]                  # AM列进入event日活用户占比
 
 
 
@@ -99,6 +111,14 @@ assign_value(new_row, 'L',value_L)
 assign_value(new_row, 'M',value_M)    
 assign_value(new_row, 'N',value_N)     
 assign_value(new_row, 'O',value_O)
+assign_value(new_row, 'P',value_P)
+assign_value(new_row, 'Q',value_Q)
+assign_value(new_row, 'R',value_R)
+assign_value(new_row, 'S',value_S)
+assign_value(new_row, 'T',value_T)
+assign_value(new_row, 'U',value_U)
+assign_value(new_row, 'V',value_V)
+assign_value(new_row, 'W',value_W)
 
 assign_value(new_row, 'X',value_X)
 assign_value(new_row, 'Y',value_Y)
