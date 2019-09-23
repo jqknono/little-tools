@@ -1,9 +1,7 @@
 from functions import *
 # 查数据
-data13 = query_iap_money()
-data14 = calculate_iap_nums()
-data15 = calculate_iap_money_sum()
 
+data = query_xi_back_gun()
 
-
-print(data14)
+print(data)
+'{"app_name":["%(app_name)s"],"dateRange":["%(start_date)s","%(end_date)s"],"timeZone":"default","platform":[],"country":[],"breakdown":["app_name","date"]}'

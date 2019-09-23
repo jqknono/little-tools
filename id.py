@@ -19,3 +19,12 @@ event_id_ad_play_action = '5b7a8b163665ca0789e82188'
 event_id_ad_play_event = '5b74f0b25a16bc074d5f2633'
 event_id_ad_play_map2 = '5b9f0bd60237f606c0aca277'
 event_id_ad_play_map3 = '5ba22b756e21cc6462bdafd3'
+
+# xi平台信息-回本手枪图
+app_name_tbc3_ios = 'Game_iOS_Idle Capitalist'
+bundle_id_tbc3_ios = 'com.idlecapatalist.aovalw'
+platform_tbc3_ios = 'ios'
+
+app_name_tbc3_android = 'Game_android_TBC3'
+bundle_id_tbc3_android = 'com.brokenreality.bigcapitalist3.android'
+platform_tbc3_android = 'android'

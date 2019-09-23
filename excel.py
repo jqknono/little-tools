@@ -43,6 +43,7 @@ def save_to_worksheet(ws):
     data14 = calculate_iap_nums()
     data15 = calculate_iap_money_sum()
     data16 = query_ad_play_num_all()
+    data17 = query_xi_back_gun()
 
     # 数据计算
     value_E = round_sig(data['昨天'][0] / data['昨天'][1])    #
@@ -79,6 +80,7 @@ def save_to_worksheet(ws):
     value_AK = data9['昨天']/data['昨天'][0]                   # AK列进入map2日活用户占比
     value_AL = data10['昨天']/data['昨天'][0]                  # AL列进入map3日活用户占比
     value_AM = data11['昨天']/data['昨天'][0]                  # AM列进入event日活用户占比
+    value_AN = round_sig(data17['num_video_played']/data17['people_num_watch_video'])      # AN列M美国fb用户24小时视频数
 
     # 切换列数
     new_row = rows + 1
@@ -99,7 +101,7 @@ def save_to_worksheet(ws):
     assign_value(ws, new_row, 'L', value_L)
     assign_value(ws, new_row, 'M', value_M)
     assign_value(ws, new_row, 'N', value_N)
-    assign_value(ws, new_row, 'O', value_O)
+    assign_value(ws, new_row, 'O', '%.2f%%'%(value_O*100))
     assign_value(ws, new_row, 'P', value_P)
     assign_value(ws, new_row, 'Q', value_Q)
     assign_value(ws, new_row, 'R', value_R)
@@ -115,15 +117,16 @@ def save_to_worksheet(ws):
     assign_value(ws, new_row, 'AA', value_AA)
     assign_value(ws, new_row, 'AB', value_AB)
     assign_value(ws, new_row, 'AD', value_AD)
-    assign_value(ws, new_row, 'AE', value_AE)
+    assign_value(ws, new_row, 'AE', '%.2f%%'%(value_AE*100))
     assign_value(ws, new_row, 'AF', value_AF)
     assign_value(ws, new_row, 'AG', value_AG)
-    assign_value(ws, new_row, 'AH', value_AH)
-    assign_value(ws, new_row, 'AI', value_AI)
+    assign_value(ws, new_row, 'AH', '%.2f%%'%(value_AH*100))
+    assign_value(ws, new_row, 'AI', '%.2f%%'%(value_AI*100))
     assign_value(ws, new_row, 'AJ', value_AJ)
-    assign_value(ws, new_row, 'AK', value_AK)
-    assign_value(ws, new_row, 'AL', value_AL)
-    assign_value(ws, new_row, 'AM', value_AM)
+    assign_value(ws, new_row, 'AK', '%.2f%%'%(value_AK*100))
+    assign_value(ws, new_row, 'AL', '%.2f%%'%(value_AL*100))
+    assign_value(ws, new_row, 'AM', '%.2f%%'%(value_AM*100))
+    assign_value(ws, new_row, 'AN', value_AN)
 
 
 def round_sig(x, sig=2):
