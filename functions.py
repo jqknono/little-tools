@@ -183,53 +183,57 @@ def query_open_event():
 
 def query_claim_times():
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-09&end_date=2019-09-15&channels[]=&versions[]=&event_id=5b7be0660237f6071568cc54&event_group_id=5b7289ddf43e4838c7000289&event_group_name=show_claim&stats=count_distribute&property_type=string
-    stats_type = 'count_distribute'
-    report_type = 'events'
-    event_id = event_id_show_claim
-    event_group_id = event_group_id_show_claim
-    event_group_name = 'show_claim'
-    days = [1, 2, 8]
-    response = []
-    i = 0
-    for day in days:
-        end_date = (today - timedelta(days=day)).strftime('%Y-%m-%d')
-        start_date = end_date
-        url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&event_id=%(event_id)s&event_group_id=%(event_group_id)s&event_group_name=%(event_group_name)s&stats=%(stats_type)s&property_type=string'
+    try:
+        stats_type = 'count_distribute'
+        report_type = 'events'
+        event_id = event_id_show_claim
+        event_group_id = event_group_id_show_claim
+        event_group_name = 'show_claim'
+        days = [1, 2, 8]
+        response = []
+        i = 0
+        for day in days:
+            end_date = (today - timedelta(days=day)).strftime('%Y-%m-%d')
+            start_date = end_date
+            url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&event_id=%(event_id)s&event_group_id=%(event_group_id)s&event_group_name=%(event_group_name)s&stats=%(stats_type)s&property_type=string'
 
-        url = url_eventname_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                                       'start_date': start_date, 'end_date': end_date, 'event_id': event_id,
-                                       'event_group_id': event_group_id, 'event_group_name': event_group_name, 'stats_type': stats_type}
-        resp = requests.get(url=url, cookies=cookies)
-        data = resp.json()
-        response.append(data['stats'][1]['num'])
-        i += 1
-    return {"昨天": response[0], "前天": response[1], '八天前': response[2]}
-
+            url = url_eventname_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
+                                        'start_date': start_date, 'end_date': end_date, 'event_id': event_id,
+                                        'event_group_id': event_group_id, 'event_group_name': event_group_name, 'stats_type': stats_type}
+            resp = requests.get(url=url, cookies=cookies)
+            data = resp.json()
+            response.append(data['stats'][1]['num'])
+            i += 1
+        return {"昨天": response[0], "前天": response[1], '八天前': response[2]}
+    except:
+        print("ERROR: query_claim_times")
 
 def query_unlock_business():
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-14&end_date=2019-09-14&channels[]=&versions[]=&event_id=5b7bdfa20237f6071568cc50&event_group_id=5b7289ddf43e4838c7000295&event_group_name=unlock_business&stats=count_distribute&property_type=string
-    stats_type = 'count_distribute'
-    report_type = 'events'
-    event_id = event_id_unlock_business
-    event_group_id = event_group_id_unlock_business
-    event_group_name = 'unlock_business'
-    days = [1, 2, 8]
-    response = []
-    i = 0
-    for day in days:
-        end_date = (today - timedelta(days=day)).strftime('%Y-%m-%d')
-        start_date = end_date
-        url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&event_id=%(event_id)s&event_group_id=%(event_group_id)s&event_group_name=%(event_group_name)s&stats=%(stats_type)s&property_type=string'
+    try:
+        stats_type = 'count_distribute'
+        report_type = 'events'
+        event_id = event_id_unlock_business
+        event_group_id = event_group_id_unlock_business
+        event_group_name = 'unlock_business'
+        days = [1, 2, 8]
+        response = []
+        i = 0
+        for day in days:
+            end_date = (today - timedelta(days=day)).strftime('%Y-%m-%d')
+            start_date = end_date
+            url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&event_id=%(event_id)s&event_group_id=%(event_group_id)s&event_group_name=%(event_group_name)s&stats=%(stats_type)s&property_type=string'
 
-        url = url_eventname_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                                       'start_date': start_date, 'end_date': end_date, 'event_id': event_id,
-                                       'event_group_id': event_group_id, 'event_group_name': event_group_name, 'stats_type': stats_type}
-        resp = requests.get(url=url, cookies=cookies)
-        data = resp.json()
-        response.append([data['stats'][3]['num'], data['stats'][-1]['num']])
-        i += 1
-    return {"昨天": response[0], "前天": response[1], '八天前': response[2]}
-
+            url = url_eventname_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
+                                        'start_date': start_date, 'end_date': end_date, 'event_id': event_id,
+                                        'event_group_id': event_group_id, 'event_group_name': event_group_name, 'stats_type': stats_type}
+            resp = requests.get(url=url, cookies=cookies)
+            data = resp.json()
+            response.append([data['stats'][3]['num'], data['stats'][-1]['num']])
+            i += 1
+        return {"昨天": response[0], "前天": response[1], '八天前': response[2]}
+    except:
+        print("ERROR: query_unlock_business")
 
 def query_iap_money():
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-14&end_date=2019-09-14&channels[]=&versions[]=&event_id=5b9f7401c37c58067735ebc0&event_group_id=5b84cc7ca40fa34b91000015&event_group_name=buy_iap_total&stats=count_distribute&property_type=string
