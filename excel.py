@@ -44,7 +44,9 @@ def save_to_worksheet(ws):
     data14 = calculate_iap_nums()
     data15 = calculate_iap_money_sum()
     data16 = query_ad_play_num_all()
-    data17 = query_xi_back_gun(app_name,bundle_id,platform)
+    data17 = query_xi_back_gun(app_name_tbc3_ios,bundle_id_tbc3_ios,platform_tbc3_ios)
+    android_gun_data = query_xi_back_gun(id_tbc_android,app_name_tbc3_android,bundle_id_tbc3_android)
+    ios_ecpm_data = query_xi_ecpm(app_name_tbc3_ios, country_us)
 
     # 数据计算
     value_E = round_sig(data['昨天'][0] / data['昨天'][1])    #
@@ -136,21 +138,13 @@ def round_sig(x, sig=2):
 
 
 def save_to_ios(wb):
-    g_product_id = id_tbc_ios
-    app_name = app_name_tbc3_ios
-    bundle_id = bundle_id_tbc3_ios
-    platform = platform_tbc3_ios
+    stat_platform(id_tbc_ios)
     ws = wb["iOS"]
-    country
     save_to_worksheet(ws)
 
 
 def save_to_android(wb):
-    g_product_id = id_tbc_android
-    app_name = app_name_tbc3_android
-    bundle_id = bundle_id_tbc3_android
-    platform = platform_tbc3_android
-
+    stat_platform(id_tbc_android)
     ws = wb["安卓"]
     save_to_worksheet(ws)
 
