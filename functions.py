@@ -412,9 +412,8 @@ def query_xi_back_gun(app_name,bundle_id,platform):
 
     return dict
 
-print(query_xi_back_gun(app_name_tbc3_ios,bundle_id_tbc3_ios,platform_tbc3_ios))
 
-def query_xi_ecpm_total(app_name):
+def query_xi_ecpm(app_name,country_code):
     """从xi平台 收入查询 ecpm"""
     url = "https://xi.harrybuy.com/es/monesimplify/pistolevent"
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
@@ -423,16 +422,13 @@ def query_xi_ecpm_total(app_name):
     connect_sid = unquote('s%3Ae_O5RJ8-rXFpEW91Ua7eKVSABBJEanws.w3NAuc1%2BI6Ni%2FDg%2BzuQ%2BZJ3zWwqdAytz0zYkzVkgRyM')
     cookies = {'Xi-Token': 'fangfang_ren',
                'connect.sid': connect_sid}
+    app_name = app_name_tbc3_ios
+    country_code = country_code_us
     # qdata = b'{"appName":["Game_iOS_Idle Capitalist"],"dateRange":["2019-09-15","2019-09-22"],"timeZone":"default","platform":[],"country":[],"breakdown":["app_name","date"]}'
-    qdata_temlate_ecpm_total = '{"app_name":["%(app_name)s"],"dateRange":["%(start_date)s","%(end_date)s"],"timeZone":"default","platform":[],"country":[],"breakdown":["app_name","date"]}'
-    qdata_ecpm_total_str = qdata_temlate_ecpm_total % {"app_name":app_name,"start_date":start_date,'end_date':end_date}
-    qdata_ecpm_total = qdata_ecpm_total_str.encode("utf-8")
-
-    # qdata_temlate ='{"app_name":"%(app_name)s","date_range":["%(start_date)s","%(end_date)s"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":["%(bundle_id)s"],"platform":["%(platform)s"],"media_source":["Facebook Ads"],"country_code":["US"]}}'
-
-    # # qdata = b'{"app_name":"Game_iOS_Idle Capitalist","date_range":["2019-09-15","2019-09-19"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":["com.idlecapatalist.aovalw"],"platform":["ios"],"media_source":["Facebook Ads"],"country_code":["US"]}}'
-    # qdata_str = qdata_temlate % {"app_name":app_name,"start_date":start_date,'end_date':end_date,'bundle_id':bundle_id,'platform':platform}
-    # qdata = qdata_str.encode("utf-8")
+    # {"appName":["Game_iOS_Idle Capitalist"],"dateRange":["2019-09-16","2019-09-23"],"timeZone":"default","platform":[],"country":["US"],"breakdown":["app_name","date"]}}
+    qdata_temlate_ecpm = '{"app_name":["%(app_name)s"],"dateRange":["%(start_date)s","%(end_date)s"],"timeZone":"default","platform":[],"country":["%(country_code)s"],"breakdown":["app_name","date"]}'
+    qdata_ecpm_str = qdata_temlate_ecpm % {"app_name":app_name,"start_date":start_date,'end_date':end_date,"country_code":country_code}
+    qdata_ecpm = qdata_ecpm_str.encode("utf-8")
 
     headers = {
         "authority": "xi.harrybuy.com",
@@ -460,18 +456,12 @@ def query_xi_ecpm_total(app_name):
         "Referrer Policy": "no-referrer-when-downgrade"
     }
     conn = HTTPConnection('xi.harrybuy.com')
-    conn.request('POST', url, headers=headers, body=qdata_ecpm_total)
+    conn.request('POST', url, headers=headers, body=qdata_ecpm)
     resp = conn.get_response()
     response = resp.read().decode("utf-8")
     data = json.loads(response)
-    # dict = {}
-    # for item in data:
-    #     if item["rep_date"]==end_date:
-    #         dict["ecpm_total_昨天"] = item["ecpm"]
-    #     if item["rep_date"]==end_date_2:
-    #         dict["ecpm_total_前天"] = item["ecpm"]
 
     return {"昨天": data[-1]['ecpm'], "前天": data[-2]['ecpm'], '八天前': response[1]['ecpm']}
 
 
-print(query_xi_ecpm_total(app_name_tbc3_ios))
+print(query_xi_ecpm(app_name_tbc3_ios,country_code_us))
