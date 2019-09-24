@@ -413,31 +413,32 @@ def query_xi_back_gun(app_name,bundle_id,platform):
     return dict
 
 
-def query_xi_ecpm(app_name,country_code):
+def query_xi_ecpm(app_name,country):
     """从xi平台 收入查询 ecpm"""
-    url = "https://xi.harrybuy.com/es/monesimplify/pistolevent"
+    url = "https://xi.harrybuy.com/report/revenue"
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
     end_date_2 = (today - timedelta(days=2)).strftime('%Y-%m-%d')    
     start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
     connect_sid = unquote('s%3Ae_O5RJ8-rXFpEW91Ua7eKVSABBJEanws.w3NAuc1%2BI6Ni%2FDg%2BzuQ%2BZJ3zWwqdAytz0zYkzVkgRyM')
     cookies = {'Xi-Token': 'fangfang_ren',
                'connect.sid': connect_sid}
-    app_name = app_name_tbc3_ios
-    country_code = country_code_us
-    # qdata = b'{"appName":["Game_iOS_Idle Capitalist"],"dateRange":["2019-09-15","2019-09-22"],"timeZone":"default","platform":[],"country":[],"breakdown":["app_name","date"]}'
+    # app_name = app_name_tbc3_ios
+    # country= country_us 
+    #{"appName":["Game_iOS_Idle Capitalist"],"dateRange":["2019-09-15","2019-09-22"],"timeZone":"default","platform":[],"country":[],"breakdown":["app_name","date"]}
     # {"appName":["Game_iOS_Idle Capitalist"],"dateRange":["2019-09-16","2019-09-23"],"timeZone":"default","platform":[],"country":["US"],"breakdown":["app_name","date"]}}
-    qdata_temlate_ecpm = '{"app_name":["%(app_name)s"],"dateRange":["%(start_date)s","%(end_date)s"],"timeZone":"default","platform":[],"country":["%(country_code)s"],"breakdown":["app_name","date"]}'
-    qdata_ecpm_str = qdata_temlate_ecpm % {"app_name":app_name,"start_date":start_date,'end_date':end_date,"country_code":country_code}
+    qdata_temlate_ecpm = '{"app_name":["%(app_name)s"],"dateRange":["%(start_date)s","%(end_date)s"],"timeZone":"default","platform":[],"country":["%(country)s"],"breakdown":["app_name","date"]}'
+    qdata_ecpm_str = qdata_temlate_ecpm % {"app_name":app_name,"start_date":start_date,'end_date':end_date,"country":country}
     qdata_ecpm = qdata_ecpm_str.encode("utf-8")
 
     headers = {
         "authority": "xi.harrybuy.com",
         "method": "POST",
-        # "path": "/report/revenue", 
-        # "scheme":"https",
+        "path": "/report/revenue", 
+        "scheme":"https",
         "accept": "application/json, text/plain, */*",
         "Accept-Encoding": "gzip, deflate, br",
         "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
+        "Host": "xi.harrybuy.com",
         # "cache-control":"no-cache",
         # "content-length":"160",
         "Content-Type": "application/json;charset=UTF-8",
@@ -454,6 +455,7 @@ def query_xi_ecpm(app_name,country_code):
         "Connection": "keep-alive",
         "Accept": "*/*",
         "Referrer Policy": "no-referrer-when-downgrade"
+
     }
     conn = HTTPConnection('xi.harrybuy.com')
     conn.request('POST', url, headers=headers, body=qdata_ecpm)
@@ -464,4 +466,4 @@ def query_xi_ecpm(app_name,country_code):
     return {"昨天": data[-1]['ecpm'], "前天": data[-2]['ecpm'], '八天前': response[1]['ecpm']}
 
 
-print(query_xi_ecpm(app_name_tbc3_ios,country_code_us))
+print(query_xi_ecpm(app_name_tbc3_ios,country_us))

@@ -21,6 +21,7 @@ today = datetime.today()
 yesterday = (today - timedelta(days=1)).strftime('%Y/%m/%d')
 save_file_name = (today - timedelta(days=1)).strftime('%Y-%m-%d')
 
+print(yesterday)
 
 def save_to_worksheet(ws):
     rows = int(ws.max_row)
@@ -43,7 +44,7 @@ def save_to_worksheet(ws):
     data14 = calculate_iap_nums()
     data15 = calculate_iap_money_sum()
     data16 = query_ad_play_num_all()
-    data17 = query_xi_back_gun()
+    data17 = query_xi_back_gun(app_name,bundle_id,platform)
 
     # 数据计算
     value_E = round_sig(data['昨天'][0] / data['昨天'][1])    #
@@ -87,6 +88,7 @@ def save_to_worksheet(ws):
     row_I = new_row-1
     row_J = new_row-3
     row_K = new_row-7
+    row_AN= new_row-2
 
     # 填数据到excel
     assign_value(ws, new_row, 'A', yesterday)
@@ -126,7 +128,7 @@ def save_to_worksheet(ws):
     assign_value(ws, new_row, 'AK', '%.2f%%'%(value_AK*100))
     assign_value(ws, new_row, 'AL', '%.2f%%'%(value_AL*100))
     assign_value(ws, new_row, 'AM', '%.2f%%'%(value_AM*100))
-    assign_value(ws, new_row, 'AN', value_AN)
+    assign_value(ws, row_AN, 'AN', value_AN)
 
 
 def round_sig(x, sig=2):
@@ -135,12 +137,20 @@ def round_sig(x, sig=2):
 
 def save_to_ios(wb):
     g_product_id = id_tbc_ios
+    app_name = app_name_tbc3_ios
+    bundle_id = bundle_id_tbc3_ios
+    platform = platform_tbc3_ios
     ws = wb["iOS"]
+    country
     save_to_worksheet(ws)
 
 
 def save_to_android(wb):
     g_product_id = id_tbc_android
+    app_name = app_name_tbc3_android
+    bundle_id = bundle_id_tbc3_android
+    platform = platform_tbc3_android
+
     ws = wb["安卓"]
     save_to_worksheet(ws)
 

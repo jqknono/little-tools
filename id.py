@@ -28,4 +28,5 @@ platform_tbc3_ios = 'ios'
 app_name_tbc3_android = 'Game_android_TBC3'
 bundle_id_tbc3_android = 'com.brokenreality.bigcapitalist3.android'
 platform_tbc3_android = 'android'
-country_code_us = "US"
+country_us = "US"
+country = ""
