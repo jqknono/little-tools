@@ -21,7 +21,6 @@ today = datetime.today()
 yesterday = (today - timedelta(days=1)).strftime('%Y/%m/%d')
 save_file_name = (today - timedelta(days=1)).strftime('%Y-%m-%d')
 
-print(yesterday)
 
 def save_to_worksheet(ws):
     rows = int(ws.max_row)
@@ -44,12 +43,21 @@ def save_to_worksheet(ws):
     data14 = calculate_iap_nums()
     data15 = calculate_iap_money_sum()
     data16 = query_ad_play_num_all()
-    data17 = query_xi_back_gun(app_name_tbc3_ios,bundle_id_tbc3_ios,platform_tbc3_ios)
-    android_gun_data = query_xi_back_gun(id_tbc_android,app_name_tbc3_android,bundle_id_tbc3_android)
-    ios_ecpm_data = query_xi_ecpm(app_name_tbc3_ios, country_us)
+    data17 = query_xi_back_gun()
+    data18 = query_xi_ecpm()
+    data19 = query_xi_ecpm(country_us)
+
 
     # 数据计算
     value_E = round_sig(data['昨天'][0] / data['昨天'][1])    #
+
+    value_G_1 = round_sig(data18['昨天'])    # G列 昨日ecpm
+    value_G_2 = round_sig(data18['前天'])    # G列 前日ecpm
+    value_H_1 = round_sig(data19['昨天'])    # F列 昨日US-ecpm
+    value_H_2 = round_sig(data19['前天'])    # F列 前日US-ecpm
+    
+    
+
     value_L = round_sig(data4['昨天'] / data['昨天'][0])     # L列日活启动次数
     value_M = round_sig(data5['昨天'][0] / data['昨天'][0])    # M列日活视频次数
     value_N = round_sig(data5['昨天'][0] / data5['昨天'][1])   # N列独立用户视频次数
@@ -85,20 +93,32 @@ def save_to_worksheet(ws):
     value_AM = data11['昨天']/data['昨天'][0]                  # AM列进入event日活用户占比
     value_AN = round_sig(data17['num_video_played']/data17['people_num_watch_video'])      # AN列M美国fb用户24小时视频数
 
+    
+    
     # 切换列数
     new_row = rows + 1
+    row_G = new_row-1
+    row_F = new_row-1    
     row_I = new_row-1
     row_J = new_row-3
     row_K = new_row-7
     row_AN= new_row-2
 
     # 填数据到excel
-    assign_value(ws, new_row, 'A', yesterday)
+    yesterday_to_write = yesterday
+    if yesterday[5] == '0':
+        yesterday_to_write = yesterday[0:5]+yesterday[6:8]
+
+    assign_value(ws, new_row, 'A', yesterday_to_write)
     assign_value(ws, new_row, 'B', 'iOS')
     assign_value(ws, new_row, 'C', data['昨天'][1])
     assign_value(ws, new_row, 'D', data['昨天'][0])
     assign_value(ws, new_row, 'E', value_E)
 
+    assign_value(ws, new_row, 'G', value_G_1)
+    assign_value(ws, row_G, 'G', value_G_2)
+    assign_value(ws, new_row, 'H', value_H_1)
+    assign_value(ws, row_F, 'H', value_H_2)
     assign_value(ws, row_I, 'I', '%.2f%%'%(data1['昨天']))  # 转换为百分数
     assign_value(ws, row_J, 'J', '%.2f%%'%(data2['昨天']))
     assign_value(ws, row_K, 'K', '%.2f%%'%(data3['昨天']))
@@ -133,20 +153,25 @@ def save_to_worksheet(ws):
     assign_value(ws, row_AN, 'AN', value_AN)
 
 
+
 def round_sig(x, sig=2):
     return round(x, sig-int(floor(log10(abs(x)))))
 
 
 def save_to_ios(wb):
-    stat_platform(id_tbc_ios)
+    stat_platform_ios()
     ws = wb["iOS"]
     save_to_worksheet(ws)
 
 
+
+
+
 def save_to_android(wb):
-    stat_platform(id_tbc_android)
+    stat_platform_android()
     ws = wb["安卓"]
     save_to_worksheet(ws)
+
 
 
 def open_excel(filename):
