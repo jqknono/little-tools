@@ -16,19 +16,27 @@ g_bundle_id = ""
 g_platform = ""
 event_group_id_ad_interstitial_from = ""
 event_group_id_watch_video = ""
-event_group_id_iap = ""
+event_group_id_buy_iap_total = ""
 event_group_id_open_map2 = ""
 event_group_id_open_map3 = ""
 event_group_id_open_event = ""
 event_group_id_show_claim = ""
 event_group_id_unlock_business = ""
-event_group_id_buy_iap_total = ""
+
+event_id_buy_iap_total = ""
+event_id_show_claim = ""
+event_id_unlock_business = ""
+event_id_ad_play_action = ""
+event_id_ad_play_event = ""
+event_id_ad_play_map2 = ""
+event_id_ad_play_map3 = ""
 
 url_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=%(stats_type)s'
 url_event_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&stats=%(stats_type)s&event_group_id=%(event_group_id)s'
 url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&%(event_id)s&%(event_group_id)s&%(event_group_name)s&stats=%(stats_type)s&property_type=string'
 
 today = datetime.today()
+# today = today - timedelta(days=1)
 interval = 8
 
 cookies = {'JSESSIONID': '6A5D190CC2D4BDDB173828B8ED74C9C8',
@@ -56,23 +64,37 @@ def stat_platform_ios():
 
     global event_group_id_ad_interstitial_from
     global event_group_id_watch_video
-    global event_group_id_iap
+    global event_group_id_buy_iap_total
     global event_group_id_open_map2
     global event_group_id_open_map3
     global event_group_id_open_event
     global event_group_id_show_claim
     global event_group_id_unlock_business
-    global event_group_id_buy_iap_total
+
+    global event_id_buy_iap_total
+    global event_id_show_claim
+    global event_id_unlock_business
+    global event_id_ad_play_action
+    global event_id_ad_play_event
+    global event_id_ad_play_map2
+    global event_id_ad_play_map3
 
     event_group_id_ad_interstitial_from = '5b7289ddf43e4838c7000268'
     event_group_id_watch_video = '5b7289a4f43e487686000096'
-    event_group_id_iap = '5b84cc7ca40fa34b91000015'
+    event_group_id_buy_iap_total = '5b84cc7ca40fa34b91000015'
     event_group_id_open_map2 = '5b84cc7ca40fa34b91000019'
     event_group_id_open_map3 = '5b9a2569b27b0a5cb8000054'
     event_group_id_open_event = '5b7289ddf43e4838c7000282'
     event_group_id_show_claim = '5b7289ddf43e4838c7000289'
     event_group_id_unlock_business = '5b7289ddf43e4838c7000295'
-    event_group_id_buy_iap_total = '5b84cc7ca40fa34b91000015'
+
+    event_id_buy_iap_total = '5b9f7401c37c58067735ebc0'
+    event_id_show_claim = '5b7be0660237f6071568cc54'
+    event_id_unlock_business= '5b7bdfa20237f6071568cc50'
+    event_id_ad_play_action = '5b7a8b163665ca0789e82188'
+    event_id_ad_play_event = '5b74f0b25a16bc074d5f2633'
+    event_id_ad_play_map2 = '5b9f0bd60237f606c0aca277'
+    event_id_ad_play_map3 = '5ba22b756e21cc6462bdafd3'
 
     g_product_id = id_tbc_ios
     g_app_name = app_name_tbc3_ios
@@ -89,23 +111,38 @@ def stat_platform_android():
     
     global event_group_id_ad_interstitial_from
     global event_group_id_watch_video
-    global event_group_id_iap
+    global event_group_id_buy_iap_total
     global event_group_id_open_map2
     global event_group_id_open_map3
     global event_group_id_open_event
     global event_group_id_show_claim
     global event_group_id_unlock_business
-    global event_group_id_buy_iap_total
 
-    event_group_id_ad_interstitial_from = '5b7289ddf43e4838c7000268'
+    global event_id_buy_iap_total
+    global event_id_show_claim
+    global event_id_unlock_business
+    global event_id_ad_play_action
+    global event_id_ad_play_event
+    global event_id_ad_play_map2
+    global event_id_ad_play_map3
+
+    event_group_id_ad_interstitial_from = '5b3de4bca40fa3572900007d' # ok
     event_group_id_watch_video = '5b3de4bca40fa35729000065' # ok
-    event_group_id_iap = '5b84cc7ca40fa34b91000015'
-    event_group_id_open_map2 = '5b84cc7ca40fa34b91000019'
-    event_group_id_open_map3 = '5b9a2569b27b0a5cb8000054'
-    event_group_id_open_event = '5b7289ddf43e4838c7000282'
-    event_group_id_show_claim = '5b7289ddf43e4838c7000289'
-    event_group_id_unlock_business = '5b7289ddf43e4838c7000295'
-    event_group_id_buy_iap_total = '5b84cc7ca40fa34b91000015'
+    event_group_id_buy_iap_total = '5b7e21c5f43e48055e000042' # ok
+    event_group_id_open_map2 = '5b7e2198b27b0a7a4200001b' # ok
+    event_group_id_open_map3 = '5b9a23a1f29d983795000100' # ok
+    event_group_id_open_event = '5b642551f29d98672d000163' # ok
+    event_group_id_show_claim = '5b3eee9cf29d9833db0001db' # ok
+    event_group_id_unlock_business = '5b3de4bca40fa35729000078' # ok 
+
+    event_id_buy_iap_total = '5b7e764f3665cafb7b5fe340' # ok 
+    event_id_show_claim = '5b44647cdd26ca4c8f4db5ad'  # ok 
+    event_id_unlock_business= '5b44645e5a16bc136ebd03a1' # ok 
+    event_id_ad_play_action = '5b446ca85a16bc136ebd03a8' # ok 
+    event_id_ad_play_event = '5b63c9ce3665ca073aad10ff'  # ok 
+    event_id_ad_play_map2 = '5b7e51d20abec661afcec361'  # ok
+    event_id_ad_play_map3 = '5b9f5e589242950645e25132' # ok
+
 
     g_product_id = id_tbc_android
     g_app_name = app_name_tbc3_android
@@ -216,6 +253,7 @@ def query_iap_users():
     stats_type = 'event_group_trend'
     report_type = 'events'
     event_group_id = event_group_id_buy_iap_total
+    
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
     url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
@@ -471,14 +509,12 @@ def query_xi_ecpm(country=""):
     """从xi平台 收入查询 ecpm"""
     url = "https://xi.harrybuy.com/report/revenue"
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
-    end_date_2 = (today - timedelta(days=2)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
     # {"appName":["Game_iOS_Idle Capitalist"],"dateRange":["2019-09-16","2019-09-23"],"timeZone":"default","platform":[],"country":["US"],"breakdown":["app_name","date"]}}
-    qdata_temlate_ecpm = '{"appName":["%(app_name)s"],"dateRange":["%(start_date)s","%(end_date)s"],"timeZone":"default","platform":["adcolony","admob"],"country":[%(country)s],"breakdown":["app_name","date"]}'
+    qdata_temlate_ecpm = '{"appName":["%(app_name)s"],"dateRange":["%(start_date)s","%(end_date)s"],"timeZone":"default","platform":[],"country":[%(country)s],"breakdown":["app_name","date"]}'
     qdata_ecpm_str = qdata_temlate_ecpm % {
         "app_name": g_app_name, "start_date": start_date, 'end_date': end_date, "country": country}
     qdata_ecpm = qdata_ecpm_str.encode("utf-8")
-
     headers = {
         "authority": "xi.harrybuy.com",
         "method": "POST",
@@ -508,7 +544,7 @@ def query_xi_ecpm(country=""):
 
 # stat_platform_android()
 # # print(query_xi_back_gun(app_name_tbc3_android, bundle_id_tbc3_android, platform_tbc3_android))
-# # print(query_xi_ecpm())
-# # print(query_xi_ecpm(country_us))
+# print(query_xi_ecpm())
+# print(query_xi_ecpm(country_us))
 
 # print(query_video())

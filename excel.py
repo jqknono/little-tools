@@ -50,7 +50,7 @@ def save_to_worksheet(ws):
 
     # 数据计算
     value_E = round_sig(data['昨天'][0] / data['昨天'][1])    #
-
+    value_F = round_sig((3.3*(data5['昨天'][0] / data['昨天'][0])* (data18['昨天']/1000))+ (3.3*0.7*(data15/data['昨天'][0])))
     value_G_1 = round_sig(data18['昨天'])    # G列 昨日ecpm
     value_G_2 = round_sig(data18['前天'])    # G列 前日ecpm
     value_H_1 = round_sig(data19['昨天'])    # F列 昨日US-ecpm
@@ -107,14 +107,14 @@ def save_to_worksheet(ws):
     # 填数据到excel
     yesterday_to_write = yesterday
     if yesterday[5] == '0':
-        yesterday_to_write = yesterday[0:5]+yesterday[6:8]
+        yesterday_to_write = yesterday[0:5]+yesterday[6:10]
 
     assign_value(ws, new_row, 'A', yesterday_to_write)
     assign_value(ws, new_row, 'B', 'iOS')
     assign_value(ws, new_row, 'C', data['昨天'][1])
     assign_value(ws, new_row, 'D', data['昨天'][0])
     assign_value(ws, new_row, 'E', value_E)
-
+    assign_value(ws, new_row, 'F', value_F)
     assign_value(ws, new_row, 'G', value_G_1)
     assign_value(ws, row_G, 'G', value_G_2)
     assign_value(ws, new_row, 'H', value_H_1)
@@ -160,7 +160,7 @@ def round_sig(x, sig=2):
 
 def save_to_ios(wb):
     stat_platform_ios()
-    ws = wb["iOS"]
+    ws = wb["iOS"]   
     save_to_worksheet(ws)
 
 

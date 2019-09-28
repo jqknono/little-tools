@@ -1,10 +1,13 @@
+
+# 全局变量 
+
 id_tbc_ios = '150000aed7d9a4f8eb9317b5'
 id_tbc_android = 'eb00006c4684e34ff9d8d3b5'
 
 
 event_id_show_claim = '5b7be0660237f6071568cc54'
 event_id_unlock_business= '5b7bdfa20237f6071568cc50'
-event_id_buy_iap_total = '5b9f7401c37c58067735ebc0'
+
 event_id_ad_play_action = '5b7a8b163665ca0789e82188'
 event_id_ad_play_event = '5b74f0b25a16bc074d5f2633'
 event_id_ad_play_map2 = '5b9f0bd60237f606c0aca277'
