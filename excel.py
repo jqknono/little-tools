@@ -2,7 +2,7 @@ from datetime import date, datetime, timedelta
 from xlutils.copy import copy
 import openpyxl
 from functions import *
-from openpyxl.styles import PatternFill, Border, Side, Alignment, Protection, Font, Color
+from openpyxl.styles import PatternFill, Border, Side, Alignment, Protection, Font, Color 
 from copy import copy
 from math import log10, floor
 
@@ -15,6 +15,7 @@ def assign_value(ws, row, column, value):
     ws[f'{column}{row}'].font = copy(ws[f'{column}{row-10}'].font)
     ws[f'{column}{row}'].alignment = copy(ws[f'{column}{row-10}'].alignment)
     ws[f'{column}{row}'].fill  = copy(ws[f'{column}{row-10}'].fill )
+    ws[f'{column}{row}'].number_format = copy(ws[f'{column}{row-10}'].number_format)
 
 
 today = datetime.today()
@@ -141,6 +142,7 @@ def save_to_worksheet(ws):
     assign_value(ws, new_row, 'AA', value_AA)
     assign_value(ws, new_row, 'AB', value_AB)
     assign_value(ws, new_row, 'AD', value_AD)
+    # todo: 改为百分号显示
     assign_value(ws, new_row, 'AE', '%.2f%%'%(value_AE*100))
     assign_value(ws, new_row, 'AF', value_AF)
     assign_value(ws, new_row, 'AG', value_AG)
@@ -194,6 +196,7 @@ def test():
     assign_value(ws, new_row, 'B', 'iOS')
     assign_value(ws, new_row, 'C', 123456789)
     assign_value(ws, new_row, 'D', 789456123)
+    assign_value(ws, new_row, 'I', 45)
     save_excel(wb)
 
 
