@@ -120,13 +120,13 @@ def save_to_worksheet(ws):
     assign_value(ws, row_G, 'G', value_G_2)
     assign_value(ws, new_row, 'H', value_H_1)
     assign_value(ws, row_F, 'H', value_H_2)
-    assign_value(ws, row_I, 'I', '%.2f%%'%(data1['昨天']))  # 转换为百分数
-    assign_value(ws, row_J, 'J', '%.2f%%'%(data2['昨天']))
-    assign_value(ws, row_K, 'K', '%.2f%%'%(data3['昨天']))
+    assign_value(ws, row_I, 'I', (data1['昨天']/100))  # 转换为百分数
+    assign_value(ws, row_J, 'J', (data2['昨天']/100))
+    assign_value(ws, row_K, 'K', (data3['昨天'])/100)
     assign_value(ws, new_row, 'L', value_L)
     assign_value(ws, new_row, 'M', value_M)
     assign_value(ws, new_row, 'N', value_N)
-    assign_value(ws, new_row, 'O', '%.2f%%'%(value_O*100))
+    assign_value(ws, new_row, 'O',value_O)
     assign_value(ws, new_row, 'P', value_P)
     assign_value(ws, new_row, 'Q', value_Q)
     assign_value(ws, new_row, 'R', value_R)
@@ -143,16 +143,16 @@ def save_to_worksheet(ws):
     assign_value(ws, new_row, 'AB', value_AB)
     assign_value(ws, new_row, 'AD', value_AD)
     # todo: 改为百分号显示
-    assign_value(ws, new_row, 'AE', '%.2f%%'%(value_AE*100))
+    assign_value(ws, new_row, 'AE', value_AE)
     assign_value(ws, new_row, 'AF', value_AF)
     assign_value(ws, new_row, 'AG', value_AG)
-    assign_value(ws, new_row, 'AH', '%.2f%%'%(value_AH*100))
-    assign_value(ws, new_row, 'AI', '%.2f%%'%(value_AI*100))
+    assign_value(ws, new_row, 'AH', value_AH)
+    assign_value(ws, new_row, 'AI', value_AI)
     assign_value(ws, new_row, 'AJ', value_AJ)
-    assign_value(ws, new_row, 'AK', '%.2f%%'%(value_AK*100))
-    assign_value(ws, new_row, 'AL', '%.2f%%'%(value_AL*100))
-    assign_value(ws, new_row, 'AM', '%.2f%%'%(value_AM*100))
-    assign_value(ws, row_AN, 'AN', value_AN)
+    assign_value(ws, new_row, 'AK', value_AK)
+    assign_value(ws, new_row, 'AL', value_AL)
+    assign_value(ws, new_row, 'AM', value_AM)
+    assign_value(ws, row_AN, 'AN',value_AN)
 
 
 
@@ -200,4 +200,4 @@ def test():
     save_excel(wb)
 
 
-# test()
+test()
