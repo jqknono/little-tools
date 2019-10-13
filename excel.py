@@ -12,10 +12,10 @@ alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
 
 def assign_value(ws, row, column, value):
     ws[f'{column}{row}'] = value
-    ws[f'{column}{row}'].font = copy(ws[f'{column}{row-10}'].font)
-    ws[f'{column}{row}'].alignment = copy(ws[f'{column}{row-10}'].alignment)
-    ws[f'{column}{row}'].fill  = copy(ws[f'{column}{row-10}'].fill )
-    ws[f'{column}{row}'].number_format = copy(ws[f'{column}{row-10}'].number_format)
+    ws[f'{column}{row}'].font = copy(ws[f'{column}{row-50}'].font)
+    ws[f'{column}{row}'].alignment = copy(ws[f'{column}{row-50}'].alignment)
+    ws[f'{column}{row}'].fill  = copy(ws[f'{column}{row-50}'].fill )
+    ws[f'{column}{row}'].number_format = copy(ws[f'{column}{row-50}'].number_format)
 
 
 today = datetime.today()
@@ -200,4 +200,4 @@ def test():
     save_excel(wb)
 
 
-test()
+# test()

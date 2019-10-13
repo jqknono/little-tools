@@ -39,15 +39,17 @@ today = datetime.today()
 # today = today - timedelta(days=1)
 interval = 8
 
-cookies = {'JSESSIONID': '6A5D190CC2D4BDDB173828B8ED74C9C8',
-           'PHPSESSID': 'e25rks4rchtepldv23flhc7l82',
-           'UM_distinctid': '16d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88',
-           'isg': 'BDg4JMX1ke6pr_1rzd7ZoTXeCebKoZwr3WE1I3KpHXMmjdl3GrIdulXlQc2Y3VQD',
-           'uc_session_id': 'be1aa0ff-4855-49d0-98d8-796308b6cc09',
+cookies = {'JSESSIONID': '26A64F4332F1D3C22CFB9778FAA46811',
+        #    'PHPSESSID': 'e25rks4rchtepldv23flhc7l82',
+
+           'UM_distinctid': '16d8779e1fc209-0edba2f9605ef-48183600-13c680-16d8779e1fd858',
+           'isg': 'BCcnC9UiNp-bC7KeajAkOhrstF3xrPuO2UGDIPmUZbbd6EeqAX8t309jDmj2G9M', 
+           'uc_session_id': 'a6680c3f-68f3-4a3f-9d5a-36b0293a8f0a',
            'um_lang': 'zh',
-           'ummo_ss': 'BAh7CEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZvOhNCU09OOjpPYmplY3RJZAY6CkBkYXRhWxFpYmkxaVppAZppXGkSaQHzaQGTaT5pAGkKaXRJIhk4UVA3eElpcW1PaGRXdG1HUFpQawY7AFRJIhR1bXBsdXNfdWNfdG9rZW4GOwBGIj0xVjNhb1pHRkpZcnJnNVA3VGpWd2F6UV8wYmI1ZDVkNDM5YTU0NjIwYTNhOWQ0NWU3ODgxNDE1N0kiD3Nlc3Npb25faWQGOwBUSSIlMDQ1ODJkYWRmOWY2MTAxOGRjMWU4ZmM1OTJlMzBkOGUGOwBG--243cef22fcee4c238eac801bc9d3b42fc5eac4a4',
+           'ummo_ss': 'BAh7CUkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZvOhNCU09OOjpPYmplY3RJZAY6CkBkYXRhWxFpYmkxaVppAZppXGkSaQHzaQGTaT5pAGkKaXRJIhk4UVA3eElpcW1PaGRXdG1HUFpQawY7AFRJIhR1bXBsdXNfdWNfdG9rZW4GOwBGIj0xZ0pzZ2VHLTJZYmNWY2VZX093UnRCZ18xMDlkMTgwODFkYWY0YWFiOGI1NmZiNDg0NGQyNmJhNUkiEF9jc3JmX3Rva2VuBjsARkkiMUdwb1FYU2o1ZU9PMXR5YkJhL0h6QVRSZVMxS1M3clpUWE5teDJIc2l1WG89BjsARkkiD3Nlc3Npb25faWQGOwBUSSIlNmNkMTY1NmYwYjQ4OTM5Njk5OTRkM2FhMjg3NWEyZTIGOwBG--68d4bdb2383f4e8b87373481e15cff04ffb8c9be',
            'umplus_uc_loginid': 'fangfang_ren',
-           'umplus_uc_token': '1V3aoZGFJYrrg5P7TjVwazQ_0bb5d5d439a54620a3a9d45e78814157'}
+           'umplus_uc_token': '1gJsgeG-2YbcVceY_OwRtBg_109d18081daf4aab8b56fb4844d26ba5'
+           }
 
 query_xi_back_gun_connect_sid = unquote(
     's%3Ae_O5RJ8-rXFpEW91Ua7eKVSABBJEanws.w3NAuc1%2BI6Ni%2FDg%2BzuQ%2BZJ3zWwqdAytz0zYkzVkgRyM')
@@ -151,18 +153,20 @@ def stat_platform_android():
 
 
 def query_active_users():
-    """查日活/新增"""
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-06&end_date=2019-09-14&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=active
-    stats_type = 'active'
-    report_type = 'game_reports'
-    end_date = today.strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=interval)).strftime('%Y-%m-%d')
-    url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
-    resp = requests.get(url=url, cookies=cookies)
-    data = resp.json()
-    return {"昨天": [data['stats'][1]['active'], data['stats'][1]['install']], "前天": [data['stats'][2]['active'], data['stats'][2]['install']], '八天前': [data['stats'][-1]['active'], data['stats'][-1]['install']]}
-
+    try:
+        """查日活/新增"""
+        # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-06&end_date=2019-09-14&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=active
+        stats_type = 'active'
+        report_type = 'game_reports'
+        end_date = today.strftime('%Y-%m-%d')
+        start_date = (today - timedelta(days=interval)).strftime('%Y-%m-%d')
+        url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
+                            'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
+        resp = requests.get(url=url, cookies=cookies)
+        data = resp.json()
+        return {"昨天": [data['stats'][1]['active'], data['stats'][1]['install']], "前天": [data['stats'][2]['active'], data['stats'][2]['install']], '八天前': [data['stats'][-1]['active'], data['stats'][-1]['install']]}
+    except:
+        print("ERROR:query_active_users")
 
 def query_launches_times():
     """启动次数"""
@@ -547,4 +551,4 @@ def query_xi_ecpm(country=""):
 # print(query_xi_ecpm())
 # print(query_xi_ecpm(country_us))
 
-# print(query_video())
+print(query_active_users())
