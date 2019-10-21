@@ -44,18 +44,18 @@ def save_to_worksheet(ws):
     data14 = calculate_iap_nums()
     data15 = calculate_iap_money_sum()
     data16 = query_ad_play_num_all()
-    data17 = query_xi_back_gun()
-    data18 = query_xi_ecpm()
-    data19 = query_xi_ecpm(country_us)
+    # data17 = query_xi_back_gun()
+    # data18 = query_xi_ecpm()
+    # data19 = query_xi_ecpm(country_us)
 
 
     # 数据计算
     value_E = round_sig(data['昨天'][0] / data['昨天'][1])    #
-    value_F = round_sig((3.3*(data5['昨天'][0] / data['昨天'][0])* (data18['昨天']/1000))+ (3.3*0.7*(data15/data['昨天'][0])))
-    value_G_1 = round_sig(data18['昨天'])    # G列 昨日ecpm
-    value_G_2 = round_sig(data18['前天'])    # G列 前日ecpm
-    value_H_1 = round_sig(data19['昨天'])    # F列 昨日US-ecpm
-    value_H_2 = round_sig(data19['前天'])    # F列 前日US-ecpm
+    # value_F = round_sig((3.3*(data5['昨天'][0] / data['昨天'][0])* (data18['昨天']/1000))+ (3.3*0.7*(data15/data['昨天'][0])))
+    # value_G_1 = round_sig(data18['昨天'])    # G列 昨日ecpm
+    # value_G_2 = round_sig(data18['前天'])    # G列 前日ecpm
+    # value_H_1 = round_sig(data19['昨天'])    # F列 昨日US-ecpm
+    # value_H_2 = round_sig(data19['前天'])    # F列 前日US-ecpm
     
     
 
@@ -92,7 +92,7 @@ def save_to_worksheet(ws):
     value_AK = data9['昨天']/data['昨天'][0]                   # AK列进入map2日活用户占比
     value_AL = data10['昨天']/data['昨天'][0]                  # AL列进入map3日活用户占比
     value_AM = data11['昨天']/data['昨天'][0]                  # AM列进入event日活用户占比
-    value_AN = round_sig(data17['num_video_played']/data17['people_num_watch_video'])      # AN列M美国fb用户24小时视频数
+    # value_AN = round_sig(data17['num_video_played']/data17['people_num_watch_video'])      # AN列M美国fb用户24小时视频数
 
     
     
@@ -115,11 +115,11 @@ def save_to_worksheet(ws):
     assign_value(ws, new_row, 'C', data['昨天'][1])
     assign_value(ws, new_row, 'D', data['昨天'][0])
     assign_value(ws, new_row, 'E', value_E)
-    assign_value(ws, new_row, 'F', value_F)
-    assign_value(ws, new_row, 'G', value_G_1)
-    assign_value(ws, row_G, 'G', value_G_2)
-    assign_value(ws, new_row, 'H', value_H_1)
-    assign_value(ws, row_F, 'H', value_H_2)
+    # assign_value(ws, new_row, 'F', value_F)
+    # assign_value(ws, new_row, 'G', value_G_1)
+    # assign_value(ws, row_G, 'G', value_G_2)
+    # assign_value(ws, new_row, 'H', value_H_1)
+    # assign_value(ws, row_F, 'H', value_H_2)
     assign_value(ws, row_I, 'I', (data1['昨天']/100))  # 转换为百分数
     assign_value(ws, row_J, 'J', (data2['昨天']/100))
     assign_value(ws, row_K, 'K', (data3['昨天'])/100)
@@ -152,7 +152,7 @@ def save_to_worksheet(ws):
     assign_value(ws, new_row, 'AK', value_AK)
     assign_value(ws, new_row, 'AL', value_AL)
     assign_value(ws, new_row, 'AM', value_AM)
-    assign_value(ws, row_AN, 'AN',value_AN)
+    # assign_value(ws, row_AN, 'AN',value_AN)
 
 
 

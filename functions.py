@@ -169,145 +169,169 @@ def query_active_users():
         print("ERROR:query_active_users")
 
 def query_launches_times():
-    """启动次数"""
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-06&end_date=2019-09-14&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=launches
-    stats_type = 'launches'
-    report_type = 'reports'
-    end_date = today.strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=interval)).strftime('%Y-%m-%d')
-    url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
-    resp = requests.get(url=url, cookies=cookies)
-    data = resp.json()
-    return {"昨天": data['stats'][1]['data'], "前天": data['stats'][2]['data'], '八天前': data['stats'][-1]['data']}
-
+    try:
+        """启动次数"""
+        # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-06&end_date=2019-09-14&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=launches
+        stats_type = 'launches'
+        report_type = 'reports'
+        end_date = today.strftime('%Y-%m-%d')
+        start_date = (today - timedelta(days=interval)).strftime('%Y-%m-%d')
+        url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
+                            'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
+        resp = requests.get(url=url, cookies=cookies)
+        data = resp.json()
+        return {"昨天": data['stats'][1]['data'], "前天": data['stats'][2]['data'], '八天前': data['stats'][-1]['data']}
+    except:
+        print("ERROR:query_morrow_retentions")
 
 def query_morrow_retentions():
-    """用户次日留存"""
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-09&end_date=2019-09-15&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=retentions
-    stats_type = 'retentions'
-    report_type = 'reports'
-    end_date = (today - timedelta(days=2)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=9)).strftime('%Y-%m-%d')
-    url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
-    resp = requests.get(url=url, cookies=cookies)
-    data = resp.json()
-    return {"昨天": data['stats'][-1]['retention_rate'][0], "前天": data['stats'][-2]['retention_rate'][0], '八天前': data['stats'][0]['retention_rate'][0]}
+    try:
+        """用户次日留存"""
+        # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-09&end_date=2019-09-15&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=retentions
+        stats_type = 'retentions'
+        report_type = 'reports'
+        end_date = (today - timedelta(days=2)).strftime('%Y-%m-%d')
+        start_date = (today - timedelta(days=9)).strftime('%Y-%m-%d')
+        url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
+                            'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
+        resp = requests.get(url=url, cookies=cookies)
+        data = resp.json()
+        return {"昨天": data['stats'][-1]['retention_rate'][0], "前天": data['stats'][-2]['retention_rate'][0], '八天前': data['stats'][0]['retention_rate'][0]}
+    except:
+        print("ERROR:query_morrow_retentions")
+
 
 
 def query_threedays_retentions():
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-04&end_date=2019-09-15&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=retentions
-    stats_type = 'retentions'
-    report_type = 'reports'
-    end_date = (today - timedelta(days=4)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=11)).strftime('%Y-%m-%d')
-    url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
-    resp = requests.get(url=url, cookies=cookies)
-    data = resp.json()
-    return {"昨天": data['stats'][7]['retention_rate'][2], "前天": data['stats'][6]['retention_rate'][2], '八天前': data['stats'][0]['retention_rate'][2]}
-
+    try:
+        # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-04&end_date=2019-09-15&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=retentions
+        stats_type = 'retentions'
+        report_type = 'reports'
+        end_date = (today - timedelta(days=4)).strftime('%Y-%m-%d')
+        start_date = (today - timedelta(days=11)).strftime('%Y-%m-%d')
+        url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
+                            'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
+        resp = requests.get(url=url, cookies=cookies)
+        data = resp.json()
+        return {"昨天": data['stats'][7]['retention_rate'][2], "前天": data['stats'][6]['retention_rate'][2], '八天前': data['stats'][0]['retention_rate'][2]}
+    except:
+        print("ERROR:query_threedays_retentions")
 
 def query_sevendays_retentions():
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-01&end_date=2019-09-15&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=retentions
-    stats_type = 'retentions'
-    report_type = 'reports'
-    end_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=14)).strftime('%Y-%m-%d')
-    url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
-    resp = requests.get(url=url, cookies=cookies)
-    data = resp.json()
-    return {"昨天": data['stats'][6]['retention_rate'][6], "前天": data['stats'][5]['retention_rate'][6], '八天前': data['stats'][0]['retention_rate'][6]}
+    try:
+        # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-01&end_date=2019-09-15&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=retentions
+        stats_type = 'retentions'
+        report_type = 'reports'
+        end_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
+        start_date = (today - timedelta(days=14)).strftime('%Y-%m-%d')
+        url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
+                            'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
+        resp = requests.get(url=url, cookies=cookies)
+        data = resp.json()
+        return {"昨天": data['stats'][6]['retention_rate'][6], "前天": data['stats'][5]['retention_rate'][6], '八天前': data['stats'][0]['retention_rate'][6]}
+    except:
+        print("ERROR:query_sevendays_retentions")
 
 
 def query_video_supplement():
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b7289ddf43e4838c7000268
-    stats_type = 'event_group_trend'
-    report_type = 'events'
-    event_group_id = event_group_id_ad_interstitial_from
-    end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                               'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
-    resp = requests.get(url=url, cookies=cookies)
-    data = resp.json()
-    return {"昨天": data['stats'][0]['count'], "前天": data['stats'][1]['count'], '八天前': data['stats'][-1]['count']}
-
+    try:
+        # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b7289ddf43e4838c7000268
+        stats_type = 'event_group_trend'
+        report_type = 'events'
+        event_group_id = event_group_id_ad_interstitial_from
+        end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
+        start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
+        url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
+                                'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
+        resp = requests.get(url=url, cookies=cookies)
+        data = resp.json()
+        return {"昨天": data['stats'][0]['count'], "前天": data['stats'][1]['count'], '八天前': data['stats'][-1]['count']}
+    except:
+        print("ERROR:query_video_supplement")
 
 def query_video():
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b7289a4f43e487686000096
-    stats_type = 'event_group_trend'
-    report_type = 'events'
-    event_group_id = event_group_id_watch_video
-    end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                               'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
-    resp = requests.get(url=url, cookies=cookies)
-    data = resp.json()
-    return {"昨天": [data['stats'][0]['count'], data['stats'][0]['device']], "前天": [data['stats'][1]['count'], data['stats'][1]['device']], '八天前': [data['stats'][-1]['count'], data['stats'][-1]['device']]}
-# https://mobile.umeng.com/apps/eb00006c4684e34ff9d8d3b5/events/load_table_data?start_date=2019-09-19&end_date=2019-09-25&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b3de4bca40fa35729000065
-# https://mobile.umeng.com/apps/eb00006c4684e34ff9d8d3b5/events/load_table_data?start_date=2019-09-17&end_date=2019-09-24&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b7289a4f43e487686000096
-
+    try:
+        # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b7289a4f43e487686000096
+        stats_type = 'event_group_trend'
+        report_type = 'events'
+        event_group_id = event_group_id_watch_video
+        end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
+        start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
+        url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
+                                'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
+        resp = requests.get(url=url, cookies=cookies)
+        data = resp.json()
+        return {"昨天": [data['stats'][0]['count'], data['stats'][0]['device']], "前天": [data['stats'][1]['count'], data['stats'][1]['device']], '八天前': [data['stats'][-1]['count'], data['stats'][-1]['device']]}
+    # https://mobile.umeng.com/apps/eb00006c4684e34ff9d8d3b5/events/load_table_data?start_date=2019-09-19&end_date=2019-09-25&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b3de4bca40fa35729000065
+    # https://mobile.umeng.com/apps/eb00006c4684e34ff9d8d3b5/events/load_table_data?start_date=2019-09-17&end_date=2019-09-24&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b7289a4f43e487686000096
+    except:
+        print("ERROR:query_video")
 
 def query_iap_users():
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b84cc7ca40fa34b91000015
-    stats_type = 'event_group_trend'
-    report_type = 'events'
-    event_group_id = event_group_id_buy_iap_total
-    
-    end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                               'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
-    resp = requests.get(url=url, cookies=cookies)
-    data = resp.json()
-    return {"昨天": data['stats'][0]['device'], "前天": data['stats'][1]['device'], '八天前': data['stats'][-1]['device']}
-
+    try:
+        # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b84cc7ca40fa34b91000015
+        stats_type = 'event_group_trend'
+        report_type = 'events'
+        event_group_id = event_group_id_buy_iap_total
+        
+        end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
+        start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
+        url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
+                                'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
+        resp = requests.get(url=url, cookies=cookies)
+        data = resp.json()
+        return {"昨天": data['stats'][0]['device'], "前天": data['stats'][1]['device'], '八天前': data['stats'][-1]['device']}
+    except:
+        print("ERROR:query_iap_users")
 
 def query_open_map2_users():
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?&start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b84cc7ca40fa34b91000019
-    stats_type = 'event_group_trend'
-    report_type = 'events'
-    event_group_id = event_group_id_open_map2
-    end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                               'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
-    resp = requests.get(url=url, cookies=cookies)
-    data = resp.json()
-    return {"昨天": data['stats'][0]['device'], "前天": data['stats'][1]['device'], '八天前': data['stats'][-1]['device']}
+    try:
 
+        # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?&start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b84cc7ca40fa34b91000019
+        stats_type = 'event_group_trend'
+        report_type = 'events'
+        event_group_id = event_group_id_open_map2
+        end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
+        start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
+        url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
+                                'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
+        resp = requests.get(url=url, cookies=cookies)
+        data = resp.json()
+        return {"昨天": data['stats'][0]['device'], "前天": data['stats'][1]['device'], '八天前': data['stats'][-1]['device']}
+    except:
+        print("ERROR:query_open_map2_users")
 
 def query_open_map3_users():
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-09&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b9a2569b27b0a5cb8000054
-    stats_type = 'event_group_trend'
-    report_type = 'events'
-    event_group_id = event_group_id_open_map3
-    end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                               'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
-    resp = requests.get(url=url, cookies=cookies)
-    data = resp.json()
-    return {"昨天": data['stats'][0]['device'], "前天": data['stats'][1]['device'], '八天前': data['stats'][-1]['device']}
-
+    try:
+        # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-09&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b9a2569b27b0a5cb8000054
+        stats_type = 'event_group_trend'
+        report_type = 'events'
+        event_group_id = event_group_id_open_map3
+        end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
+        start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
+        url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
+                                'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
+        resp = requests.get(url=url, cookies=cookies)
+        data = resp.json()
+        return {"昨天": data['stats'][0]['device'], "前天": data['stats'][1]['device'], '八天前': data['stats'][-1]['device']}
+    except:
+        print("ERROR:query_open_map3_users")
 
 def query_open_event():
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b7289ddf43e4838c7000282
-    stats_type = 'event_group_trend'
-    report_type = 'events'
-    event_group_id = event_group_id_open_event
-    end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                               'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
-    resp = requests.get(url=url, cookies=cookies)
-    data = resp.json()
-    return {"昨天": data['stats'][0]['device'], "前天": data['stats'][1]['device'], '八天前': data['stats'][-1]['device']}
-
+    try:
+        # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b7289ddf43e4838c7000282
+        stats_type = 'event_group_trend'
+        report_type = 'events'
+        event_group_id = event_group_id_open_event
+        end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
+        start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
+        url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
+                                'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
+        resp = requests.get(url=url, cookies=cookies)
+        data = resp.json()
+        return {"昨天": data['stats'][0]['device'], "前天": data['stats'][1]['device'], '八天前': data['stats'][-1]['device']}
+    except:
+        print("ERROR:query_open_event")
 
 def query_claim_times():
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-09&end_date=2019-09-15&channels[]=&versions[]=&event_id=5b7be0660237f6071568cc54&event_group_id=5b7289ddf43e4838c7000289&event_group_name=show_claim&stats=count_distribute&property_type=string
@@ -367,26 +391,29 @@ def query_unlock_business():
 
 
 def query_iap_money():
+    try:
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-14&end_date=2019-09-14&channels[]=&versions[]=&event_id=5b9f7401c37c58067735ebc0&event_group_id=5b84cc7ca40fa34b91000015&event_group_name=buy_iap_total&stats=count_distribute&property_type=string
-    stats_type = 'count_distribute'
-    report_type = 'events'
-    event_id = event_id_buy_iap_total
-    event_group_id = event_group_id_buy_iap_total
-    event_group_name = 'buy_iap_total'
-    group = []
-    end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
-    start_date = end_date
-    url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&event_id=%(event_id)s&event_group_id=%(event_group_id)s&event_group_name=%(event_group_name)s&stats=%(stats_type)s&property_type=string'
+        stats_type = 'count_distribute'
+        report_type = 'events'
+        event_id = event_id_buy_iap_total
+        event_group_id = event_group_id_buy_iap_total
+        event_group_name = 'buy_iap_total'
+        group = []
+        end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
+        start_date = end_date
+        url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&event_id=%(event_id)s&event_group_id=%(event_group_id)s&event_group_name=%(event_group_name)s&stats=%(stats_type)s&property_type=string'
 
-    url = url_eventname_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                                   'start_date': start_date, 'end_date': end_date, 'event_id': event_id,
-                                   'event_group_id': event_group_id, 'event_group_name': event_group_name, 'stats_type': stats_type}
-    resp = requests.get(url=url, cookies=cookies)
-    data = resp.json()
-    for d in data['stats']:
-        group.append({'label': d['label'], 'num': d['num']})
+        url = url_eventname_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
+                                    'start_date': start_date, 'end_date': end_date, 'event_id': event_id,
+                                    'event_group_id': event_group_id, 'event_group_name': event_group_name, 'stats_type': stats_type}
+        resp = requests.get(url=url, cookies=cookies)
+        data = resp.json()
+        for d in data['stats']:
+            group.append({'label': d['label'], 'num': d['num']})
 
-    return group
+        return group
+    except:
+        print("ERROR:query_iap_money")
 
 
 def query_ad_play_num(event_id, event_group_id):
@@ -398,41 +425,47 @@ def query_ad_play_num(event_id, event_group_id):
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-16&end_date=2019-09-22&channels[]=&versions[]=&event_id=5b9f0bd60237f606c0aca277&event_group_id=5b7289a4f43e487686000096&event_group_name=watch_video&stats=count_distribute&property_type=string
 
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-16&end_date=2019-09-22&channels[]=&versions[]=&event_id=5ba22b756e21cc6462bdafd3&event_group_id=5b7289a4f43e487686000096&event_group_name=watch_video&stats=count_distribute&property_type=string
-    stats_type = 'count_distribute'
-    report_type = 'events'
-    event_group_name = 'watch_video'
-    event_group_id = event_group_id_watch_video
-    end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
-    start_date = end_date
-    url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&event_id=%(event_id)s&event_group_id=%(event_group_id)s&event_group_name=%(event_group_name)s&stats=%(stats_type)s&property_type=string'
+    try:
+        stats_type = 'count_distribute'
+        report_type = 'events'
+        event_group_name = 'watch_video'
+        event_group_id = event_group_id_watch_video
+        end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
+        start_date = end_date
+        url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&event_id=%(event_id)s&event_group_id=%(event_group_id)s&event_group_name=%(event_group_name)s&stats=%(stats_type)s&property_type=string'
 
-    url = url_eventname_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                                   'start_date': start_date, 'end_date': end_date, 'event_id': event_id,
-                                   'event_group_id': event_group_id, 'event_group_name': event_group_name, 'stats_type': stats_type}
-    resp = requests.get(url=url, cookies=cookies)
-    data = resp.json()
-    dict = {}
-    for item in data['stats']:
-        dict[item['label']] = item['num']
+        url = url_eventname_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
+                                    'start_date': start_date, 'end_date': end_date, 'event_id': event_id,
+                                    'event_group_id': event_group_id, 'event_group_name': event_group_name, 'stats_type': stats_type}
+        resp = requests.get(url=url, cookies=cookies)
+        data = resp.json()
+        dict = {}
+        for item in data['stats']:
+            dict[item['label']] = item['num']
 
-    return dict
+        return dict
+    except:
+        print("ERROR:query_ad_play_num")
 
 
 def query_ad_play_num_all():
-    total = {}
-    ids = [event_id_ad_play_action,
-           event_id_ad_play_event,
-           event_id_ad_play_map2,
-           event_id_ad_play_map3]
-    for id in ids:
-        data = query_ad_play_num(id, event_group_id_watch_video)
-        for key in data.keys():
-            if key in total:
-                total[key] += data[key]
-            else:
-                total[key] = data[key]
+    try:
+        total = {}
+        ids = [event_id_ad_play_action,
+            event_id_ad_play_event,
+            event_id_ad_play_map2,
+            event_id_ad_play_map3]
+        for id in ids:
+            data = query_ad_play_num(id, event_group_id_watch_video)
+            for key in data.keys():
+                if key in total:
+                    total[key] += data[key]
+                else:
+                    total[key] = data[key]
 
-    return total
+        return total
+    except:
+        print("ERROR:query_ad_play_num_all")
 
 
 def calculate_iap_nums():
@@ -511,44 +544,46 @@ def query_xi_back_gun():
 
 def query_xi_ecpm(country=""):
     """从xi平台 收入查询 ecpm"""
-    url = "https://xi.harrybuy.com/report/revenue"
-    end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    # {"appName":["Game_iOS_Idle Capitalist"],"dateRange":["2019-09-16","2019-09-23"],"timeZone":"default","platform":[],"country":["US"],"breakdown":["app_name","date"]}}
-    qdata_temlate_ecpm = '{"appName":["%(app_name)s"],"dateRange":["%(start_date)s","%(end_date)s"],"timeZone":"default","platform":[],"country":[%(country)s],"breakdown":["app_name","date"]}'
-    qdata_ecpm_str = qdata_temlate_ecpm % {
-        "app_name": g_app_name, "start_date": start_date, 'end_date': end_date, "country": country}
-    qdata_ecpm = qdata_ecpm_str.encode("utf-8")
-    headers = {
-        "authority": "xi.harrybuy.com",
-        "method": "POST",
-        "path": "/report/revenue",
-        "scheme": "https",
-        "accept": "application/json, text/plain, */*",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
-        "Host": "xi.harrybuy.com",
-        "cache-control": "no-cache",
-        "Content-Type": "application/json;charset=UTF-8",
-        "cookie": f"connect.sid={query_xi_ecpm_connect_sid}; Xi-Token=fangfang_ren",
-        "Origin": "https://xi.harrybuy.com",
-        "referer": "https://xi.harrybuy.com/v3/",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-site": "same-origin",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-token": "fangfang_ren"
-    }
+    try:
+        url = "https://xi.harrybuy.com/report/revenue"
+        end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
+        start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
+        # {"appName":["Game_iOS_Idle Capitalist"],"dateRange":["2019-09-16","2019-09-23"],"timeZone":"default","platform":[],"country":["US"],"breakdown":["app_name","date"]}}
+        qdata_temlate_ecpm = '{"appName":["%(app_name)s"],"dateRange":["%(start_date)s","%(end_date)s"],"timeZone":"default","platform":[],"country":[%(country)s],"breakdown":["app_name","date"]}'
+        qdata_ecpm_str = qdata_temlate_ecpm % {
+            "app_name": g_app_name, "start_date": start_date, 'end_date': end_date, "country": country}
+        qdata_ecpm = qdata_ecpm_str.encode("utf-8")
+        headers = {
+            "authority": "xi.harrybuy.com",
+            "method": "POST",
+            "path": "/report/revenue",
+            "scheme": "https",
+            "accept": "application/json, text/plain, */*",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
+            "Host": "xi.harrybuy.com",
+            "cache-control": "no-cache",
+            "Content-Type": "application/json;charset=UTF-8",
+            "cookie": f"connect.sid={query_xi_ecpm_connect_sid}; Xi-Token=fangfang_ren",
+            "Origin": "https://xi.harrybuy.com",
+            "referer": "https://xi.harrybuy.com/v3/",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-origin",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
+            "x-token": "fangfang_ren"
+        }
 
-    resp = requests.post(url=url, data=qdata_ecpm, headers=headers)
+        resp = requests.post(url=url, data=qdata_ecpm, headers=headers)
 
-    data = resp.json()
+        data = resp.json()
 
-    return {"昨天": data[-1]['ecpm'], "前天": data[-2]['ecpm'], '八天前': data[1]['ecpm']}
-
+        return {"昨天": data[-1]['ecpm'], "前天": data[-2]['ecpm'], '八天前': data[1]['ecpm']}
+    except:
+        print("ERROR:query_xi_ecpm")
 
 # stat_platform_android()
 # # print(query_xi_back_gun(app_name_tbc3_android, bundle_id_tbc3_android, platform_tbc3_android))
 # print(query_xi_ecpm())
 # print(query_xi_ecpm(country_us))
 
-# print(query_active_users())
+# print(query_xi_back_gun())
