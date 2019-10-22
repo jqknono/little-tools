@@ -471,24 +471,24 @@ def query_xi_back_gun():
                                  'end_date': end_date, 'bundle_id': g_bundle_id, 'platform': g_platform}
     qdata = qdata_str.encode("utf-8")
     headers = {
-        "authority": "xi.harrybuy.com",
-        "method": "POST",
-        "Host": "xi.harrybuy.com",
-        "Connection": "keep-alive",
+        ":authority": "xi.harrybuy.com",
+        ":method": "POST",
+        # "Host": "xi.harrybuy.com",
+        # "Connection": "keep-alive",
         "accept": "application/json, text/plain, */*",
-        "Origin": "https://xi.harrybuy.com",
-        "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5",
-        "Content-Type": "application/json",
-        "Accept": "*/*",
-        "Referer": "https://xi.harrybuy.com/v3/",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
-        "Content-Type": "application/json;charset=UTF-8",
-        "Cookie": f"Xi-Token=fangfang_ren; connect.sid= {query_xi_back_gun_connect_sid}",
+        "origin": "https://xi.harrybuy.com",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36",
+        "content-type": "application/json",
+        # "Accept": "*/*",
+        "referer": "https://xi.harrybuy.com/v3/",
+        "accept-encoding": "gzip, deflate, br",
+        "accept-language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
+        "content-type": "application/json;charset=UTF-8",
+        "cookie": f"Xi-Token=fangfang_ren; connect.sid= {query_xi_back_gun_connect_sid}",
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "x-token": "fangfang_ren",
-        "Referrer Policy": "no-referrer-when-downgrade"
+        # "Referrer Policy": "no-referrer-when-downgrade"
     }
 
     conn = HTTPConnection('xi.harrybuy.com')
@@ -551,4 +551,4 @@ def query_xi_ecpm(country=""):
 # print(query_xi_ecpm())
 # print(query_xi_ecpm(country_us))
 
-print(query_active_users())
+print(query_xi_back_gun())
