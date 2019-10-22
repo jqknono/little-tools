@@ -2,5 +2,9 @@
     "git.allowForcePush": true,
     "git.rebaseWhenSync": true,
     "git.autoStash": true,
+<<<<<<< Updated upstream
     "python.pythonPath": "/usr/local/bin/python3"
+=======
+    "git.autofetch": true
+>>>>>>> Stashed changes
 }
