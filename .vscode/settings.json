@@ -1,6 +1,0 @@
-{
-    "git.allowForcePush": true,
-    "git.rebaseWhenSync": true,
-    "git.autoStash": true,
-    "python.pythonPath": "/usr/local/bin/python3"
-}
