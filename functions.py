@@ -8,7 +8,7 @@ from collections import namedtuple
 from result import *
 from urllib.parse import unquote
 from hyper import HTTPConnection
-
+import inspect
 
 g_product_id = id_tbc_ios
 g_app_name = ""
@@ -152,6 +152,7 @@ def stat_platform_android():
 
 
 def query_active_users():
+    print(inspect.stack()[0][3])
     try:
         """查日活/新增"""
         # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-06&end_date=2019-09-14&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=active
@@ -168,6 +169,7 @@ def query_active_users():
         print("ERROR:query_active_users")
 
 def query_launches_times():
+    print(inspect.stack()[0][3])
     """启动次数"""
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-06&end_date=2019-09-14&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=launches
     stats_type = 'launches'
@@ -182,6 +184,7 @@ def query_launches_times():
 
 
 def query_morrow_retentions():
+    print(inspect.stack()[0][3])
     """用户次日留存"""
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-09&end_date=2019-09-15&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=retentions
     stats_type = 'retentions'
@@ -196,6 +199,7 @@ def query_morrow_retentions():
 
 
 def query_threedays_retentions():
+    print(inspect.stack()[0][3])
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-04&end_date=2019-09-15&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=retentions
     stats_type = 'retentions'
     report_type = 'reports'
@@ -209,6 +213,7 @@ def query_threedays_retentions():
 
 
 def query_sevendays_retentions():
+    print(inspect.stack()[0][3])
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-01&end_date=2019-09-15&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=retentions
     stats_type = 'retentions'
     report_type = 'reports'
@@ -222,6 +227,7 @@ def query_sevendays_retentions():
 
 
 def query_video_supplement():
+    print(inspect.stack()[0][3])
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b7289ddf43e4838c7000268
     stats_type = 'event_group_trend'
     report_type = 'events'
@@ -236,6 +242,7 @@ def query_video_supplement():
 
 
 def query_video():
+    print(inspect.stack()[0][3])
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b7289a4f43e487686000096
     stats_type = 'event_group_trend'
     report_type = 'events'
@@ -252,6 +259,7 @@ def query_video():
 
 
 def query_iap_users():
+    print(inspect.stack()[0][3])
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b84cc7ca40fa34b91000015
     stats_type = 'event_group_trend'
     report_type = 'events'
@@ -267,6 +275,7 @@ def query_iap_users():
 
 
 def query_open_map2_users():
+    print(inspect.stack()[0][3])
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?&start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b84cc7ca40fa34b91000019
     stats_type = 'event_group_trend'
     report_type = 'events'
@@ -281,6 +290,7 @@ def query_open_map2_users():
 
 
 def query_open_map3_users():
+    print(inspect.stack()[0][3])
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-09&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b9a2569b27b0a5cb8000054
     stats_type = 'event_group_trend'
     report_type = 'events'
@@ -295,6 +305,7 @@ def query_open_map3_users():
 
 
 def query_open_event():
+    print(inspect.stack()[0][3])
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b7289ddf43e4838c7000282
     stats_type = 'event_group_trend'
     report_type = 'events'
@@ -309,6 +320,7 @@ def query_open_event():
 
 
 def query_claim_times():
+    print(inspect.stack()[0][3])
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-09&end_date=2019-09-15&channels[]=&versions[]=&event_id=5b7be0660237f6071568cc54&event_group_id=5b7289ddf43e4838c7000289&event_group_name=show_claim&stats=count_distribute&property_type=string
     try:
         stats_type = 'count_distribute'
@@ -337,6 +349,7 @@ def query_claim_times():
 
 
 def query_unlock_business():
+    print(inspect.stack()[0][3])
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-14&end_date=2019-09-14&channels[]=&versions[]=&event_id=5b7bdfa20237f6071568cc50&event_group_id=5b7289ddf43e4838c7000295&event_group_name=unlock_business&stats=count_distribute&property_type=string
     try:
         stats_type = 'count_distribute'
@@ -366,6 +379,7 @@ def query_unlock_business():
 
 
 def query_iap_money():
+    print(inspect.stack()[0][3])
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-14&end_date=2019-09-14&channels[]=&versions[]=&event_id=5b9f7401c37c58067735ebc0&event_group_id=5b84cc7ca40fa34b91000015&event_group_name=buy_iap_total&stats=count_distribute&property_type=string
     stats_type = 'count_distribute'
     report_type = 'events'
@@ -389,6 +403,7 @@ def query_iap_money():
 
 
 def query_ad_play_num(event_id, event_group_id):
+    print(inspect.stack()[0][3])
     """查询播放广告次数"""
     # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-16&end_date=2019-09-22&channels[]=&versions[]=&event_id=5b7a8b163665ca0789e82188&event_group_id=5b7289a4f43e487686000096&event_group_name=watch_video&stats=count_distribute&property_type=string
 
@@ -418,6 +433,7 @@ def query_ad_play_num(event_id, event_group_id):
 
 
 def query_ad_play_num_all():
+    print(inspect.stack()[0][3])
     total = {}
     ids = [event_id_ad_play_action,
            event_id_ad_play_event,
@@ -435,6 +451,7 @@ def query_ad_play_num_all():
 
 
 def calculate_iap_nums():
+    print(inspect.stack()[0][3])
     '''IAP购买次数'''
     i = 0
     j = 0
@@ -445,6 +462,7 @@ def calculate_iap_nums():
 
 
 def calculate_iap_money_sum():
+    print(inspect.stack()[0][3])
     '''付费金额'''
     i = 0
     j = 0
@@ -459,6 +477,7 @@ def calculate_iap_money_sum():
 
 
 def query_xi_back_gun():
+    print(inspect.stack()[0][3])
     """
     https://xi.harrybuy.com/es/monesimplify/pistolevent
     从xi平台查询, 回本手枪图
@@ -511,6 +530,7 @@ def query_xi_back_gun():
 
 
 def query_xi_ecpm(country=""):
+    print(inspect.stack()[0][3])
     """从xi平台 收入查询 ecpm"""
     url = "https://xi.harrybuy.com/report/revenue"
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
@@ -552,5 +572,5 @@ def query_xi_ecpm(country=""):
 # print(query_xi_ecpm())
 # print(query_xi_ecpm(country_us))
 
-stat_platform_android()
-print(query_xi_back_gun())
+# stat_platform_android()
+# print(query_xi_back_gun())
