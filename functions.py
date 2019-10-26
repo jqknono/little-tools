@@ -460,21 +460,25 @@ def calculate_iap_money_sum():
 
 
 def query_xi_back_gun():
-    """从xi平台查询, 回本手枪图"""
+    """
+    https://xi.harrybuy.com/es/monesimplify/pistolevent
+    从xi平台查询, 回本手枪图
+    """
     url = "https://xi.harrybuy.com/es/monesimplify/pistolevent"
     end_date = (today - timedelta(days=3)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=11)).strftime('%Y-%m-%d')
     qdata_temlate = '{"app_name":"%(app_name)s","date_range":["%(start_date)s","%(end_date)s"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":["%(bundle_id)s"],"platform":["%(platform)s"],"media_source":["Facebook Ads"],"country_code":["US"]}}'
 
-    # qdata = b'{"app_name":"Game_iOS_Idle Capitalist","date_range":["2019-09-15","2019-09-19"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":["com.idlecapatalist.aovalw"],"platform":["ios"],"media_source":["Facebook Ads"],"country_code":["US"]}}'
+    # qdata = b'{"app_name":"Game_iOS_Idle Capitalist","date_range":["2019-09-15","2019-09-19"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":["com.idlecapatalist.aovalw"],               "platform":["ios"],    "media_source":["Facebook Ads"],"country_code":["US"]}}'
+    # qdata = b'{"app_name":"Game_android_TBC3",       "date_range":["2019-10-13","2019-10-25"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":["com.brokenreality.bigcapitalist3.android"],"platform":["android"],"media_source":["Facebook Ads"],"country_code":["US"]}}'
     qdata_str = qdata_temlate % {"app_name": g_app_name, "start_date": start_date,
                                  'end_date': end_date, 'bundle_id': g_bundle_id, 'platform': g_platform}
     qdata = qdata_str.encode("utf-8")
     headers = {
-        ":authority": "xi.harrybuy.com",
-        ":method": "POST",
-        # "Host": "xi.harrybuy.com",
-        # "Connection": "keep-alive",
+        "authority": "xi.harrybuy.com",
+        "method": "POST",
+        "Host": "xi.harrybuy.com",
+        "Connection": "keep-alive",
         "accept": "application/json, text/plain, */*",
         "origin": "https://xi.harrybuy.com",
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36",
@@ -488,14 +492,12 @@ def query_xi_back_gun():
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "x-token": "fangfang_ren",
-        # "Referrer Policy": "no-referrer-when-downgrade"
+        "Referrer Policy": "no-referrer-when-downgrade"
     }
 
-    conn = HTTPConnection('xi.harrybuy.com')
-    conn.request('POST', url, headers=headers, body=qdata)
-    resp = conn.get_response()
-    response = resp.read().decode("utf-8")
-    data = json.loads(response)
+    resp = requests.post(url=url, data=qdata, headers=headers)
+    data = resp.json()
+
     try:
         dict = {}
         for item in data[0]:
@@ -551,4 +553,5 @@ def query_xi_ecpm(country=""):
 # print(query_xi_ecpm())
 # print(query_xi_ecpm(country_us))
 
+stat_platform_android()
 print(query_xi_back_gun())
