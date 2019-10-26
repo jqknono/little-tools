@@ -34,7 +34,7 @@ def main():
 
     # step6: 获取插屏数量
 
-    filename = "TBC3每日数据2019-10-10.xlsx"
+    filename = "TBC3每日数据2019-10-24.xlsx"
     wb = open_excel(filename)
     save_to_ios(wb)
     save_to_android(wb)

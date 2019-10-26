@@ -40,15 +40,14 @@ today = datetime.today()
 interval = 8
 
 cookies = {'JSESSIONID': '26A64F4332F1D3C22CFB9778FAA46811',
-        #    'PHPSESSID': 'e25rks4rchtepldv23flhc7l82',
-
-           'UM_distinctid': '16d8779e1fc209-0edba2f9605ef-48183600-13c680-16d8779e1fd858',
-           'isg': 'BCcnC9UiNp-bC7KeajAkOhrstF3xrPuO2UGDIPmUZbbd6EeqAX8t309jDmj2G9M', 
-           'uc_session_id': 'a6680c3f-68f3-4a3f-9d5a-36b0293a8f0a',
+           'PHPSESSID': 'e25rks4rchtepldv23flhc7l82',
+           'UM_distinctid': '16d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88',
+           'isg': 'BHl5F5L7ANyeINyI5BmIkmxxiOWTLm1UkGz0TJuuxaAfIpm049KxCWJ7oG5xmgVw', 
+           'uc_session_id': 'd521e33a-ddf0-4d6d-8ed3-a1d082639bd6',
            'um_lang': 'zh',
-           'ummo_ss': 'BAh7CUkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZvOhNCU09OOjpPYmplY3RJZAY6CkBkYXRhWxFpYmkxaVppAZppXGkSaQHzaQGTaT5pAGkKaXRJIhk4UVA3eElpcW1PaGRXdG1HUFpQawY7AFRJIhR1bXBsdXNfdWNfdG9rZW4GOwBGIj0xZ0pzZ2VHLTJZYmNWY2VZX093UnRCZ18xMDlkMTgwODFkYWY0YWFiOGI1NmZiNDg0NGQyNmJhNUkiEF9jc3JmX3Rva2VuBjsARkkiMUdwb1FYU2o1ZU9PMXR5YkJhL0h6QVRSZVMxS1M3clpUWE5teDJIc2l1WG89BjsARkkiD3Nlc3Npb25faWQGOwBUSSIlNmNkMTY1NmYwYjQ4OTM5Njk5OTRkM2FhMjg3NWEyZTIGOwBG--68d4bdb2383f4e8b87373481e15cff04ffb8c9be',
+           'ummo_ss': 'BAh7CUkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZvOhNCU09OOjpPYmplY3RJZAY6CkBkYXRhWxFpYmkxaVppAZppXGkSaQHzaQGTaT5pAGkKaXRJIhk4UVA3eElpcW1PaGRXdG1HUFpQawY7AFRJIhR1bXBsdXNfdWNfdG9rZW4GOwBGIj0xdVFkY1hjb3I2ZmtRXzI2bzVnMzYzd18wZTI2MGI3Yjc4Y2U0MjBkYjI5ODk4Yjk3MTk0ZjFkNUkiEF9jc3JmX3Rva2VuBjsARkkiMXdqZjBnY1EvLzYxazNTRnd6WFlOL3pTQlQ1M1Vxdk5vRXVmMTg0aGR6enM9BjsARkkiD3Nlc3Npb25faWQGOwBUSSIlMWU5NDQwZmE1NmY5Y2ZlYWVhYzUwNzg0MjllNzQyYmIGOwBG--4011cfd5b83413aedc5acc4244e0e8e6bb3d73f3',
            'umplus_uc_loginid': 'fangfang_ren',
-           'umplus_uc_token': '1gJsgeG-2YbcVceY_OwRtBg_109d18081daf4aab8b56fb4844d26ba5'
+           'umplus_uc_token': '1uQdcXcor6fkQ_26o5g363w_0e260b7b78ce420db29898b97194f1d5'
            }
 
 query_xi_back_gun_connect_sid = unquote(
