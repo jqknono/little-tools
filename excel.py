@@ -319,19 +319,19 @@ def save_xi_worksheet(ws):
     
     
     # 切换列数
-    new_row = rows + 1
-    row_G = new_row-1
-    row_F = new_row-1    
-    row_I = new_row-1
-    row_J = new_row-3
-    row_K = new_row-7
-    row_AN= new_row-2
+    # new_row = rows + 1
+    row_G = rows-1
+    row_F = rows-1    
+    # row_I = new_row-1
+    # row_J = new_row-3
+    # row_K = new_row-7
+    row_AN= rows-2
 
     # 填数据到excel
 
-    assign_value(ws, new_row, 'G', value_G_1)
+    assign_value(ws, rows, 'G', value_G_1)
     assign_value(ws, row_G, 'G', value_G_2)
-    assign_value(ws, new_row, 'H', value_H_1)
+    assign_value(ws, rows, 'H', value_H_1)
     assign_value(ws, row_F, 'H', value_H_2)
     assign_value(ws, row_AN, 'AN',value_AN)
 
