@@ -19,7 +19,9 @@ def assign_value(ws, row, column, value):
 
 
 today = datetime.today()
+# today = today - timedelta(days=1)
 yesterday = (today - timedelta(days=1)).strftime('%Y/%m/%d')
+
 save_file_name = (today - timedelta(days=1)).strftime('%Y-%m-%d')
 
 # template
