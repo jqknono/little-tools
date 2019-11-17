@@ -258,7 +258,7 @@ def save_umeng_worksheet(ws):
         yesterday_to_write = yesterday[0:5]+yesterday[6:10]
 
     assign_value(ws, new_row, 'A', yesterday_to_write)
-    assign_value(ws, new_row, 'B', 'iOS')
+    assign_value(ws, new_row, 'B', g_platform_version)
     assign_value(ws, new_row, 'C', data['昨天'][1])
     assign_value(ws, new_row, 'D', data['昨天'][0])
     assign_value(ws, new_row, 'E', value_E)
@@ -347,10 +347,6 @@ def save_to_ios(wb):
     save_xi_worksheet(ws)
     # save_to_worksheet(ws)
 
-
-
-
-
 def save_to_android(wb):
     stat_platform_android()
     ws = wb["安卓"]
@@ -358,6 +354,9 @@ def save_to_android(wb):
     save_xi_worksheet(ws)
     # save_to_worksheet(ws)
 
+def save_to_tbc3(wb):
+    ws = wb["TBC3"]
+    ws["B1"] = yesterday
 
 
 def open_excel(filename):

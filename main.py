@@ -37,10 +37,11 @@ def main():
 
     # step6: 获取插屏数量
 
-    filename = "template.xlsx"
+    filename = read_file_name
     wb = open_excel(filename)
     save_to_ios(wb)
     save_to_android(wb)
+    save_to_tbc3(wb)
     save_excel(wb)
 
     # TBC3每日数据2019-11-14.xlsx
@@ -51,4 +52,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    print("All Done!!!!")
     

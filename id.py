@@ -24,3 +24,5 @@ bundle_id_tbc3_android = 'com.brokenreality.bigcapitalist3.android'
 platform_tbc3_android = 'android'
 country_us ='"US"' 
 country = ""
+
+g_platform_version = "iOS"
