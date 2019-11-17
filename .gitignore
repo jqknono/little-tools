@@ -1,8 +1,5 @@
 *.pyc
-*.xlsx
 .vs
 __pycache__/functions.cpython-37.pyc
-__pycache__
 __pycache__/**
-*.xlsx
 .vscode
