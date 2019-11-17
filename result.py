@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 class Result(object):
     def __init__(self, result, dates, stats, ):
         self.result = result

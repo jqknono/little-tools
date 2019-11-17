@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import requests
 from const import *
 from id import *

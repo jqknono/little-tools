@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from functions import *
 # 查数据
 stat_platform_android()
