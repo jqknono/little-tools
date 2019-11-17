@@ -35,8 +35,6 @@ url_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(
 url_event_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&stats=%(stats_type)s&event_group_id=%(event_group_id)s'
 url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&%(event_id)s&%(event_group_id)s&%(event_group_name)s&stats=%(stats_type)s&property_type=string'
 
-today = datetime.today()
-# today = today - timedelta(days=1)
 interval = 8
 
 cookies = {'JSESSIONID': '26A64F4332F1D3C22CFB9778FAA46811',

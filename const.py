@@ -1,5 +1,13 @@
+from datetime import datetime
+from datetime import timedelta
+
 base_url = 'https://mobile.umeng.com/apps'
 xi_base_url = 'https://xi.harrybuy.com/es/monesimplify/pistolevent'
+
+today_date = datetime.today()
+today = today_date - timedelta(days=0)
+yesterday_str = (today - timedelta(days=1)).strftime('%Y-%m-%d')
+save_file_name = f"TBC3每日数据{yesterday_str}.xlsx"
 
 ad_play_dict_keys = ["FreeBonus_money",
                      "Offline",

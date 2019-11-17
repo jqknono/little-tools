@@ -8,7 +8,7 @@ from math import log10, floor
 
 alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
             'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-
+            
 
 def assign_value(ws, row, column, value):
     ws[f'{column}{row}'] = value
@@ -18,11 +18,8 @@ def assign_value(ws, row, column, value):
     ws[f'{column}{row}'].number_format = copy(ws[f'{column}{row-50}'].number_format)
 
 
-today = datetime.today()
-# today = today - timedelta(days=1)
 yesterday = (today - timedelta(days=1)).strftime('%Y/%m/%d')
 
-save_file_name = (today - timedelta(days=1)).strftime('%Y-%m-%d')
 
 # template
 # def save_shouqiang_data():
@@ -368,8 +365,7 @@ def open_excel(filename):
 
 def save_excel(wb):
     # Save the file
-    wb.save(f"TBC3每日数据{save_file_name}.xlsx")
-
+    wb.save(save_file_name)
 
 def test():
     filename = "TBC3每日数据20190912.xlsx"
