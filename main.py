@@ -14,40 +14,13 @@ from shutil import copyfile
 
 
 def main():
-
-    # step1: 查日活
-    # data = query_active_users()
-    # print(data)
-
-    # step2: 获取启动次数
-    # data = query_launches_times()
-    # print(data)
-
-    # step3: 获取次日留存
-    # data = query_morrow_retentions()
-    # print(data)
-
-    # step4: 获取三日留存
-    # data = query_threedays_retentions()
-    # print(data)
-
-    # step5: 获取七日留存
-    # data = query_sevendays_retentions()
-    # print(data)
-
-    # step6: 获取插屏数量
-
-    filename = read_file_name
+    copyfile(read_file_name, save_file_name)
+    filename = save_file_name
     wb = open_excel(filename)
     save_to_ios(wb)
     save_to_android(wb)
     save_to_tbc3(wb)
     save_excel(wb)
-
-    # TBC3每日数据2019-11-14.xlsx
-
-    copyfile(save_file_name, filename)
-
 
 
 if __name__ == "__main__":

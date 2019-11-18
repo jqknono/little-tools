@@ -10,7 +10,8 @@ from math import log10, floor
 
 alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
             'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-            
+
+platform_version =  ''
 
 def assign_value(ws, row, column, value):
     ws[f'{column}{row}'] = value
@@ -130,7 +131,7 @@ def save_to_worksheet(ws):
         yesterday_to_write = yesterday[0:5]+yesterday[6:10]
 
     assign_value(ws, new_row, 'A', yesterday_to_write)
-    assign_value(ws, new_row, 'B', 'iOS')
+    assign_value(ws, new_row, 'B', platform_version)
     assign_value(ws, new_row, 'C', data['昨天'][1])
     assign_value(ws, new_row, 'D', data['昨天'][0])
     assign_value(ws, new_row, 'E', value_E)
@@ -258,7 +259,7 @@ def save_umeng_worksheet(ws):
         yesterday_to_write = yesterday[0:5]+yesterday[6:10]
 
     assign_value(ws, new_row, 'A', yesterday_to_write)
-    assign_value(ws, new_row, 'B', g_platform_version)
+    assign_value(ws, new_row, 'B', platform_version)
     assign_value(ws, new_row, 'C', data['昨天'][1])
     assign_value(ws, new_row, 'D', data['昨天'][0])
     assign_value(ws, new_row, 'E', value_E)
@@ -341,6 +342,8 @@ def round_sig(x, sig=2):
 
 
 def save_to_ios(wb):
+    global platform_version
+    platform_version = 'iOS'
     stat_platform_ios()
     ws = wb["iOS"]   
     save_umeng_worksheet(ws)
@@ -348,6 +351,8 @@ def save_to_ios(wb):
     # save_to_worksheet(ws)
 
 def save_to_android(wb):
+    global platform_version
+    platform_version = '安卓'
     stat_platform_android()
     ws = wb["安卓"]
     save_umeng_worksheet(ws)

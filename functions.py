@@ -79,7 +79,6 @@ def stat_platform_ios():
     global event_id_ad_play_event
     global event_id_ad_play_map2
     global event_id_ad_play_map3
-    global g_platform_version
 
     event_group_id_ad_interstitial_from = '5b7289ddf43e4838c7000268'
     event_group_id_watch_video = '5b7289a4f43e487686000096'
@@ -102,7 +101,6 @@ def stat_platform_ios():
     g_app_name = app_name_tbc3_ios
     g_bundle_id = bundle_id_tbc3_ios
     g_platform = platform_tbc3_ios
-    g_platform_version = "iOS"
 
 
 def stat_platform_android():
@@ -128,7 +126,6 @@ def stat_platform_android():
     global event_id_ad_play_event
     global event_id_ad_play_map2
     global event_id_ad_play_map3
-    global g_platform_version
 
     event_group_id_ad_interstitial_from = '5b3de4bca40fa3572900007d' # ok
     event_group_id_watch_video = '5b3de4bca40fa35729000065' # ok
@@ -151,7 +148,6 @@ def stat_platform_android():
     g_app_name = app_name_tbc3_android
     g_bundle_id = bundle_id_tbc3_android
     g_platform = platform_tbc3_android
-    g_platform_version = "安卓"
 
 
 def query_active_users():
