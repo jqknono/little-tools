@@ -1,0 +1,70 @@
+{
+    "code": 200,
+    "msg": "成功",
+    "sCode": 200,
+    "sMsg": "成功",
+    "status": true,
+    "data": {
+        "total": 8,
+        "items": [
+            {
+                "date": "2019-11-24",
+                "newAccountRate": 0.0,
+                "newUser": 17929,
+                "newAccount": 0,
+                "newUserRate": 22.03
+            },
+            {
+                "date": "2019-11-23",
+                "newAccountRate": 0.0,
+                "newUser": 20904,
+                "newAccount": 0,
+                "newUserRate": 23.22
+            },
+            {
+                "date": "2019-11-22",
+                "newAccountRate": 0.0,
+                "newUser": 22839,
+                "newAccount": 0,
+                "newUserRate": 24.62
+            },
+            {
+                "date": "2019-11-21",
+                "newAccountRate": 0.0,
+                "newUser": 23535,
+                "newAccount": 0,
+                "newUserRate": 25.06
+            },
+            {
+                "date": "2019-11-20",
+                "newAccountRate": 0.0,
+                "newUser": 24202,
+                "newAccount": 0,
+                "newUserRate": 25.16
+            },
+            {
+                "date": "2019-11-19",
+                "newAccountRate": 0.0,
+                "newUser": 25858,
+                "newAccount": 0,
+                "newUserRate": 25.73
+            },
+            {
+                "date": "2019-11-18",
+                "newAccountRate": 0.0,
+                "newUser": 32648,
+                "newAccount": 0,
+                "newUserRate": 30.61
+            },
+            {
+                "date": "2019-11-17",
+                "newAccountRate": 0.0,
+                "newUser": 29831,
+                "newAccount": 0,
+                "newUserRate": 29.51
+            }
+        ]
+    },
+    "timestamp": 1574598996741,
+    "traceId": "0b0fecd915745989964911719e1a24"
+}
