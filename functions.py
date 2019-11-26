@@ -38,10 +38,9 @@ url_event_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_d
 url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&%(event_id)s&%(event_group_id)s&%(event_group_name)s&stats=%(stats_type)s&property_type=string'
 
 interval = 8
+related_Id = "5b3d8d9ff43e4864c60000be"
 
-related_Id = "5b7139be8f4a9d7dea000051"
-
-cookies_str = 'umplus_uc_loginid=fangfang_ren; UM_distinctid=16d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88; um_lang=zh; cn_1276392090_dplus=1%5B%7B%7D%2C0%2C1567949770%2C0%2C1567949770%2Cnull%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567940381%22%2C%22https%3A%2F%2Fpassport.umeng.com%2Freg-redirect.html%3FredirectUrl%3Dhttps%253A%252F%252Fweb.umeng.com%252Fmain.php%253Fc%253Dsite%2526a%253Dshow%2526from%253Dlogin%22%2C%22passport.umeng.com%22%5D; cna=6axpFZjaSlYCATuvJCB7x6Bc; uc_session_id=d521e33a-ddf0-4d6d-8ed3-a1d082639bd6; umplus_uc_token=1ZsL_GyVMO09c7WqHRCzffA_c1fa63173fb6450da72b09f72173a34f; cn_1258498910_dplus=1%5B%7B%7D%2C0%2C1574562491%2C0%2C1574562491%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221569051311%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fhome%2Fcheck_login%3Furl%3Dhttps%253A%252F%252Fpassport.umeng.com%252Flogin%253FappId%253Dumeng%22%2C%22mobile.umeng.com%22%5D; isg=BKSkFmh5pc7Q6tEvgfINnQH6daJWlcjLL6uAhL7GY2_0aUcz5kyYNZjILYlUsQD_; frame=; ummo_ss=BAh7CEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZvOhNCU09OOjpPYmplY3RJZAY6CkBkYXRhWxFpYmkxaVppAZppXGkSaQHzaQGTaT5pAGkKaXRJIhk4UVA3eElpcW1PaGRXdG1HUFpQawY7AFRJIhR1bXBsdXNfdWNfdG9rZW4GOwBGIj0xWnNMX0d5Vk1PMDljN1dxSFJDemZmQV9jMWZhNjMxNzNmYjY0NTBkYTcyYjA5ZjcyMTczYTM0ZkkiD3Nlc3Npb25faWQGOwBUSSIlNTZlMDAwZTNlZmI4Y2I0MzhkN2MxMDgxOTc0MWEzYjIGOwBG--3c163cc54dceafece46b51a7625222f27f159f75; cn_1259864772_dplus=1%5B%7B%22%E6%98%AF%E5%90%A6%E7%99%BB%E5%BD%95%22%3Atrue%2C%22UserID%22%3A%22fangfang_ren%22%2C%22Uapp_appkey%22%3A%225b7139be8f4a9d7dea000051%22%2C%22Uapp_platform%22%3A%22iphone%22%7D%2C0%2C1574597949%2C0%2C1574597949%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567941798%22%2C%22%24direct%22%2C%22%24direct%22%5D; cn_1273967994_dplus=1%5B%7B%7D%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567945446%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fplatform%2Fapps%2Flist%22%2C%22mobile.umeng.com%22%5D; CNZZDATA1259864772=1505950409-1567941798-%7C1574596551; JSESSIONID=2D8F832024A037F1EDB436FFC7DA8CB8'
+cookies_str = 'umplus_uc_loginid=fangfang_ren; UM_distinctid=16d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88; um_lang=zh; cn_1276392090_dplus=1%5B%7B%7D%2C0%2C1567949770%2C0%2C1567949770%2Cnull%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567940381%22%2C%22https%3A%2F%2Fpassport.umeng.com%2Freg-redirect.html%3FredirectUrl%3Dhttps%253A%252F%252Fweb.umeng.com%252Fmain.php%253Fc%253Dsite%2526a%253Dshow%2526from%253Dlogin%22%2C%22passport.umeng.com%22%5D; cna=6axpFZjaSlYCATuvJCB7x6Bc; frame=; CNZZDATA1259864772=1505950409-1567941798-%7C1574772244; uc_session_id=52585a1b-32f8-463f-90fd-8c55e39a84b1; cn_1258498910_dplus=1%5B%7B%7D%2C0%2C1574777601%2C0%2C1574777601%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221569051311%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fhome%2Fcheck_login%3Furl%3Dhttps%253A%252F%252Fpassport.umeng.com%252Flogin%253FappId%253Dumeng%22%2C%22mobile.umeng.com%22%5D; umplus_uc_token=1L2mCUHZal1wrd1d6SfpyLg_b9c85717ee5a46b587acb02ba84ed045; isg=BGJi2sjVS2B7JleVMyxTB1NMs-gEG2ahvX2Gnqz7g1WAfwL5lEZ23LZ2q_Mm795l; ummo_ss=BAh7CEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZvOhNCU09OOjpPYmplY3RJZAY6CkBkYXRhWxFpYmkxaVppAZppXGkSaQHzaQGTaT5pAGkKaXRJIhk4UVA3eElpcW1PaGRXdG1HUFpQawY7AFRJIhR1bXBsdXNfdWNfdG9rZW4GOwBGIj0xTDJtQ1VIWmFsMXdyZDFkNlNmcHlMZ19iOWM4NTcxN2VlNWE0NmI1ODdhY2IwMmJhODRlZDA0NUkiD3Nlc3Npb25faWQGOwBUSSIlNTc3MWM4M2FkMWM3NThkOGEzMTZlMGRmNjJiZTYzMTEGOwBG--7485405d89e438c288b3fd4a8b73a88a4270e262; cn_1259864772_dplus=1%5B%7B%22%E6%98%AF%E5%90%A6%E7%99%BB%E5%BD%95%22%3Atrue%2C%22UserID%22%3A%22fangfang_ren%22%2C%22Uapp_appkey%22%3A%225b3d8d9ff43e4864c60000be%22%2C%22Uapp_platform%22%3A%22android%22%7D%2C0%2C1574777590%2C0%2C1574777590%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567941798%22%2C%22%24direct%22%2C%22%24direct%22%5D; cn_1273967994_dplus=1%5B%7B%7D%2Cnull%2Cnull%2Cnull%2Cnull%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567945446%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fplatform%2Fapps%2Flist%22%2C%22mobile.umeng.com%22%5D'
 
 query_xi_back_gun_connect_sid = unquote(
     's%3Ae_O5RJ8-rXFpEW91Ua7eKVSABBJEanws.w3NAuc1%2BI6Ni%2FDg%2BzuQ%2BZJ3zWwqdAytz0zYkzVkgRyM')
@@ -145,6 +144,7 @@ def stat_platform_android():
 def query_new_users():
     """从umeng平台"""
     print(inspect.stack()[0][3])
+    related_Id = "5b7139be8f4a9d7dea000051"
     url = f"https://mobile.umeng.com/ht/api/v3/app/user/active/detail?relatedId={related_Id}"
     end_date = (today - timedelta(days=0)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
@@ -182,6 +182,7 @@ def query_new_users():
 def query_active_users():
     """从umeng平台"""
     print(inspect.stack()[0][3])
+    related_Id = "5b7139be8f4a9d7dea000051"
     url = f"https://mobile.umeng.com/ht/api/v3/app/user/active/detail?relatedId={related_Id}"
     end_date = (today - timedelta(days=0)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
@@ -217,109 +218,257 @@ def query_active_users():
 
 
 def query_launches_times():
-    print(inspect.stack()[0][3])
     """启动次数"""
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-06&end_date=2019-09-14&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=launches
-    stats_type = 'launches'
-    report_type = 'reports'
-    end_date = today.strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=interval)).strftime('%Y-%m-%d')
-    url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
-    resp = requests.get(url=url, cookies=cookies)
+    print(inspect.stack()[0][3])
+    related_Id = "5b3d8d9ff43e4864c60000be"
+    url = f"https://mobile.umeng.com/ht/api/v3/app/user/launch/detail?relatedId={related_Id}"
+    # {"page":1,"pageSize":30,"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-18","toDate":"2019-11-25","version":[],"channel":[],"timeUnit":"day","view":"launch"}
+    end_date = (today - timedelta(days=0)).strftime('%Y-%m-%d')
+    start_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
+    qdata_temlate = '{"page":1,"pageSize":30,"relatedId":"%(related_Id)s","fromDate":"%(from_date)s","toDate":"%(to_date)s","version":[],"channel":[],"timeUnit":"day","view":"launch"}'
+    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id}
+    qdata = qdata_str.encode("utf-8")
+    query_type = "launch"
+    user_status_type = 'launch'
+    headers = {
+        "authority": "mobile.umeng.com",
+        "method": "POST",
+        "path": f"/ht/api/v3/app/user/{user_status_type}/detail?relatedId={related_Id}",
+        "scheme": "https",
+        "accept": "application/json, text/plain, */*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
+        "cache-control": "no-cache",
+        "Content-Type": "application/json;charset=UTF-8",
+        "cookie": f"{cookies_str.encode('utf-8')}",
+        "origin": "https://mobile.umeng.com",
+        "referer": f"https://mobile.umeng.com/platform/{related_Id}/reports/{query_type}",
+        "pragma": "no-cache",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
+    }
+    resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
-    return {"昨天": data['stats'][1]['data'], "前天": data['stats'][2]['data'], '八天前': data['stats'][-1]['data']}
+    return {"昨天": data['data']['items'][1]['launch']}
 
 
 def query_morrow_retentions():
     print(inspect.stack()[0][3])
     """用户次日留存"""
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-09&end_date=2019-09-15&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=retentions
-    stats_type = 'retentions'
-    report_type = 'reports'
+    related_Id = "5b3d8d9ff43e4864c60000be"
+    url = f'https://mobile.umeng.com/ht/api/v3/app/retention/view?relatedId={related_Id}'
+    # {"fromDate":"2019-11-17","toDate":"2019-11-24","timeUnit":"day","page":1,"pageSize":30,"type":"newUser","view":"retention","channel":[],"version":[],"relatedId":"5b3d8d9ff43e4864c60000be"}
     end_date = (today - timedelta(days=2)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=9)).strftime('%Y-%m-%d')
-    url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
-    resp = requests.get(url=url, cookies=cookies)
+    qdata_temlate = '{"fromDate":"%(from_date)s","toDate":"%(to_date)s","timeUnit":"day","page":1,"pageSize":30,"type":"newUser","view":"retention","channel":[],"version":[],"relatedId":"%(related_Id)s"}'
+    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id}
+    qdata = qdata_str.encode("utf-8")
+    query_type = "retention"
+    user_status_type = 'retention'
+    headers = {
+        "authority": "mobile.umeng.com",
+        "method": "POST",
+        "path": f"/ht/api/v3/app/user/{user_status_type}/detail?relatedId={related_Id}",
+        "scheme": "https",
+        "accept": "application/json, text/plain, */*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
+        "cache-control": "no-cache",
+        "Content-Type": "application/json;charset=UTF-8",
+        "cookie": f"{cookies_str.encode('utf-8')}",
+        "origin": "https://mobile.umeng.com",
+        "referer": f"https://mobile.umeng.com/platform/{related_Id}/reports/{query_type}",
+        "pragma": "no-cache",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
+    }
+    resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
-    return {"昨天": data['stats'][-1]['retention_rate'][0], "前天": data['stats'][-2]['retention_rate'][0], '八天前': data['stats'][0]['retention_rate'][0]}
+    return {"昨天": data['data']['rateItems'][6]['retention'][0]}
 
 
 def query_threedays_retentions():
+    """用户三日留存"""
     print(inspect.stack()[0][3])
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-04&end_date=2019-09-15&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=retentions
-    stats_type = 'retentions'
-    report_type = 'reports'
-    end_date = (today - timedelta(days=4)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=11)).strftime('%Y-%m-%d')
-    url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
-    resp = requests.get(url=url, cookies=cookies)
+    related_Id = "5b3d8d9ff43e4864c60000be"
+    url = f'https://mobile.umeng.com/ht/api/v3/app/retention/view?relatedId={related_Id}'
+    # {"fromDate":"2019-11-17","toDate":"2019-11-24","timeUnit":"day","page":1,"pageSize":30,"type":"newUser","view":"retention","channel":[],"version":[],"relatedId":"5b3d8d9ff43e4864c60000be"}
+    end_date = (today - timedelta(days=2)).strftime('%Y-%m-%d')
+    start_date = (today - timedelta(days=9)).strftime('%Y-%m-%d')
+    qdata_temlate = '{"fromDate":"%(from_date)s","toDate":"%(to_date)s","timeUnit":"day","page":1,"pageSize":30,"type":"newUser","view":"retention","channel":[],"version":[],"relatedId":"%(related_Id)s"}'
+    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id}
+    qdata = qdata_str.encode("utf-8")
+    query_type = "retention"
+    user_status_type = 'retention'
+    headers = {
+        "authority": "mobile.umeng.com",
+        "method": "POST",
+        "path": f"/ht/api/v3/app/user/{user_status_type}/detail?relatedId={related_Id}",
+        "scheme": "https",
+        "accept": "application/json, text/plain, */*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
+        "cache-control": "no-cache",
+        "Content-Type": "application/json;charset=UTF-8",
+        "cookie": f"{cookies_str.encode('utf-8')}",
+        "origin": "https://mobile.umeng.com",
+        "referer": f"https://mobile.umeng.com/platform/{related_Id}/reports/{query_type}",
+        "pragma": "no-cache",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
+    }
+    resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
-    return {"昨天": data['stats'][7]['retention_rate'][2], "前天": data['stats'][6]['retention_rate'][2], '八天前': data['stats'][0]['retention_rate'][2]}
+    return {"昨天": data['data']['rateItems'][-3]['retention'][2]}
 
 
 def query_sevendays_retentions():
+    """用户七日留存"""
     print(inspect.stack()[0][3])
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/reports/load_table_data?start_date=2019-09-01&end_date=2019-09-15&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=retentions
-    stats_type = 'retentions'
-    report_type = 'reports'
-    end_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=14)).strftime('%Y-%m-%d')
-    url = url_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                         'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type}
-    resp = requests.get(url=url, cookies=cookies)
+    related_Id = "5b3d8d9ff43e4864c60000be"
+    url = f'https://mobile.umeng.com/ht/api/v3/app/retention/view?relatedId={related_Id}'
+    # {"fromDate":"2019-11-17","toDate":"2019-11-24","timeUnit":"day","page":1,"pageSize":30,"type":"newUser","view":"retention","channel":[],"version":[],"relatedId":"5b3d8d9ff43e4864c60000be"}
+    end_date = (today - timedelta(days=2)).strftime('%Y-%m-%d')
+    start_date = (today - timedelta(days=9)).strftime('%Y-%m-%d')
+    qdata_temlate = '{"fromDate":"%(from_date)s","toDate":"%(to_date)s","timeUnit":"day","page":1,"pageSize":30,"type":"newUser","view":"retention","channel":[],"version":[],"relatedId":"%(related_Id)s"}'
+    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id}
+    qdata = qdata_str.encode("utf-8")
+    query_type = "retention"
+    user_status_type = 'retention'
+    headers = {
+        "authority": "mobile.umeng.com",
+        "method": "POST",
+        "path": f"/ht/api/v3/app/user/{user_status_type}/detail?relatedId={related_Id}",
+        "scheme": "https",
+        "accept": "application/json, text/plain, */*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
+        "cache-control": "no-cache",
+        "Content-Type": "application/json;charset=UTF-8",
+        "cookie": f"{cookies_str.encode('utf-8')}",
+        "origin": "https://mobile.umeng.com",
+        "referer": f"https://mobile.umeng.com/platform/{related_Id}/reports/{query_type}",
+        "pragma": "no-cache",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
+    }
+    resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
-    return {"昨天": data['stats'][6]['retention_rate'][6], "前天": data['stats'][5]['retention_rate'][6], '八天前': data['stats'][0]['retention_rate'][6]}
-
+    return {"昨天": data['data']['rateItems'][0]['retention'][-1]}
 
 def query_video_supplement():
+    '''查插屏數量'''
     print(inspect.stack()[0][3])
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b7289ddf43e4838c7000268
-    stats_type = 'event_group_trend'
-    report_type = 'events'
-    event_group_id = event_group_id_ad_interstitial_from
-    end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                               'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
-    resp = requests.get(url=url, cookies=cookies)
+    related_Id = "5b3d8d9ff43e4864c60000be"
+    url = f'https://mobile.umeng.com/ht/api/v3/app/event/analysis/detail?relatedId={related_Id}'
+    #{"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-20","toDate":"2019-11-26","version":[],"channel":[],"timeUnit":"day","eventName":"ad_interstitial_from","view":"eventSDetailView","page":1,"pageSize":30}
+    end_date = (today - timedelta(days=0)).strftime('%Y-%m-%d')
+    start_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
+    eventName = "ad_interstitial_from"
+    qdata_temlate = '{"relatedId":"%(related_Id)s","fromDate":"%(from_date)s","toDate":"%(to_date)s","channel":[],"version":[],"timeUnit":"day","eventName":"%(eventName)s","view":"eventSDetailView","page":1,"pageSize":30}'
+    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id,'eventName':eventName}
+    qdata = qdata_str.encode("utf-8")
+    # query_type = "retention"
+    # user_status_type = 'retention'
+    headers = {
+        "authority": "mobile.umeng.com",
+        "method": "POST",
+        "path": f"ht/api/v3/app/event/analysis/detail?relatedId={related_Id}",
+        "scheme": "https",
+        "accept": "application/json, text/plain, */*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
+        "cache-control": "no-cache",
+        "Content-Type": "application/json;charset=UTF-8",
+        "cookie": f"{cookies_str.encode('utf-8')}",
+        "origin": "https://mobile.umeng.com",
+        "referer": f"https://mobile.umeng.com/platform/{related_Id}/function/events/detail/{event_group_id_ad_interstitial_from}/string",
+        "pragma": "no-cache",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
+    }
+    resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
-    return {"昨天": data['stats'][0]['count'], "前天": data['stats'][1]['count'], '八天前': data['stats'][-1]['count']}
+    return {"昨天": data['data']['items'][1]['eventLaunch']}
 
 
 def query_video():
+    '''查視頻數量及獨立人數'''
     print(inspect.stack()[0][3])
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b7289a4f43e487686000096
-    stats_type = 'event_group_trend'
-    report_type = 'events'
-    event_group_id = event_group_id_watch_video
-    end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                               'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
-    resp = requests.get(url=url, cookies=cookies)
+    related_Id = "5b3d8d9ff43e4864c60000be"
+    url = f'https://mobile.umeng.com/ht/api/v3/app/event/analysis/detail?relatedId={related_Id}'
+    #{"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-20","toDate":"2019-11-26","version":[],"channel":[],"timeUnit":"day","eventName":"watch_video","view":"eventSDetailView","page":1,"pageSize":30}
+    end_date = (today - timedelta(days=0)).strftime('%Y-%m-%d')
+    start_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
+    eventName = "watch_video"
+    qdata_temlate = '{"relatedId":"%(related_Id)s","fromDate":"%(from_date)s","toDate":"%(to_date)s","version":[],"channel":[],"timeUnit":"day","eventName":"%(eventName)s","view":"eventSDetailView","page":1,"pageSize":30}'
+    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id,'eventName':eventName}
+    qdata = qdata_str.encode("utf-8")
+    # query_type = "retention"
+    # user_status_type = 'retention'
+    headers = {
+        "authority": "mobile.umeng.com",
+        "method": "POST",
+        "path": f"ht/api/v3/app/event/analysis/detail?relatedId={related_Id}",
+        "scheme": "https",
+        "accept": "application/json, text/plain, */*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
+        "cache-control": "no-cache",
+        "Content-Type": "application/json;charset=UTF-8",
+        "cookie": f"{cookies_str.encode('utf-8')}",
+        "origin": "https://mobile.umeng.com",
+        "referer": f"https://mobile.umeng.com/platform/{related_Id}/function/events/detail/{event_group_id_watch_video}/string",
+        "pragma": "no-cache",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
+    }
+    resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
-    return {"昨天": [data['stats'][0]['count'], data['stats'][0]['device']], "前天": [data['stats'][1]['count'], data['stats'][1]['device']], '八天前': [data['stats'][-1]['count'], data['stats'][-1]['device']]}
-# https://mobile.umeng.com/apps/eb00006c4684e34ff9d8d3b5/events/load_table_data?start_date=2019-09-19&end_date=2019-09-25&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b3de4bca40fa35729000065
-# https://mobile.umeng.com/apps/eb00006c4684e34ff9d8d3b5/events/load_table_data?start_date=2019-09-17&end_date=2019-09-24&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b7289a4f43e487686000096
+    return {"昨天_數量": data['data']['items'][1]['eventLaunch'],"昨天_人數": data['data']['items'][1]['eventDevice']}
 
 
 def query_iap_users():
+    '''查詢内購iap人數'''
     print(inspect.stack()[0][3])
-    # https://mobile.umeng.com/apps/150000aed7d9a4f8eb9317b5/events/load_table_data?start_date=2019-09-07&end_date=2019-09-15&channels[]=&versions[]=&stats=event_group_trend&event_group_id=5b84cc7ca40fa34b91000015
-    stats_type = 'event_group_trend'
-    report_type = 'events'
-    event_group_id = event_group_id_buy_iap_total
-
-    end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    url = url_event_temlate % {"base_url": base_url, "id": g_product_id, 'report_type': report_type,
-                               'start_date': start_date, 'end_date': end_date, 'stats_type': stats_type, 'event_group_id': event_group_id}
-    resp = requests.get(url=url, cookies=cookies)
+    related_Id = "5b3d8d9ff43e4864c60000be"
+    url = f'https://mobile.umeng.com/ht/api/v3/app/event/analysis/detail?relatedId={related_Id}'
+    #{"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-20","toDate":"2019-11-26","version":[],"channel":[],"timeUnit":"day","eventName":"buy_iap_total","view":"eventSDetailView","page":1,"pageSize":30}
+    end_date = (today - timedelta(days=0)).strftime('%Y-%m-%d')
+    start_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
+    eventName = "buy_iap_total"
+    qdata_temlate = '{"relatedId":"%(related_Id)s","fromDate":"%(from_date)s","toDate":"%(to_date)s","version":[],"channel":[],"timeUnit":"day","eventName":"%(eventName)s","view":"eventSDetailView","page":1,"pageSize":30}'
+    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id,'eventName':eventName}
+    qdata = qdata_str.encode("utf-8")
+    # query_type = "retention"
+    # user_status_type = 'retention'
+    headers = {
+        "authority": "mobile.umeng.com",
+        "method": "POST",
+        "path": f"ht/api/v3/app/event/analysis/detail?relatedId={related_Id}",
+        "scheme": "https",
+        "accept": "application/json, text/plain, */*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
+        "cache-control": "no-cache",
+        "Content-Type": "application/json;charset=UTF-8",
+        "cookie": f"{cookies_str.encode('utf-8')}",
+        "origin": "https://mobile.umeng.com",
+        "referer": f"https://mobile.umeng.com/platform/{related_Id}/function/events/detail/{event_group_id_buy_iap_total}/string",
+        "pragma": "no-cache",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
+    }
+    resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
-    return {"昨天": data['stats'][0]['device'], "前天": data['stats'][1]['device'], '八天前': data['stats'][-1]['device']}
+    return {"昨天": data['data']['items'][1]['eventDevice']}
 
 
 def query_open_map2_users():
@@ -627,7 +776,7 @@ def query_xi_ecpm(country=""):
 
 def test():
     stat_platform_android()
-    print(query_new_users())
+    print(query_iap_users())
 
 
 test()
