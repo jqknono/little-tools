@@ -47,7 +47,7 @@ def save_to_worksheet(ws):
     rows = int(ws.max_row)
     ###############
     # 查数据
-    data = query_active_users()
+    data = query_new_active_users()
     data1 = query_morrow_retentions()
     data2 = query_threedays_retentions()
     data3 = query_sevendays_retentions()
@@ -60,7 +60,6 @@ def save_to_worksheet(ws):
     data10 = query_open_map3_users()
     data11 = query_open_event()
     data12 = query_claim_times()
-    data13 = query_iap_money()
     data14 = calculate_iap_nums()
     data15 = calculate_iap_money_sum()
     data16 = query_ad_play_num_all()
@@ -177,7 +176,7 @@ def save_umeng_worksheet(ws):
     rows = int(ws.max_row)
     ###############
     # 查数据
-    data = query_active_users()
+    data = query_new_active_users()
     data1 = query_morrow_retentions()
     data2 = query_threedays_retentions()
     data3 = query_sevendays_retentions()
@@ -190,7 +189,6 @@ def save_umeng_worksheet(ws):
     data10 = query_open_map3_users()
     data11 = query_open_event()
     data12 = query_claim_times()
-    data13 = query_iap_money()
     data14 = calculate_iap_nums()
     data15 = calculate_iap_money_sum()
     data16 = query_ad_play_num_all()

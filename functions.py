@@ -215,6 +215,13 @@ def query_active_users():
     return {"昨天": data['data']['items'][1]['activeUser']}
 
 
+def query_new_active_users():
+    print(inspect.stack()[0][3])
+    new_user = query_new_users()
+    active_user = query_active_users()
+    return {"昨天": [active_user['昨天'], new_user['昨天']]}
+
+
 def query_launches_times():
     """启动次数"""
     print(inspect.stack()[0][3])
@@ -257,7 +264,7 @@ def query_morrow_retentions():
     url = f'https://mobile.umeng.com/ht/api/v3/app/retention/view?relatedId={related_Id}'
     # {"fromDate":"2019-11-17","toDate":"2019-11-24","timeUnit":"day","page":1,"pageSize":30,"type":"newUser","view":"retention","channel":[],"version":[],"relatedId":"5b3d8d9ff43e4864c60000be"}
     end_date = (today - timedelta(days=2)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=9)).strftime('%Y-%m-%d')
+    start_date = (today - timedelta(days=2)).strftime('%Y-%m-%d')
     qdata_temlate = '{"fromDate":"%(from_date)s","toDate":"%(to_date)s","timeUnit":"day","page":1,"pageSize":30,"type":"newUser","view":"retention","channel":[],"version":[],"relatedId":"%(related_Id)s"}'
     qdata_str = qdata_temlate % {
         "from_date": start_date, "to_date": end_date, 'related_Id': related_Id}
@@ -284,7 +291,7 @@ def query_morrow_retentions():
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
-    return {"昨天": data['data']['rateItems'][6]['retention'][0]}
+    return {"昨天": data['data']['rateItems'][0]['retention'][0]}
 
 
 def query_threedays_retentions():
@@ -320,6 +327,7 @@ def query_threedays_retentions():
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
+    # Todo: 消除数字-3可能带来的风险
     return {"昨天": data['data']['rateItems'][-3]['retention'][2]}
 
 
@@ -356,6 +364,7 @@ def query_sevendays_retentions():
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
+    # Todo: 消除魔鬼数字可能带来的风险
     return {"昨天": data['data']['rateItems'][0]['retention'][-1]}
 
 
@@ -430,7 +439,7 @@ def query_video():
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
-    return {"昨天_數量": data['data']['items'][1]['eventLaunch'], "昨天_人數": data['data']['items'][1]['eventDevice']}
+    return {"昨天": [data['data']['items'][1]['eventLaunch'], data['data']['items'][1]['eventDevice']]}
 
 
 def query_iap_users():
@@ -648,7 +657,7 @@ def query_unlock_business():
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
-    return {"business_5": data['data']['items'][3]['value'], "business_10": data['data']['items'][-1]['value']}
+    return {"昨天": [data['data']['items'][3]['value'], data['data']['items'][-1]['value']]}
 
 
 def query_iap_money():
@@ -879,7 +888,7 @@ def query_xi_ecpm(country=""):
 
 def test():
     stat_platform_android()
-    print(query_ad_play_num_all())
+    print(query_morrow_retentions())
 
 
 test()
