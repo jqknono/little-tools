@@ -32,13 +32,14 @@ event_id_ad_play_action = ""
 event_id_ad_play_event = ""
 event_id_ad_play_map2 = ""
 event_id_ad_play_map3 = ""
+related_Id = ""
 
 url_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=%(stats_type)s'
 url_event_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&stats=%(stats_type)s&event_group_id=%(event_group_id)s'
 url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&%(event_id)s&%(event_group_id)s&%(event_group_name)s&stats=%(stats_type)s&property_type=string'
 
 interval = 8
-related_Id = "5b3d8d9ff43e4864c60000be"
+
 
 cookies_str = 'umplus_uc_loginid=fangfang_ren; UM_distinctid=16d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88; um_lang=zh; cn_1276392090_dplus=1%5B%7B%7D%2C0%2C1567949770%2C0%2C1567949770%2Cnull%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567940381%22%2C%22https%3A%2F%2Fpassport.umeng.com%2Freg-redirect.html%3FredirectUrl%3Dhttps%253A%252F%252Fweb.umeng.com%252Fmain.php%253Fc%253Dsite%2526a%253Dshow%2526from%253Dlogin%22%2C%22passport.umeng.com%22%5D; cna=6axpFZjaSlYCATuvJCB7x6Bc; frame=; CNZZDATA1259864772=1505950409-1567941798-%7C1574772244; uc_session_id=52585a1b-32f8-463f-90fd-8c55e39a84b1; cn_1258498910_dplus=1%5B%7B%7D%2C0%2C1574777601%2C0%2C1574777601%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221569051311%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fhome%2Fcheck_login%3Furl%3Dhttps%253A%252F%252Fpassport.umeng.com%252Flogin%253FappId%253Dumeng%22%2C%22mobile.umeng.com%22%5D; umplus_uc_token=1L2mCUHZal1wrd1d6SfpyLg_b9c85717ee5a46b587acb02ba84ed045; isg=BGJi2sjVS2B7JleVMyxTB1NMs-gEG2ahvX2Gnqz7g1WAfwL5lEZ23LZ2q_Mm795l; ummo_ss=BAh7CEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZvOhNCU09OOjpPYmplY3RJZAY6CkBkYXRhWxFpYmkxaVppAZppXGkSaQHzaQGTaT5pAGkKaXRJIhk4UVA3eElpcW1PaGRXdG1HUFpQawY7AFRJIhR1bXBsdXNfdWNfdG9rZW4GOwBGIj0xTDJtQ1VIWmFsMXdyZDFkNlNmcHlMZ19iOWM4NTcxN2VlNWE0NmI1ODdhY2IwMmJhODRlZDA0NUkiD3Nlc3Npb25faWQGOwBUSSIlNTc3MWM4M2FkMWM3NThkOGEzMTZlMGRmNjJiZTYzMTEGOwBG--7485405d89e438c288b3fd4a8b73a88a4270e262; cn_1259864772_dplus=1%5B%7B%22%E6%98%AF%E5%90%A6%E7%99%BB%E5%BD%95%22%3Atrue%2C%22UserID%22%3A%22fangfang_ren%22%2C%22Uapp_appkey%22%3A%225b3d8d9ff43e4864c60000be%22%2C%22Uapp_platform%22%3A%22android%22%7D%2C0%2C1574777590%2C0%2C1574777590%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567941798%22%2C%22%24direct%22%2C%22%24direct%22%5D; cn_1273967994_dplus=1%5B%7B%7D%2Cnull%2Cnull%2Cnull%2Cnull%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567945446%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fplatform%2Fapps%2Flist%22%2C%22mobile.umeng.com%22%5D'
 
@@ -71,7 +72,10 @@ def stat_platform_ios():
     global event_id_ad_play_event
     global event_id_ad_play_map2
     global event_id_ad_play_map3
+    global related_Id
 
+    
+    related_Id = "5b7139be8f4a9d7dea000051"
     event_group_id_ad_interstitial_from = '5b7289ddf43e4838c7000268'
     event_group_id_watch_video = '5b7289a4f43e487686000096'
     event_group_id_buy_iap_total = '5b84cc7ca40fa34b91000015'
@@ -117,7 +121,9 @@ def stat_platform_android():
     global event_id_ad_play_event
     global event_id_ad_play_map2
     global event_id_ad_play_map3
+    global related_Id
 
+    related_Id = "5b3d8d9ff43e4864c60000be"
     event_group_id_ad_interstitial_from = '5b3de4bca40fa3572900007d'  # ok
     event_group_id_watch_video = '5b3de4bca40fa35729000065'  # ok
     event_group_id_buy_iap_total = '5b7e21c5f43e48055e000042'  # ok
@@ -337,7 +343,7 @@ def query_sevendays_retentions():
     url = f'https://mobile.umeng.com/ht/api/v3/app/retention/view?relatedId={related_Id}'
     # {"fromDate":"2019-11-17","toDate":"2019-11-24","timeUnit":"day","page":1,"pageSize":30,"type":"newUser","view":"retention","channel":[],"version":[],"relatedId":"5b3d8d9ff43e4864c60000be"}
     end_date = (today - timedelta(days=2)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=9)).strftime('%Y-%m-%d')
+    start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
     qdata_temlate = '{"fromDate":"%(from_date)s","toDate":"%(to_date)s","timeUnit":"day","page":1,"pageSize":30,"type":"newUser","view":"retention","channel":[],"version":[],"relatedId":"%(related_Id)s"}'
     qdata_str = qdata_temlate % {
         "from_date": start_date, "to_date": end_date, 'related_Id': related_Id}
@@ -886,9 +892,9 @@ def query_xi_ecpm(country=""):
 # stat_platform_android()
 # print(query_xi_back_gun())
 
-def test():
-    stat_platform_android()
-    print(query_morrow_retentions())
+# def test():
+#     stat_platform_ios()
+#     print(query_sevendays_retentions())
 
 
-test()
+# test()
