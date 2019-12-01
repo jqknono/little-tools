@@ -150,7 +150,7 @@ def query_new_users():
     # {"page":1,"pageSize":30,"fromDate":"2019-11-17","toDate":"2019-11-24","version":[],"channel":[],"timeUnit":"day","view":"newUser","relatedId":"5b7139be8f4a9d7dea000051"}
     qdata_temlate = '{"page":1,"pageSize":30,"fromDate":"%(from_date)s","toDate":"%(to_date)s","version":[],"channel":[],"timeUnit":"day","view":"%(view)s","relatedId":"%(related_Id)s"}'
     qdata_str = qdata_temlate % {
-        "from_date": start_date, "to_date": end_date, 'view':'newUser', 'related_Id': related_Id}
+        "from_date": start_date, "to_date": end_date, 'view': 'newUser', 'related_Id': related_Id}
     qdata = qdata_str.encode("utf-8")
     query_type = "installation"
     user_status_type = 'new'
@@ -223,7 +223,8 @@ def query_launches_times():
     end_date = (today - timedelta(days=0)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
     qdata_temlate = '{"page":1,"pageSize":30,"relatedId":"%(related_Id)s","fromDate":"%(from_date)s","toDate":"%(to_date)s","version":[],"channel":[],"timeUnit":"day","view":"launch"}'
-    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id}
+    qdata_str = qdata_temlate % {
+        "from_date": start_date, "to_date": end_date, 'related_Id': related_Id}
     qdata = qdata_str.encode("utf-8")
     query_type = "launch"
     user_status_type = 'launch'
@@ -258,7 +259,8 @@ def query_morrow_retentions():
     end_date = (today - timedelta(days=2)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=9)).strftime('%Y-%m-%d')
     qdata_temlate = '{"fromDate":"%(from_date)s","toDate":"%(to_date)s","timeUnit":"day","page":1,"pageSize":30,"type":"newUser","view":"retention","channel":[],"version":[],"relatedId":"%(related_Id)s"}'
-    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id}
+    qdata_str = qdata_temlate % {
+        "from_date": start_date, "to_date": end_date, 'related_Id': related_Id}
     qdata = qdata_str.encode("utf-8")
     query_type = "retention"
     user_status_type = 'retention'
@@ -293,7 +295,8 @@ def query_threedays_retentions():
     end_date = (today - timedelta(days=2)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=9)).strftime('%Y-%m-%d')
     qdata_temlate = '{"fromDate":"%(from_date)s","toDate":"%(to_date)s","timeUnit":"day","page":1,"pageSize":30,"type":"newUser","view":"retention","channel":[],"version":[],"relatedId":"%(related_Id)s"}'
-    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id}
+    qdata_str = qdata_temlate % {
+        "from_date": start_date, "to_date": end_date, 'related_Id': related_Id}
     qdata = qdata_str.encode("utf-8")
     query_type = "retention"
     user_status_type = 'retention'
@@ -328,7 +331,8 @@ def query_sevendays_retentions():
     end_date = (today - timedelta(days=2)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=9)).strftime('%Y-%m-%d')
     qdata_temlate = '{"fromDate":"%(from_date)s","toDate":"%(to_date)s","timeUnit":"day","page":1,"pageSize":30,"type":"newUser","view":"retention","channel":[],"version":[],"relatedId":"%(related_Id)s"}'
-    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id}
+    qdata_str = qdata_temlate % {
+        "from_date": start_date, "to_date": end_date, 'related_Id': related_Id}
     qdata = qdata_str.encode("utf-8")
     query_type = "retention"
     user_status_type = 'retention'
@@ -354,16 +358,18 @@ def query_sevendays_retentions():
     data = resp.json()
     return {"昨天": data['data']['rateItems'][0]['retention'][-1]}
 
+
 def query_video_supplement():
     '''查插屏數量'''
     print(inspect.stack()[0][3])
     url = f'https://mobile.umeng.com/ht/api/v3/app/event/analysis/detail?relatedId={related_Id}'
-    #{"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-20","toDate":"2019-11-26","version":[],"channel":[],"timeUnit":"day","eventName":"ad_interstitial_from","view":"eventSDetailView","page":1,"pageSize":30}
+    # {"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-20","toDate":"2019-11-26","version":[],"channel":[],"timeUnit":"day","eventName":"ad_interstitial_from","view":"eventSDetailView","page":1,"pageSize":30}
     end_date = (today - timedelta(days=0)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
     eventName = "ad_interstitial_from"
     qdata_temlate = '{"relatedId":"%(related_Id)s","fromDate":"%(from_date)s","toDate":"%(to_date)s","channel":[],"version":[],"timeUnit":"day","eventName":"%(eventName)s","view":"eventSDetailView","page":1,"pageSize":30}'
-    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id,'eventName':eventName}
+    qdata_str = qdata_temlate % {
+        "from_date": start_date, "to_date": end_date, 'related_Id': related_Id, 'eventName': eventName}
     qdata = qdata_str.encode("utf-8")
     # query_type = "retention"
     # user_status_type = 'retention'
@@ -394,12 +400,13 @@ def query_video():
     '''查視頻數量及獨立人數'''
     print(inspect.stack()[0][3])
     url = f'https://mobile.umeng.com/ht/api/v3/app/event/analysis/detail?relatedId={related_Id}'
-    #{"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-20","toDate":"2019-11-26","version":[],"channel":[],"timeUnit":"day","eventName":"watch_video","view":"eventSDetailView","page":1,"pageSize":30}
+    # {"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-20","toDate":"2019-11-26","version":[],"channel":[],"timeUnit":"day","eventName":"watch_video","view":"eventSDetailView","page":1,"pageSize":30}
     end_date = (today - timedelta(days=0)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
     eventName = "watch_video"
     qdata_temlate = '{"relatedId":"%(related_Id)s","fromDate":"%(from_date)s","toDate":"%(to_date)s","version":[],"channel":[],"timeUnit":"day","eventName":"%(eventName)s","view":"eventSDetailView","page":1,"pageSize":30}'
-    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id,'eventName':eventName}
+    qdata_str = qdata_temlate % {
+        "from_date": start_date, "to_date": end_date, 'related_Id': related_Id, 'eventName': eventName}
     qdata = qdata_str.encode("utf-8")
     # query_type = "retention"
     # user_status_type = 'retention'
@@ -423,19 +430,20 @@ def query_video():
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
-    return {"昨天_數量": data['data']['items'][1]['eventLaunch'],"昨天_人數": data['data']['items'][1]['eventDevice']}
+    return {"昨天_數量": data['data']['items'][1]['eventLaunch'], "昨天_人數": data['data']['items'][1]['eventDevice']}
 
 
 def query_iap_users():
     '''查詢内購iap人數'''
     print(inspect.stack()[0][3])
     url = f'https://mobile.umeng.com/ht/api/v3/app/event/analysis/detail?relatedId={related_Id}'
-    #{"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-20","toDate":"2019-11-26","version":[],"channel":[],"timeUnit":"day","eventName":"buy_iap_total","view":"eventSDetailView","page":1,"pageSize":30}
+    # {"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-20","toDate":"2019-11-26","version":[],"channel":[],"timeUnit":"day","eventName":"buy_iap_total","view":"eventSDetailView","page":1,"pageSize":30}
     end_date = (today - timedelta(days=0)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
     eventName = "buy_iap_total"
     qdata_temlate = '{"relatedId":"%(related_Id)s","fromDate":"%(from_date)s","toDate":"%(to_date)s","version":[],"channel":[],"timeUnit":"day","eventName":"%(eventName)s","view":"eventSDetailView","page":1,"pageSize":30}'
-    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id,'eventName':eventName}
+    qdata_str = qdata_temlate % {
+        "from_date": start_date, "to_date": end_date, 'related_Id': related_Id, 'eventName': eventName}
     qdata = qdata_str.encode("utf-8")
     # query_type = "retention"
     # user_status_type = 'retention'
@@ -466,12 +474,13 @@ def query_open_map2_users():
     '''查詢進入map2獨立用戶數'''
     print(inspect.stack()[0][3])
     url = f'https://mobile.umeng.com/ht/api/v3/app/event/analysis/detail?relatedId={related_Id}'
-    # {"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-21","toDate":"2019-11-27","version":[],"channel":[],"timeUnit":"day","eventName":"open_map2","view":"eventSDetailView","page":1,"pageSize":30}  
+    # {"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-21","toDate":"2019-11-27","version":[],"channel":[],"timeUnit":"day","eventName":"open_map2","view":"eventSDetailView","page":1,"pageSize":30}
     end_date = (today - timedelta(days=0)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
     eventName = "open_map2"
     qdata_temlate = '{"relatedId":"%(related_Id)s","fromDate":"%(from_date)s","toDate":"%(to_date)s","version":[],"channel":[],"timeUnit":"day","eventName":"%(eventName)s","view":"eventSDetailView","page":1,"pageSize":30}'
-    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id,'eventName':eventName}
+    qdata_str = qdata_temlate % {
+        "from_date": start_date, "to_date": end_date, 'related_Id': related_Id, 'eventName': eventName}
     qdata = qdata_str.encode("utf-8")
     # query_type = "retention"
     # user_status_type = 'retention'
@@ -502,12 +511,13 @@ def query_open_map3_users():
     '''查詢進入map3獨立用戶數'''
     print(inspect.stack()[0][3])
     url = f'https://mobile.umeng.com/ht/api/v3/app/event/analysis/detail?relatedId={related_Id}'
-    #{"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-21","toDate":"2019-11-27","version":[],"channel":[],"timeUnit":"day","eventName":"open_map3","view":"eventSDetailView","page":1,"pageSize":30}
+    # {"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-21","toDate":"2019-11-27","version":[],"channel":[],"timeUnit":"day","eventName":"open_map3","view":"eventSDetailView","page":1,"pageSize":30}
     end_date = (today - timedelta(days=0)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
     eventName = "open_map3"
     qdata_temlate = '{"relatedId":"%(related_Id)s","fromDate":"%(from_date)s","toDate":"%(to_date)s","version":[],"channel":[],"timeUnit":"day","eventName":"%(eventName)s","view":"eventSDetailView","page":1,"pageSize":30}'
-    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id,'eventName':eventName}
+    qdata_str = qdata_temlate % {
+        "from_date": start_date, "to_date": end_date, 'related_Id': related_Id, 'eventName': eventName}
     qdata = qdata_str.encode("utf-8")
     # query_type = "retention"
     # user_status_type = 'retention'
@@ -538,12 +548,13 @@ def query_open_event():
     '''查詢進入event獨立用戶數'''
     print(inspect.stack()[0][3])
     url = f'https://mobile.umeng.com/ht/api/v3/app/event/analysis/detail?relatedId={related_Id}'
-    #{"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-21","toDate":"2019-11-27","version":[],"channel":[],"timeUnit":"day","eventName":"open_event","view":"eventSDetailView","page":1,"pageSize":30}
+    # {"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-21","toDate":"2019-11-27","version":[],"channel":[],"timeUnit":"day","eventName":"open_event","view":"eventSDetailView","page":1,"pageSize":30}
     end_date = (today - timedelta(days=0)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
     eventName = "open_event"
     qdata_temlate = '{"relatedId":"%(related_Id)s","fromDate":"%(from_date)s","toDate":"%(to_date)s","version":[],"channel":[],"timeUnit":"day","eventName":"%(eventName)s","view":"eventSDetailView","page":1,"pageSize":30}'
-    qdata_str = qdata_temlate % {"from_date": start_date, "to_date": end_date,'related_Id': related_Id,'eventName':eventName}
+    qdata_str = qdata_temlate % {
+        "from_date": start_date, "to_date": end_date, 'related_Id': related_Id, 'eventName': eventName}
     qdata = qdata_str.encode("utf-8")
     # query_type = "retention"
     # user_status_type = 'retention'
@@ -574,12 +585,13 @@ def query_claim_times():
     '''查詢成功claim次數'''
     print(inspect.stack()[0][3])
     url = f'https://mobile.umeng.com/ht/api/v3/app/event/analysis/property/string/detail?relatedId={related_Id}'
-    #{"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-26","toDate":"2019-11-26","version":[],"channel":[],"timeUnit":"day","eventName":"show_claim","propertyName":"action","view":"propertyStringLaunchView","type":"propertyValue"}
+    # {"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-26","toDate":"2019-11-26","version":[],"channel":[],"timeUnit":"day","eventName":"show_claim","propertyName":"action","view":"propertyStringLaunchView","type":"propertyValue"}
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
     eventName = "show_claim"
     qdata_temlate = '{"relatedId":"%(related_Id)s","fromDate":"%(from_date)s","toDate":"%(to_date)s","version":[],"channel":[],"timeUnit":"day","eventName":"%(eventName)s","propertyName":"action","view":"propertyStringLaunchView","type":"propertyValue"}'
-    qdata_str = qdata_temlate % {"from_date": end_date, "to_date": end_date,'related_Id': related_Id,'eventName':eventName}
+    qdata_str = qdata_temlate % {
+        "from_date": end_date, "to_date": end_date, 'related_Id': related_Id, 'eventName': eventName}
     qdata = qdata_str.encode("utf-8")
     headers = {
         "authority": "mobile.umeng.com",
@@ -603,16 +615,18 @@ def query_claim_times():
     data = resp.json()
     return {"昨天": data['data']['items'][1]['value']}
 
+
 def query_unlock_business():
     '''查詢產業解鎖人數'''
     print(inspect.stack()[0][3])
     url = f'https://mobile.umeng.com/ht/api/v3/app/event/analysis/property/string/detail?relatedId={related_Id}'
-    #{"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-26","toDate":"2019-11-26","version":[],"channel":[],"timeUnit":"day","eventName":"unlock_business","propertyName":"action","view":"propertyStringLaunchView","type":"propertyValue"}
+    # {"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-26","toDate":"2019-11-26","version":[],"channel":[],"timeUnit":"day","eventName":"unlock_business","propertyName":"action","view":"propertyStringLaunchView","type":"propertyValue"}
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
     eventName = "unlock_business"
     qdata_temlate = '{"relatedId":"%(related_Id)s","fromDate":"%(from_date)s","toDate":"%(to_date)s","version":[],"channel":[],"timeUnit":"day","eventName":"%(eventName)s","propertyName":"action","view":"propertyStringLaunchView","type":"propertyValue"}'
-    qdata_str = qdata_temlate % {"from_date": end_date, "to_date": end_date,'related_Id': related_Id,'eventName':eventName}
+    qdata_str = qdata_temlate % {
+        "from_date": end_date, "to_date": end_date, 'related_Id': related_Id, 'eventName': eventName}
     qdata = qdata_str.encode("utf-8")
     headers = {
         "authority": "mobile.umeng.com",
@@ -634,18 +648,20 @@ def query_unlock_business():
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
-    return {"business_5": data['data']['items'][3]['value'],"business_10": data['data']['items'][-1]['value']}
+    return {"business_5": data['data']['items'][3]['value'], "business_10": data['data']['items'][-1]['value']}
+
 
 def query_iap_money():
     '''查詢iap產品與數量'''
     print(inspect.stack()[0][3])
     url = f'https://mobile.umeng.com/ht/api/v3/app/event/analysis/property/string/detail?relatedId={related_Id}'
-    #{"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-27","toDate":"2019-11-27","version":[],"channel":[],"timeUnit":"day","eventName":"buy_iap_total","propertyName":"action","view":"propertyStringLaunchView","type":"propertyValue"}
+    # {"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-27","toDate":"2019-11-27","version":[],"channel":[],"timeUnit":"day","eventName":"buy_iap_total","propertyName":"action","view":"propertyStringLaunchView","type":"propertyValue"}
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
     eventName = "buy_iap_total"
     qdata_temlate = '{"relatedId":"%(related_Id)s","fromDate":"%(end_date)s","toDate":"%(to_date)s","version":[],"channel":[],"timeUnit":"day","eventName":"%(eventName)s","propertyName":"action","view":"propertyStringLaunchView","type":"propertyValue"}'
-    qdata_str = qdata_temlate % {"end_date": end_date, "to_date": end_date,'related_Id': related_Id,'eventName':eventName}
+    qdata_str = qdata_temlate % {
+        "end_date": end_date, "to_date": end_date, 'related_Id': related_Id, 'eventName': eventName}
     qdata = qdata_str.encode("utf-8")
     group = []
     headers = {
@@ -670,29 +686,48 @@ def query_iap_money():
     data = resp.json()
     # return {"business_5": data['data']['items']}
     for d in data['data']['items']:
-        group.append({'name':d['name'],'value':d['value']})
+        group.append({'name': d['name'], 'value': d['value']})
     return group
 
 
-def query_ad_play_num(event_id, event_group_id):
+def query_ad_play_num(property_value):
     """查询廣告場景視頻播放次数"""
     print(inspect.stack()[0][3])
     url = f'https://mobile.umeng.com/ht/api/v3/app/event/analysis/property/string/detail?relatedId={related_Id}'
-    # {"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-27","toDate":"2019-11-27","version":[],"channel":[],"timeUnit":"day","eventName":"watch_video","propertyName":"event","view":"propertyStringLaunchView","type":"propertyValue"}
-    # {"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-27","toDate":"2019-11-27","version":[],"channel":[],"timeUnit":"day","eventName":"watch_video","propertyName":"action","view":"propertyStringLaunchView","type":"propertyValue"}
-    # {"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-27","toDate":"2019-11-27","version":[],"channel":[],"timeUnit":"day","eventName":"watch_video","propertyName":"map2","view":"propertyStringLaunchView","type":"propertyValue"}
-    # {"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-27","toDate":"2019-11-27","version":[],"channel":[],"timeUnit":"day","eventName":"watch_video","propertyName":"map3","view":"propertyStringLaunchView","type":"propertyValue"}
+    # {"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-27","toDate":"2019-11-27","version":[],"channel":[],"timeUnit":"day","eventName":"buy_iap_total","propertyName":"action","view":"propertyStringLaunchView","type":"propertyValue"}
+    # {"relatedId":"5b3d8d9ff43e4864c60000be","fromDate":"2019-11-30","toDate":"2019-11-30","version":[],"channel":[],"timeUnit":"day","eventName":"watch_video","propertyName":"action","view":"propertyStringLaunchView","type":"propertyValue"}
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    propertyName = ["event","action","map2","map3"]
     eventName = "watch_video"
-    qdata_temlate = '{"relatedId":"%(related_Id)s","fromDate":"%(from_date)s","toDate":"%(to_date)s","version":[],"channel":[],"timeUnit":"day","eventName":"%(eventName)s","propertyName":"action","view":"propertyStringLaunchView","type":"propertyValue"}'
-    qdata_str = qdata_temlate % {"from_date": end_date, "to_date": end_date,'related_Id': related_Id,'eventName':eventName}
+    qdata_temlate = '{"relatedId":"%(related_Id)s","fromDate":"%(end_date)s","toDate":"%(to_date)s","version":[],"channel":[],"timeUnit":"day","eventName":"%(eventName)s","propertyName":"%(property_value)s","view":"propertyStringLaunchView","type":"propertyValue"}'
+    qdata_str = qdata_temlate % {"end_date": end_date, "to_date": end_date,
+                                 'related_Id': related_Id, 'eventName': eventName, 'property_value': property_value}
     qdata = qdata_str.encode("utf-8")
+    group = []
+    headers = {
+        "authority": "mobile.umeng.com",
+        "method": "POST",
+        "path": f"/ht/api/v3/app/event/analysis/property/string/detail?relatedId={related_Id}",
+        "scheme": "https",
+        "accept": "application/json, text/plain, */*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
+        "cache-control": "no-cache",
+        "Content-Type": "application/json;charset=UTF-8",
+        "cookie": f"{cookies_str.encode('utf-8')}",
+        "origin": "https://mobile.umeng.com",
+        "referer": f"https://mobile.umeng.com/platform/{related_Id}/function/events/detail/{event_group_id_watch_video}/string",
+        "pragma": "no-cache",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
+    }
+    resp = requests.post(url=url, data=qdata, headers=headers)
+    data = resp.json()
 
     dict = {}
-    for item in data['stats']:
-        dict[item['label']] = item['num']
+    for item in data['data']['items']:
+        dict[item['name']] = item['value']
 
     return dict
 
@@ -700,12 +735,12 @@ def query_ad_play_num(event_id, event_group_id):
 def query_ad_play_num_all():
     print(inspect.stack()[0][3])
     total = {}
-    ids = [event_id_ad_play_action,
-           event_id_ad_play_event,
-           event_id_ad_play_map2,
-           event_id_ad_play_map3]
-    for id in ids:
-        data = query_ad_play_num(id, event_group_id_watch_video)
+    names = [event_name_ad_play_action,
+             event_name_ad_play_event,
+             event_name_ad_play_map2,
+             event_name_ad_play_map3]
+    for name in names:
+        data = query_ad_play_num(name)
         for key in data.keys():
             if key in total:
                 total[key] += data[key]
@@ -736,7 +771,8 @@ def calculate_iap_money_sum():
         if data[i]['name'] in product_id_iOS_unit_price:
             j += data[i]['value'] * product_id_iOS_unit_price[data[i]['name']]
         elif data[i]['name'] in product_id_andriod_unit_price:
-            j += data[i]['value'] * product_id_andriod_unit_price[data[i]['name']]
+            j += data[i]['value'] * \
+                product_id_andriod_unit_price[data[i]['name']]
     return j
 
 
@@ -843,7 +879,7 @@ def query_xi_ecpm(country=""):
 
 def test():
     stat_platform_android()
-    print(calculate_iap_money_sum())
+    print(query_ad_play_num_all())
 
 
 test()
