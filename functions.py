@@ -33,6 +33,7 @@ event_id_ad_play_event = ""
 event_id_ad_play_map2 = ""
 event_id_ad_play_map3 = ""
 related_Id = ""
+xiAppId = ""
 
 url_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=%(stats_type)s'
 url_event_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&channels[]=&versions[]=&stats=%(stats_type)s&event_group_id=%(event_group_id)s'
@@ -41,13 +42,11 @@ url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?sta
 interval = 8
 
 
-cookies_str = 'umplus_uc_loginid=fangfang_ren; UM_distinctid=16d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88; um_lang=zh; cn_1276392090_dplus=1%5B%7B%7D%2C0%2C1567949770%2C0%2C1567949770%2Cnull%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567940381%22%2C%22https%3A%2F%2Fpassport.umeng.com%2Freg-redirect.html%3FredirectUrl%3Dhttps%253A%252F%252Fweb.umeng.com%252Fmain.php%253Fc%253Dsite%2526a%253Dshow%2526from%253Dlogin%22%2C%22passport.umeng.com%22%5D; cna=6axpFZjaSlYCATuvJCB7x6Bc; frame=; CNZZDATA1259864772=1505950409-1567941798-%7C1574772244; uc_session_id=52585a1b-32f8-463f-90fd-8c55e39a84b1; cn_1258498910_dplus=1%5B%7B%7D%2C0%2C1574777601%2C0%2C1574777601%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221569051311%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fhome%2Fcheck_login%3Furl%3Dhttps%253A%252F%252Fpassport.umeng.com%252Flogin%253FappId%253Dumeng%22%2C%22mobile.umeng.com%22%5D; umplus_uc_token=1L2mCUHZal1wrd1d6SfpyLg_b9c85717ee5a46b587acb02ba84ed045; isg=BGJi2sjVS2B7JleVMyxTB1NMs-gEG2ahvX2Gnqz7g1WAfwL5lEZ23LZ2q_Mm795l; ummo_ss=BAh7CEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZvOhNCU09OOjpPYmplY3RJZAY6CkBkYXRhWxFpYmkxaVppAZppXGkSaQHzaQGTaT5pAGkKaXRJIhk4UVA3eElpcW1PaGRXdG1HUFpQawY7AFRJIhR1bXBsdXNfdWNfdG9rZW4GOwBGIj0xTDJtQ1VIWmFsMXdyZDFkNlNmcHlMZ19iOWM4NTcxN2VlNWE0NmI1ODdhY2IwMmJhODRlZDA0NUkiD3Nlc3Npb25faWQGOwBUSSIlNTc3MWM4M2FkMWM3NThkOGEzMTZlMGRmNjJiZTYzMTEGOwBG--7485405d89e438c288b3fd4a8b73a88a4270e262; cn_1259864772_dplus=1%5B%7B%22%E6%98%AF%E5%90%A6%E7%99%BB%E5%BD%95%22%3Atrue%2C%22UserID%22%3A%22fangfang_ren%22%2C%22Uapp_appkey%22%3A%225b3d8d9ff43e4864c60000be%22%2C%22Uapp_platform%22%3A%22android%22%7D%2C0%2C1574777590%2C0%2C1574777590%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567941798%22%2C%22%24direct%22%2C%22%24direct%22%5D; cn_1273967994_dplus=1%5B%7B%7D%2Cnull%2Cnull%2Cnull%2Cnull%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567945446%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fplatform%2Fapps%2Flist%22%2C%22mobile.umeng.com%22%5D'
+cookies_str = 'umplus_uc_loginid=fangfang_ren; UM_distinctid=16d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88; um_lang=zh; cn_1276392090_dplus=1%5B%7B%7D%2C0%2C1567949770%2C0%2C1567949770%2Cnull%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567940381%22%2C%22https%3A%2F%2Fpassport.umeng.com%2Freg-redirect.html%3FredirectUrl%3Dhttps%253A%252F%252Fweb.umeng.com%252Fmain.php%253Fc%253Dsite%2526a%253Dshow%2526from%253Dlogin%22%2C%22passport.umeng.com%22%5D; cna=6axpFZjaSlYCATuvJCB7x6Bc; uc_session_id=52585a1b-32f8-463f-90fd-8c55e39a84b1; CNZZDATA1259864772=1505950409-1567941798-%7C1575715586; cn_1258498910_dplus=1%5B%7B%7D%2C0%2C1575720137%2C0%2C1575720137%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221569051311%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fhome%2Fcheck_login%3Furl%3Dhttps%253A%252F%252Fpassport.umeng.com%252Flogin%253FappId%253Dumeng%22%2C%22mobile.umeng.com%22%5D; umplus_uc_token=1KHbrS7hgiXI6FNlekH1i6g_616bb81893e74b6da38c57855632d9f0; isg=BElJp4XjcBOD8wz4tCnYIjxBWHVjPj2kAkC9M-u-2jBvMmlEM-BrmV1rcN4hatUA; ummo_ss=BAh7CEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZvOhNCU09OOjpPYmplY3RJZAY6CkBkYXRhWxFpYmkxaVppAZppXGkSaQHzaQGTaT5pAGkKaXRJIhk4UVA3eElpcW1PaGRXdG1HUFpQawY7AFRJIhR1bXBsdXNfdWNfdG9rZW4GOwBGIj0xS0hiclM3aGdpWEk2Rk5sZWtIMWk2Z182MTZiYjgxODkzZTc0YjZkYTM4YzU3ODU1NjMyZDlmMEkiD3Nlc3Npb25faWQGOwBUSSIlYzgxMTk1N2M0ODY5ZmYwMDBjYjAyN2EzZTUyMDM2OGIGOwBG--ce7f719e608b048fd149d4680e6b674f4ea0c07a; cn_1273967994_dplus=1%5B%7B%7D%2Cnull%2Cnull%2Cnull%2Cnull%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567945446%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fplatform%2Fapps%2Flist%22%2C%22mobile.umeng.com%22%5D; cn_1259864772_dplus=1%5B%7B%22%E6%98%AF%E5%90%A6%E7%99%BB%E5%BD%95%22%3Atrue%2C%22UserID%22%3A%22fangfang_ren%22%2C%22Uapp_appkey%22%3A%225b3d8d9ff43e4864c60000be%22%2C%22Uapp_platform%22%3A%22android%22%7D%2C0%2C1575720005%2C0%2C1575720005%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567941798%22%2C%22%24direct%22%2C%22%24direct%22%5D'
 
-query_xi_back_gun_connect_sid = unquote(
-    's%3Ae_O5RJ8-rXFpEW91Ua7eKVSABBJEanws.w3NAuc1%2BI6Ni%2FDg%2BzuQ%2BZJ3zWwqdAytz0zYkzVkgRyM')
+query_xi_back_gun_connect_sid = unquote('s%3Ah2yNIUYUmpVTq_xnEzKtf2sU3z7s-rAE.aNO2UnfIk17%2Bp1PwBCBB7WfJdSjzijRzpckrA1aACQ0')
 
-query_xi_ecpm_connect_sid = unquote(
-    's%3Ae_O5RJ8-rXFpEW91Ua7eKVSABBJEanws.w3NAuc1%2BI6Ni%2FDg%2BzuQ%2BZJ3zWwqdAytz0zYkzVkgRyM')
+query_xi_ecpm_connect_sid = unquote('s%3Ah2yNIUYUmpVTq_xnEzKtf2sU3z7s-rAE.aNO2UnfIk17%2Bp1PwBCBB7WfJdSjzijRzpckrA1aACQ0')
 
 
 def stat_platform_ios():
@@ -55,6 +54,7 @@ def stat_platform_ios():
     global g_app_name
     global g_bundle_id
     global g_platform
+    global xiAppId
 
     global event_group_id_ad_interstitial_from
     global event_group_id_watch_video
@@ -97,6 +97,7 @@ def stat_platform_ios():
     g_app_name = app_name_tbc3_ios
     g_bundle_id = bundle_id_tbc3_ios
     g_platform = platform_tbc3_ios
+    xiAppId = xiAppId_ios
 
 
 def stat_platform_android():
@@ -104,6 +105,7 @@ def stat_platform_android():
     global g_app_name
     global g_bundle_id
     global g_platform
+    global xiAppId
 
     global event_group_id_ad_interstitial_from
     global event_group_id_watch_video
@@ -145,6 +147,7 @@ def stat_platform_android():
     g_app_name = app_name_tbc3_android
     g_bundle_id = bundle_id_tbc3_android
     g_platform = platform_tbc3_android
+    xiAppId = xiAppId_android
 
 
 def query_new_users():
@@ -793,39 +796,32 @@ def calculate_iap_money_sum():
 
 def query_xi_back_gun():
     print(inspect.stack()[0][3])
-    """
-    https://xi.harrybuy.com/es/monesimplify/pistolevent
-    从xi平台查询, 回本手枪图
-    """
-    url = "https://xi.harrybuy.com/es/monesimplify/pistolevent"
+    """从xi平台查询, 回本手枪图"""
+    url = "https://api-xi.harrybuy.com/es/monesimplify/pistolevent"
     end_date = (today - timedelta(days=3)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=11)).strftime('%Y-%m-%d')
+    start_date = (today - timedelta(days=3)).strftime('%Y-%m-%d')
+    # {"app_name":"Game_android_TBC3","date_range":["2019-12-04","2019-12-04"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":["com.brokenreality.bigcapitalist3.android"],"platform":["android"],"media_source":["Facebook Ads"],"country_code":["US"]}}
     qdata_temlate = '{"app_name":"%(app_name)s","date_range":["%(start_date)s","%(end_date)s"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":["%(bundle_id)s"],"platform":["%(platform)s"],"media_source":["Facebook Ads"],"country_code":["US"]}}'
-
-    # qdata = b'{"app_name":"Game_iOS_Idle Capitalist","date_range":["2019-09-15","2019-09-19"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":["com.idlecapatalist.aovalw"],               "platform":["ios"],    "media_source":["Facebook Ads"],"country_code":["US"]}}'
-    # qdata = b'{"app_name":"Game_android_TBC3",       "date_range":["2019-10-13","2019-10-25"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":["com.brokenreality.bigcapitalist3.android"],"platform":["android"],"media_source":["Facebook Ads"],"country_code":["US"]}}'
     qdata_str = qdata_temlate % {"app_name": g_app_name, "start_date": start_date,
                                  'end_date': end_date, 'bundle_id': g_bundle_id, 'platform': g_platform}
     qdata = qdata_str.encode("utf-8")
     headers = {
-        "authority": "xi.harrybuy.com",
+        "authority": "api-xi.harrybuy.com",
         "method": "POST",
-        "Host": "xi.harrybuy.com",
-        "Connection": "keep-alive",
+        # "Host": "xi.harrybuy.com",
+        # "Connection": "keep-alive",
         "accept": "application/json, text/plain, */*",
         "origin": "https://xi.harrybuy.com",
-        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36",
-        "content-type": "application/json",
-        # "Accept": "*/*",
-        "referer": "https://xi.harrybuy.com/v3/",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "referer": "https://xi.harrybuy.com/",
         "accept-encoding": "gzip, deflate, br",
         "accept-language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
         "content-type": "application/json;charset=UTF-8",
-        "cookie": f"Xi-Token=fangfang_ren; connect.sid= {query_xi_back_gun_connect_sid}",
+        "cookie": f"connect.sid= {query_xi_back_gun_connect_sid}",
         "sec-fetch-mode": "cors",
-        "sec-fetch-site": "same-origin",
+        "sec-fetch-site": "same-site",
         "x-token": "fangfang_ren",
-        "Referrer Policy": "no-referrer-when-downgrade"
+        # "Referrer Policy": "no-referrer-when-downgrade"
     }
 
     try:
@@ -847,39 +843,37 @@ def query_xi_back_gun():
 def query_xi_ecpm(country=""):
     print(inspect.stack()[0][3])
     """从xi平台 收入查询 ecpm"""
-    url = "https://xi.harrybuy.com/report/revenue"
+    url = "https://api-xi.harrybuy.com/report/revenuedatav4"
     end_date = (today - timedelta(days=1)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=8)).strftime('%Y-%m-%d')
-    # {"appName":["Game_iOS_Idle Capitalist"],"dateRange":["2019-09-16","2019-09-23"],"timeZone":"default","platform":[],"country":["US"],"breakdown":["app_name","date"]}}
-    qdata_temlate_ecpm = '{"appName":["%(app_name)s"],"dateRange":["%(start_date)s","%(end_date)s"],"timeZone":"default","platform":[],"country":[%(country)s],"breakdown":["app_name","date"]}'
-    qdata_ecpm_str = qdata_temlate_ecpm % {
-        "app_name": g_app_name, "start_date": start_date, 'end_date': end_date, "country": country}
+    # {"xiAppId":"Android_com.brokenreality.bigcapitalist3.android","dateRange":["2019-11-29","2019-12-06"],"vendor":[],"country":[],"breakdown":["xi_application_id","date"]
+    # {"xiAppId":"Android_com.brokenreality.bigcapitalist3.android","dateRange":["2019-11-29","2019-12-06"],"vendor":[],"country":["US"],"breakdown":["xi_application_id","date"]}
+    qdata_temlate_ecpm = '{"xiAppId":"%(xiAppId)s","dateRange":["%(start_date)s","%(end_date)s"],"vendor":[],"country":[%(country)s],"breakdown":["xi_application_id","date"]}'
+    qdata_ecpm_str = qdata_temlate_ecpm % {'xiAppId': xiAppId, "start_date": start_date, 'end_date': end_date, "country": country}
     qdata_ecpm = qdata_ecpm_str.encode("utf-8")
     headers = {
-        "authority": "xi.harrybuy.com",
+        "authority": "api-xi.harrybuy.com",
         "method": "POST",
-        "path": "/report/revenue",
-        "scheme": "https",
+        # "Host": "xi.harrybuy.com",
+        # "Connection": "keep-alive",
         "accept": "application/json, text/plain, */*",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
-        "Host": "xi.harrybuy.com",
-        "cache-control": "no-cache",
-        "Content-Type": "application/json;charset=UTF-8",
-        "cookie": f"connect.sid={query_xi_ecpm_connect_sid}; Xi-Token=fangfang_ren",
-        "Origin": "https://xi.harrybuy.com",
-        "referer": "https://xi.harrybuy.com/v3/",
+        "origin": "https://xi.harrybuy.com",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36",
+        "referer": "https://xi.harrybuy.com/",
+        "accept-encoding": "gzip, deflate, br",
+        "accept-language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
+        "content-type": "application/json;charset=UTF-8",
+        "cookie": f"connect.sid= {query_xi_ecpm_connect_sid}",
         "sec-fetch-mode": "cors",
-        "sec-fetch-site": "same-origin",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-token": "fangfang_ren"
+        "sec-fetch-site": "same-site",
+        "x-token": "fangfang_ren",
+        # "Referrer Policy": "no-referrer-when-downgrade"
     }
-
     try:
         resp = requests.post(url=url, data=qdata_ecpm, headers=headers)
         data = resp.json()
 
-        return {"昨天": data[-1]['ecpm'], "前天": data[-2]['ecpm'], '八天前': data[1]['ecpm']}
+        return {"昨天": float(data[-1]['ecpm']), "前天": float(data[-2]['ecpm'])}
     except:
         print("ERROR: query_xi_back_gun")
 
@@ -893,8 +887,8 @@ def query_xi_ecpm(country=""):
 # print(query_xi_back_gun())
 
 # def test():
-#     stat_platform_ios()
-#     print(query_sevendays_retentions())
+#     stat_platform_android()
+#     print(query_xi_back_gun())
 
 
 # test()

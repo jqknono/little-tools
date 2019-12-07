@@ -22,10 +22,12 @@ event_name_ad_play_map3 = 'map3'
 # xi平台信息-回本手枪图
 app_name_tbc3_ios = 'Game_iOS_Idle Capitalist'
 bundle_id_tbc3_ios = 'com.idlecapatalist.aovalw'
+xiAppId_ios = 'iOS_com.idlecapatalist.aovalw'
 platform_tbc3_ios = 'ios'
 
 app_name_tbc3_android = 'Game_android_TBC3'
 bundle_id_tbc3_android = 'com.brokenreality.bigcapitalist3.android'
+xiAppId_android = 'Android_com.brokenreality.bigcapitalist3.android'
 platform_tbc3_android = 'android'
 country_us ='"US"' 
 country = ""
