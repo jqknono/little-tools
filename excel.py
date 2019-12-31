@@ -255,7 +255,7 @@ def save_umeng_worksheet(ws):
     yesterday_to_write = yesterday
     if yesterday[5] == '0':
         yesterday_to_write = yesterday[0:5]+yesterday[6:10]
-
+    yesterday_to_write = datetime.strptime(yesterday_to_write, "%Y/%m/%d")
     assign_value(ws, new_row, 'A', yesterday_to_write)
     assign_value(ws, new_row, 'B', platform_version)
     assign_value(ws, new_row, 'C', data['昨天'][1])
@@ -359,7 +359,8 @@ def save_to_android(wb):
 
 def save_to_tbc3(wb):
     ws = wb["TBC3"]
-    ws["B1"] = yesterday
+    yesterday_to_write = datetime.strptime(yesterday, "%Y/%m/%d")
+    ws["B1"] = yesterday_to_write
 
 
 def open_excel(filename):
