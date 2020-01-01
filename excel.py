@@ -361,7 +361,8 @@ def save_to_tbc3(wb):
     ws = wb["TBC3"]
     yesterday_to_write = datetime.strptime(yesterday, "%Y/%m/%d")
     ws["B1"] = yesterday_to_write
-
+    ws["A20"] = f"TBC3-安卓本周（{nine_days_before_str}~{yesterday}）数据趋势 "
+    ws["Q20"] = f"TBC3-iOS本周（{nine_days_before_str}~{yesterday}）数据趋势 "
 
 def open_excel(filename):
     wb = openpyxl.load_workbook(filename)
