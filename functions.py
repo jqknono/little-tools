@@ -41,7 +41,7 @@ url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?sta
 
 interval = 8
 
-cookies_str = 'umplus_uc_loginid=fangfang_ren; UM_distinctid=16d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88; um_lang=zh; cn_1276392090_dplus=1%5B%7B%7D%2C0%2C1567949770%2C0%2C1567949770%2Cnull%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567940381%22%2C%22https%3A%2F%2Fpassport.umeng.com%2Freg-redirect.html%3FredirectUrl%3Dhttps%253A%252F%252Fweb.umeng.com%252Fmain.php%253Fc%253Dsite%2526a%253Dshow%2526from%253Dlogin%22%2C%22passport.umeng.com%22%5D; cna=6axpFZjaSlYCATuvJCB7x6Bc; uc_session_id=52585a1b-32f8-463f-90fd-8c55e39a84b1; cn_1258498910_dplus=1%5B%7B%7D%2C0%2C1577458285%2C0%2C1577458285%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221569051311%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fhome%2Fcheck_login%3Furl%3Dhttps%253A%252F%252Fpassport.umeng.com%252Flogin%253FappId%253Dumeng%22%2C%22mobile.umeng.com%22%5D; cn_1273967994_dplus=1%5B%7B%7D%2Cnull%2Cnull%2Cnull%2Cnull%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567945446%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fplatform%2Fapps%2Flist%22%2C%22mobile.umeng.com%22%5D; CNZZDATA1259864772=1505950409-1567941798-%7C1577458100; cn_1259864772_dplus=1%5B%7B%22%E6%98%AF%E5%90%A6%E7%99%BB%E5%BD%95%22%3Atrue%2C%22UserID%22%3A%22fangfang_ren%22%2C%22Uapp_appkey%22%3A%225b7139be8f4a9d7dea000051%22%2C%22Uapp_platform%22%3A%22iphone%22%7D%2C0%2C1577458701%2C0%2C1577458701%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567941798%22%2C%22%24direct%22%2C%22%24direct%22%5D; umplus_uc_token=1Y1nqT7r1BBFv50FOtiJl9g_a27de4847c904dc9886da9eb6ffce71a; isg=BEVFs_aNt8uc75BsWB2c7hgtVIG_qvn4cx4gdEeqQnyL3mVQD1DAZVI37EqNnhFM; XSRF-TOKEN=109fa97e-cef7-46ec-b0e2-da3c1fd61e49; ummo_ss=BAh7CEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZvOhNCU09OOjpPYmplY3RJZAY6CkBkYXRhWxFpYmkxaVppAZppXGkSaQHzaQGTaT5pAGkKaXRJIhk4UVA3eElpcW1PaGRXdG1HUFpQawY7AFRJIhR1bXBsdXNfdWNfdG9rZW4GOwBGIj0xWTFucVQ3cjFCQkZ2NTBGT3RpSmw5Z19hMjdkZTQ4NDdjOTA0ZGM5ODg2ZGE5ZWI2ZmZjZTcxYUkiD3Nlc3Npb25faWQGOwBUSSIlNWE3Mjg2ZWU1NDgzZWQxMmMwZmY1ZWUzZTkyZmM3MTkGOwBG--6f9522f0b14be4a1d7e4d98a2991a94db61db782'
+cookies_str = 'umplus_uc_loginid=fangfang_ren; UM_distinctid=16d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88; um_lang=zh; cn_1276392090_dplus=1%5B%7B%7D%2C0%2C1567949770%2C0%2C1567949770%2Cnull%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567940381%22%2C%22https%3A%2F%2Fpassport.umeng.com%2Freg-redirect.html%3FredirectUrl%3Dhttps%253A%252F%252Fweb.umeng.com%252Fmain.php%253Fc%253Dsite%2526a%253Dshow%2526from%253Dlogin%22%2C%22passport.umeng.com%22%5D; cna=6axpFZjaSlYCATuvJCB7x6Bc; uc_session_id=52585a1b-32f8-463f-90fd-8c55e39a84b1; cn_1258498910_dplus=1%5B%7B%7D%2C0%2C1577458285%2C0%2C1577458285%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221569051311%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fhome%2Fcheck_login%3Furl%3Dhttps%253A%252F%252Fpassport.umeng.com%252Flogin%253FappId%253Dumeng%22%2C%22mobile.umeng.com%22%5D; cn_1273967994_dplus=1%5B%7B%7D%2Cnull%2Cnull%2Cnull%2Cnull%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567945446%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fplatform%2Fapps%2Flist%22%2C%22mobile.umeng.com%22%5D; CNZZDATA1259864772=1505950409-1567941798-%7C1577458100; cn_1259864772_dplus=1%5B%7B%22%E6%98%AF%E5%90%A6%E7%99%BB%E5%BD%95%22%3Atrue%2C%22UserID%22%3A%22fangfang_ren%22%2C%22Uapp_appkey%22%3A%225b7139be8f4a9d7dea000051%22%2C%22Uapp_platform%22%3A%22iphone%22%7D%2C0%2C1577458701%2C0%2C1577458701%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567941798%22%2C%22%24direct%22%2C%22%24direct%22%5D; XSRF-TOKEN=66e72cec-54e5-44e0-8392-838f5dbf4871; umplus_uc_token=1xVEEt4VERmJF9Qa7peZE3g_0a50eae01b5c44378474f0c2eec31251; isg=BJqaMtrBkIwGsB9NO8SbX8sk60B8Yx7JC8PMIKQTfC34FzpRjF_etMxu46sux5Y9; ummo_ss=BAh7CEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZvOhNCU09OOjpPYmplY3RJZAY6CkBkYXRhWxFpYmkxaVppAZppXGkSaQHzaQGTaT5pAGkKaXRJIhk4UVA3eElpcW1PaGRXdG1HUFpQawY7AFRJIhR1bXBsdXNfdWNfdG9rZW4GOwBGIj0xeFZFRXQ0VkVSbUpGOVFhN3BlWkUzZ18wYTUwZWFlMDFiNWM0NDM3ODQ3NGYwYzJlZWMzMTI1MUkiD3Nlc3Npb25faWQGOwBUSSIlMTJjOGMzMDVhNmM0NTdlMjhiNDIyYTRjYzNkMTkxZTYGOwBG--91797bf79265a08390ee76e16b52b255627283de'
 
 query_xi_back_gun_connect_sid = unquote('s%3ACGTnbTJdCAzpAWTu3Q2CDZX958umZLda.AxF5yblaNnJdLve7iePH9wbnNqwsnlACot7lfTvwnls')
 
@@ -179,7 +179,7 @@ def query_new_users():
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49"
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871"
     }
 
     resp = requests.post(url=url, data=qdata, headers=headers)
@@ -217,7 +217,7 @@ def query_active_users():
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49"
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871"
     }
 
     resp = requests.post(url=url, data=qdata, headers=headers)
@@ -262,7 +262,7 @@ def query_launches_times():
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49"
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871"
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
@@ -299,7 +299,7 @@ def query_morrow_retentions():
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49"
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871"
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
@@ -336,7 +336,7 @@ def query_threedays_retentions():
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49"
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871"
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
@@ -374,7 +374,7 @@ def query_sevendays_retentions():
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49"
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871"
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
@@ -413,7 +413,7 @@ def query_video_supplement():
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49"
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871"
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
@@ -451,7 +451,7 @@ def query_video():
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49"
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871"
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
@@ -489,7 +489,7 @@ def query_iap_users():
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49"
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871"
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
@@ -527,7 +527,7 @@ def query_open_map2_users():
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49"
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871"
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
@@ -565,7 +565,7 @@ def query_open_map3_users():
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49"
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871"
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
@@ -603,7 +603,7 @@ def query_open_event():
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49"
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871"
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
@@ -639,7 +639,7 @@ def query_claim_times():
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49"
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871"
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
@@ -675,7 +675,7 @@ def query_unlock_business():
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49"
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871"
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
@@ -712,7 +712,7 @@ def query_iap_money():
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49"
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871"
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
@@ -753,7 +753,7 @@ def query_ad_play_num(property_value):
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49"
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871"
     }
     resp = requests.post(url=url, data=qdata, headers=headers)
     data = resp.json()
@@ -828,7 +828,7 @@ def query_xi_back_gun():
         "accept": "application/json, text/plain, */*",
         "origin": "https://xi.harrybuy.com",
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
-        "x-xsrf-token": "109fa97e-cef7-46ec-b0e2-da3c1fd61e49",
+        "x-xsrf-token": "66e72cec-54e5-44e0-8392-838f5dbf4871",
         "referer": "https://xi.harrybuy.com/",
         "accept-encoding": "gzip, deflate, br",
         "accept-language": "en-US,en;q=0.9,zh-CN;q=0.8,zh-TW;q=0.7,zh;q=0.6,ja;q=0.5",
