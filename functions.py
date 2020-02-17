@@ -34,7 +34,6 @@ event_id_ad_play_map2 = ""
 event_id_ad_play_map3 = ""
 related_Id = ""
 xiAppId = ""
-g_x_xsrf_token= "3cc8f6e3-3f3a-4694-a801-3d087aee8f73"
 
 
 url_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?start_date=%(start_date)s&end_date=%(end_date)s&versions[]=&channels[]=&segments[]=&time_unit=daily&stats=%(stats_type)s'
@@ -43,9 +42,13 @@ url_eventname_temlate = '%(base_url)s/%(id)s/%(report_type)s/load_table_data?sta
 
 interval = 8
 
-cookies_str = 'umplus_uc_loginid=fangfang_ren; UM_distinctid=16d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88; um_lang=zh; cn_1276392090_dplus=1%5B%7B%7D%2C0%2C1567949770%2C0%2C1567949770%2Cnull%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567940381%22%2C%22https%3A%2F%2Fpassport.umeng.com%2Freg-redirect.html%3FredirectUrl%3Dhttps%253A%252F%252Fweb.umeng.com%252Fmain.php%253Fc%253Dsite%2526a%253Dshow%2526from%253Dlogin%22%2C%22passport.umeng.com%22%5D; cna=6axpFZjaSlYCATuvJCB7x6Bc; uc_session_id=52585a1b-32f8-463f-90fd-8c55e39a84b1; cn_1258498910_dplus=1%5B%7B%7D%2C0%2C1577458285%2C0%2C1577458285%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221569051311%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fhome%2Fcheck_login%3Furl%3Dhttps%253A%252F%252Fpassport.umeng.com%252Flogin%253FappId%253Dumeng%22%2C%22mobile.umeng.com%22%5D; cn_1273967994_dplus=1%5B%7B%7D%2Cnull%2Cnull%2Cnull%2Cnull%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567945446%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fplatform%2Fapps%2Flist%22%2C%22mobile.umeng.com%22%5D; CNZZDATA1259864772=1505950409-1567941798-%7C1577458100; cn_1259864772_dplus=1%5B%7B%22%E6%98%AF%E5%90%A6%E7%99%BB%E5%BD%95%22%3Atrue%2C%22UserID%22%3A%22fangfang_ren%22%2C%22Uapp_appkey%22%3A%225b7139be8f4a9d7dea000051%22%2C%22Uapp_platform%22%3A%22iphone%22%7D%2C0%2C1577458701%2C0%2C1577458701%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567941798%22%2C%22%24direct%22%2C%22%24direct%22%5D; umplus_uc_token=1if2-usyYF6qrUzeUz95mzQ_a2426827a574431791772996225192be; isg=BGJi2tPgSJkJXFeVMyxTB1NMs-jEs2bNgzsEmKz7z1WAfwL5lECi3Bt2q7OD795l; XSRF-TOKEN=3cc8f6e3-3f3a-4694-a801-3d087aee8f73; ummo_ss=BAh7CEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZvOhNCU09OOjpPYmplY3RJZAY6CkBkYXRhWxFpYmkxaVppAZppXGkSaQHzaQGTaT5pAGkKaXRJIhk4UVA3eElpcW1PaGRXdG1HUFpQawY7AFRJIhR1bXBsdXNfdWNfdG9rZW4GOwBGIj0xaWYyLXVzeVlGNnFyVXplVXo5NW16UV9hMjQyNjgyN2E1NzQ0MzE3OTE3NzI5OTYyMjUxOTJiZUkiD3Nlc3Npb25faWQGOwBUSSIlMjEyZjJjOTE5YzNiMjJhMWFkZDk3M2QxN2ZiMTA4MTkGOwBG--bc956b08141e60ecb24ff7815a95e06ce53e74ea'
+# Cookies不对时, 拷贝以下链接对应的cookies
+# https://mobile.umeng.com/ht/api/v3/app/user/active/detail?relatedId=5b3d8d9ff43e4864c60000be
+# detail?relatedId=5b3d8d9ff43e4864c60000be
+cookies_str = 'umplus_uc_loginid=fangfang_ren; UM_distinctid=16d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88; um_lang=zh; cn_1276392090_dplus=1%5B%7B%7D%2C0%2C1567949770%2C0%2C1567949770%2Cnull%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567940381%22%2C%22https%3A%2F%2Fpassport.umeng.com%2Freg-redirect.html%3FredirectUrl%3Dhttps%253A%252F%252Fweb.umeng.com%252Fmain.php%253Fc%253Dsite%2526a%253Dshow%2526from%253Dlogin%22%2C%22passport.umeng.com%22%5D; cna=6axpFZjaSlYCATuvJCB7x6Bc; uc_session_id=52585a1b-32f8-463f-90fd-8c55e39a84b1; cn_1258498910_dplus=1%5B%7B%7D%2C0%2C1577458285%2C0%2C1577458285%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221569051311%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fhome%2Fcheck_login%3Furl%3Dhttps%253A%252F%252Fpassport.umeng.com%252Flogin%253FappId%253Dumeng%22%2C%22mobile.umeng.com%22%5D; cn_1273967994_dplus=1%5B%7B%7D%2Cnull%2Cnull%2Cnull%2Cnull%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567945446%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fplatform%2Fapps%2Flist%22%2C%22mobile.umeng.com%22%5D; CNZZDATA1259864772=1505950409-1567941798-%7C1577458100; cn_1259864772_dplus=1%5B%7B%22%E6%98%AF%E5%90%A6%E7%99%BB%E5%BD%95%22%3Atrue%2C%22UserID%22%3A%22fangfang_ren%22%2C%22Uapp_appkey%22%3A%225b7139be8f4a9d7dea000051%22%2C%22Uapp_platform%22%3A%22iphone%22%7D%2C0%2C1577458701%2C0%2C1577458701%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567941798%22%2C%22%24direct%22%2C%22%24direct%22%5D; umplus_uc_token=1WdCAeSIqFGUtsf7IVHLX5A_c690ed8b25ba4e869c7beb9b874ab814; ummo_ss=BAh7CUkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZvOhNCU09OOjpPYmplY3RJZAY6CkBkYXRhWxFpYmkxaVppAZppXGkSaQHzaQGTaT5pAGkKaXRJIhk4UVA3eElpcW1PaGRXdG1HUFpQawY7AFRJIhR1bXBsdXNfdWNfdG9rZW4GOwBGIj0xV2RDQWVTSXFGR1V0c2Y3SVZITFg1QV9jNjkwZWQ4YjI1YmE0ZTg2OWM3YmViOWI4NzRhYjgxNEkiEF9jc3JmX3Rva2VuBjsARkkiMW5ST2tCOVdMSHZ5bUxuU3RZWllqVjJpam12NWpoRzArY1UxZ2t6SWVIMUE9BjsARkkiD3Nlc3Npb25faWQGOwBUSSIlMTI2MTRkMzcyOWFmNjVmN2EwMjhjODBhYmUyMjhjN2IGOwBG--8fcb825b91969f9708acc7e2944ab8af19f70ddd; frame=; XSRF-TOKEN=2a9f710e-8eb4-49ba-af19-b752ed698a93; PHPSESSID=plr1sr25cgcj24mbqngrvpd8f3; isg=BDQ0Zk4A1iCPnEHfkcKdbRGKBfKmDVj3c4HeW86VwL9COdSD9h0oh-r7vXnhwZBP'
 
-'umplus_uc_loginid=fangfang_ren; UM_distinctid=16d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88; um_lang=zh; cn_1276392090_dplus=1%5B%7B%7D%2C0%2C1567949770%2C0%2C1567949770%2Cnull%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567940381%22%2C%22https%3A%2F%2Fpassport.umeng.com%2Freg-redirect.html%3FredirectUrl%3Dhttps%253A%252F%252Fweb.umeng.com%252Fmain.php%253Fc%253Dsite%2526a%253Dshow%2526from%253Dlogin%22%2C%22passport.umeng.com%22%5D; cna=6axpFZjaSlYCATuvJCB7x6Bc; uc_session_id=52585a1b-32f8-463f-90fd-8c55e39a84b1; cn_1258498910_dplus=1%5B%7B%7D%2C0%2C1577458285%2C0%2C1577458285%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221569051311%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fhome%2Fcheck_login%3Furl%3Dhttps%253A%252F%252Fpassport.umeng.com%252Flogin%253FappId%253Dumeng%22%2C%22mobile.umeng.com%22%5D; cn_1273967994_dplus=1%5B%7B%7D%2Cnull%2Cnull%2Cnull%2Cnull%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567945446%22%2C%22https%3A%2F%2Fmobile.umeng.com%2Fplatform%2Fapps%2Flist%22%2C%22mobile.umeng.com%22%5D; CNZZDATA1259864772=1505950409-1567941798-%7C1577458100; cn_1259864772_dplus=1%5B%7B%22%E6%98%AF%E5%90%A6%E7%99%BB%E5%BD%95%22%3Atrue%2C%22UserID%22%3A%22fangfang_ren%22%2C%22Uapp_appkey%22%3A%225b7139be8f4a9d7dea000051%22%2C%22Uapp_platform%22%3A%22iphone%22%7D%2C0%2C1577458701%2C0%2C1577458701%2C%22%24direct%22%2C%2216d10cf0765141-056e45dadb0c15-5373e62-240000-16d10cf0766e88%22%2C%221567941798%22%2C%22%24direct%22%2C%22%24direct%22%5D; umplus_uc_token=1if2-usyYF6qrUzeUz95mzQ_a2426827a574431791772996225192be; isg=BGJi2tPgSJkJXFeVMyxTB1NMs-jEs2bNgzsEmKz7z1WAfwL5lECi3Bt2q7OD795l; XSRF-TOKEN=3cc8f6e3-3f3a-4694-a801-3d087aee8f73; ummo_ss=BAh7CEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZvOhNCU09OOjpPYmplY3RJZAY6CkBkYXRhWxFpYmkxaVppAZppXGkSaQHzaQGTaT5pAGkKaXRJIhk4UVA3eElpcW1PaGRXdG1HUFpQawY7AFRJIhR1bXBsdXNfdWNfdG9rZW4GOwBGIj0xaWYyLXVzeVlGNnFyVXplVXo5NW16UV9hMjQyNjgyN2E1NzQ0MzE3OTE3NzI5OTYyMjUxOTJiZUkiD3Nlc3Npb25faWQGOwBUSSIlMjEyZjJjOTE5YzNiMjJhMWFkZDk3M2QxN2ZiMTA4MTkGOwBG--bc956b08141e60ecb24ff7815a95e06ce53e74ea'
+# x-xsrf-token可能也需要更新
+g_x_xsrf_token= "2a9f710e-8eb4-49ba-af19-b752ed698a93"
 
 query_xi_back_gun_connect_sid = unquote('s%3ACGTnbTJdCAzpAWTu3Q2CDZX958umZLda.AxF5yblaNnJdLve7iePH9wbnNqwsnlACot7lfTvwnls')
 
@@ -195,9 +198,9 @@ def query_active_users():
     """从umeng平台"""
     print(inspect.stack()[0][3])
     url = f"https://mobile.umeng.com/ht/api/v3/app/user/active/detail?relatedId={related_Id}"
+    #       https://mobile.umeng.com/ht/api/v3/app/user/active/detail?relatedId=5b3d8d9ff43e4864c60000be
     end_date = (today - timedelta(days=0)).strftime('%Y-%m-%d')
     start_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
-    # {"page":1,"pageSize":30,"fromDate":"2020-01-10","toDate":"2020-01-19","version":[],"channel":[],"timeUnit":"day","view":"activeUserDay","relatedId":"5b3d8d9ff43e4864c60000be"}
     qdata_temlate = '{"page":1,"pageSize":30,"fromDate":"%(from_date)s","toDate":"%(to_date)s","version":[],"channel":[],"timeUnit":"day","view":"activeUserDay","relatedId":"%(related_Id)s"}'
     qdata_str = qdata_temlate % {
         "from_date": start_date, "to_date": end_date, 'related_Id': related_Id}
@@ -907,9 +910,9 @@ def query_xi_ecpm(country=""):
 # print(query_active_users())
 
 def test():
+    # stat_platform_ios()
     stat_platform_android()
     # print(query_xi_back_gun())
     print(query_active_users())
-
 
 test()
