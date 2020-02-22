@@ -155,6 +155,12 @@ def stat_platform_android():
     g_platform = platform_tbc3_android
     xiAppId = xiAppId_android
 
+def get_start_time():
+    start_date = (today - timedelta(days=7)).strftime('%Y-%m-%d')
+    return start_date
+
+def get_start_time():
+    end_date = (today - timedelta(days=0)).strftime('%Y-%m-%d')
 
 def query_new_users():
     """从umeng平台"""
@@ -820,12 +826,15 @@ def query_xi_back_gun():
     print(inspect.stack()[0][3])
     """从xi平台查询, 回本手枪图"""
     url = "https://api-xi.harrybuy.com/es/monesimplify/pistolevent"
-    end_date = (today - timedelta(days=3)).strftime('%Y-%m-%d')
-    start_date = (today - timedelta(days=3)).strftime('%Y-%m-%d')
+    end_date = (today - timedelta(days=3)).strftime('%Y-%m-%d 23:59:59')
+    end_date_resp = (today - timedelta(days=3)).strftime('%Y%m%d00')
+    start_date = (today - timedelta(days=3)).strftime('%Y-%m-%d 00:00:00')
+    init_time_span = 24
     # {"app_name":"Game_android_TBC3","date_range":["2019-12-04","2019-12-04"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":["com.brokenreality.bigcapitalist3.android"],"platform":["android"],"media_source":["Facebook Ads"],"country_code":["US"]}}
-    qdata_temlate = '{"app_name":"%(app_name)s","date_range":["%(start_date)s","%(end_date)s"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","filter":{"bundle_id":["%(bundle_id)s"],"platform":["%(platform)s"],"media_source":["Facebook Ads"],"country_code":["US"]}}'
+    # {"app_name":"Game_android_TBC3","date_range":["2020-02-19 00:00:00","2020-02-19 23:59:59"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","init_time_span":24,"filter":{"bundle_id":["com.brokenreality.bigcapitalist3.android"],"platform":["android"],"media_source":["Facebook Ads"],"country_code":["US"]}}
+    qdata_temlate = '{"app_name":"%(app_name)s","date_range":["%(start_date)s","%(end_date)s"],"dimension":[],"time_span":"auto","limit":20,"subs_type":"real","init_time_span":%(init_time_span)d,"filter":{"bundle_id":["%(bundle_id)s"],"platform":["%(platform)s"],"media_source":["Facebook Ads"],"country_code":["US"]}}'
     qdata_str = qdata_temlate % {"app_name": g_app_name, "start_date": start_date,
-                                 'end_date': end_date, 'bundle_id': g_bundle_id, 'platform': g_platform}
+                                 'end_date': end_date, "init_time_span":init_time_span,'bundle_id': g_bundle_id, 'platform': g_platform}
     qdata = qdata_str.encode("utf-8")
     headers = {
         "authority": "api-xi.harrybuy.com",
@@ -853,7 +862,7 @@ def query_xi_back_gun():
 
         dict = {}
         for item in data[0]:
-            if item["date"] == end_date and item["lifetime"] == 24:
+            if item["date"] == end_date_resp and item["lifetime"] == 24:
                 dict["people_num_watch_video"] = item["users"]
                 for event in item["event"]:
                     if event["event_name"] == "video_imp":
@@ -912,7 +921,7 @@ def query_xi_ecpm(country=""):
 def test():
     # stat_platform_ios()
     stat_platform_android()
-    # print(query_xi_back_gun())
-    print(query_active_users())
+    print(query_xi_back_gun())
+    # print(query_active_users())
 
-test()
+# test()
