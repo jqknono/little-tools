@@ -336,7 +336,10 @@ def save_xi_worksheet(ws):
     assign_value(ws, row_AN, 'AN',value_AN)
 
 def round_sig(x, sig=2):
-    return round(x, sig-int(floor(log10(abs(x)))))
+    if x == 0:
+        pass
+    else:
+        return round(x, sig-int(floor(log10(abs(x)))))
 
 
 def save_to_ios(wb):

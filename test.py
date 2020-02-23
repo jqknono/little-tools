@@ -14,4 +14,27 @@ def test2():
     end_date_resp = (today_date - timedelta(days=3)).strftime('%Y%m%d00')
     print(end_date_resp)
 
-test2()
+from math import log10, floor
+
+def round_sig(x, sig=2):
+    return round(x, sig-int(floor(log10(abs(x)))))
+
+def test():
+    # stat_platform_ios()
+    stat_platform_android()
+    data17= query_xi_back_gun()
+    # print(query_active_users())
+    # print(query_xi_ecpm())
+    # print(query_xi_ecpm(country_us))
+    print(round_sig(data17['num_video_played']/data17['people_num_watch_video']))
+
+test()
+
+def test3():
+    # stat_platform_ios()
+    stat_platform_ios()
+    print(query_xi_back_gun())
+    # print(query_active_users())
+
+# test3()
+
