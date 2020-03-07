@@ -52,7 +52,7 @@ g_x_xsrf_token= "b898306e-1f87-4d4f-97b4-473a3b3ce336"
 
 query_xi_back_gun_connect_sid = unquote('s%3AACH4Z4vE7zmqg57ahLk67l4Rt25unSZi.zZBqjvgvie%2FbURJ%2BHgIQpdvup2ycuOfrkZ8xRjfG4aU')
 
-query_xi_ecpm_connect_sid = unquote('s%3ACGTnbTJdCAzpAWTu3Q2CDZX958umZLda.AxF5yblaNnJdLve7iePH9wbnNqwsnlACot7lfTvwnls')
+query_xi_ecpm_connect_sid = unquote('s%3AYiqe-7O-YgeX4_pVViNlw_p8Zqa4WRP-.ncVSijXUZrTl9r848zYf7W0DAdIxqLqrdZaP7slTEDY')
 
 
 def stat_platform_ios():
@@ -921,7 +921,7 @@ def query_xi_ecpm(country=""):
 def test():
     # stat_platform_ios()
     stat_platform_android()
-    # print(query_xi_back_gun())
+    print(query_xi_back_gun())
     print(query_active_users())
 
 test()
